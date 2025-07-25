@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: default
 permalink: /projects/
 author_profile: true
 ---
