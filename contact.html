@@ -53,7 +53,7 @@
 
           <h3 class="h3 form-title">Contact Form</h3>
 
-          <form action="#" class="form" data-form>
+          <form action="#" class="form" data-form id="contact-form">
 
             <div class="input-wrapper">
               <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
@@ -65,10 +65,13 @@
 
             <button class="form-btn" type="submit" disabled data-form-btn>
               <ion-icon name="paper-plane"></ion-icon>
-              <span>Send Message</span>
+              <span id="btn-text">Send Message</span>
             </button>
 
           </form>
+
+          <!-- Status message -->
+          <div id="form-status" style="margin-top: 1rem; padding: 1rem; border-radius: 8px; display: none;"></div>
 
         </section>
 
@@ -79,6 +82,68 @@
 
   <!-- custom js -->
   <script src="./assets/js/script.js"></script>
+  
+  <!-- Contact form handler -->
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      
+      const formBtn = document.querySelector('[data-form-btn]');
+      const btnText = document.getElementById('btn-text');
+      const statusDiv = document.getElementById('form-status');
+      
+      // Get form data
+      const formData = new FormData(this);
+      const data = {
+        fullname: formData.get('fullname'),
+        email: formData.get('email'),
+        message: formData.get('message')
+      };
+      
+      // Update button state
+      formBtn.disabled = true;
+      btnText.textContent = 'Sending...';
+      statusDiv.style.display = 'none';
+      
+      try {
+        const response = await fetch('http://localhost:3000/api/contact', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data)
+        });
+        
+        const result = await response.json();
+        
+        if (response.ok) {
+          // Success
+          statusDiv.style.display = 'block';
+          statusDiv.style.backgroundColor = '#d4edda';
+          statusDiv.style.color = '#155724';
+          statusDiv.style.border = '1px solid #c3e6cb';
+          statusDiv.textContent = 'Message sent successfully! Thank you for reaching out.';
+          
+          // Reset form
+          this.reset();
+          formBtn.disabled = true; // Will be re-enabled by existing script when form is filled
+        } else {
+          throw new Error(result.message || 'Failed to send message');
+        }
+      } catch (error) {
+        // Error
+        statusDiv.style.display = 'block';
+        statusDiv.style.backgroundColor = '#f8d7da';
+        statusDiv.style.color = '#721c24';
+        statusDiv.style.border = '1px solid #f5c6cb';
+        statusDiv.textContent = 'Failed to send message. Please try again or contact directly via email.';
+      } finally {
+        // Reset button
+        btnText.textContent = 'Send Message';
+        formBtn.disabled = false;
+      }
+    });
+  </script>
 
   <!-- ionicon js -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
