@@ -1,27 +1,44 @@
-# Minimal Mistakes remote theme starter
+# vCard - Personal portfolio
 
-Click [**Use this template**](https://github.com/mmistakes/mm-github-pages-starter/generate) button above for the quickest method of getting started with the [Minimal Mistakes Jekyll theme](https://github.com/mmistakes/minimal-mistakes).
+![GitHub repo size](https://img.shields.io/github/repo-size/codewithsadee/vcard-personal-portfolio)
+![GitHub stars](https://img.shields.io/github/stars/codewithsadee/vcard-personal-portfolio?style=social)
+![GitHub forks](https://img.shields.io/github/forks/codewithsadee/vcard-personal-portfolio?style=social)
+[![Twitter Follow](https://img.shields.io/twitter/follow/codewithsadee_?style=social)](https://twitter.com/intent/follow?screen_name=codewithsadee_)
+[![YouTube Video Views](https://img.shields.io/youtube/views/SoxmIlgf2zM?style=social)](https://youtu.be/SoxmIlgf2zM)
 
-Contains basic configuration to get you a site with:
+vCard is a fully responsive personal portfolio website, responsive for all devices, built using HTML, CSS, and JavaScript.
 
-- Sample posts.
-- Sample top navigation.
-- Sample author sidebar with social links.
-- Sample footer links.
-- Paginated home page.
-- Archive pages for posts grouped by year, category, and tag.
-- Sample about page.
-- Sample 404 page.
-- Site wide search.
+## Demo
 
-Replace sample content with your own and [configure as necessary](https://mmistakes.github.io/minimal-mistakes/docs/configuration/).
+![vCard Desktop Demo](./website-demo-image/desktop.png "Desktop Demo")
+![vCard Mobile Demo](./website-demo-image/mobile.png "Mobile Demo")
 
----
+## Prerequisites
 
-## Troubleshooting
+Before you begin, ensure you have met the following requirements:
 
-If you have a question about using Jekyll, start a discussion on the [Jekyll Forum](https://talk.jekyllrb.com/) or [StackOverflow](https://stackoverflow.com/questions/tagged/jekyll). Other resources:
+* [Git](https://git-scm.com/downloads "Download Git") must be installed on your operating system.
 
-- [Ruby 101](https://jekyllrb.com/docs/ruby-101/)
-- [Setting up a Jekyll site with GitHub Pages](https://jekyllrb.com/docs/github-pages/)
-- [Configuring GitHub Metadata](https://github.com/jekyll/github-metadata/blob/master/docs/configuration.md#configuration) to work properly when developing locally and avoid `No GitHub API authentication could be found. Some fields may be missing or have incorrect data.` warnings.
+## Installing vCard
+
+To install **vCard**, follow these steps:
+
+Linux and macOS:
+
+```bash
+sudo git clone https://github.com/codewithsadee/vcard-personal-portfolio.git
+```
+
+Windows:
+
+```bash
+git clone https://github.com/codewithsadee/vcard-personal-portfolio.git
+```
+
+## Contact
+
+If you want to contact me you can reach me at [Twitter](https://www.x.com/codewithsadee_).
+
+## License
+
+MIT
