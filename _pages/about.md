@@ -1,11 +1,10 @@
 ---
 permalink: /about/
 title: "About"
+classes: wide
 ---
 
-# 👋 About Me
-
-I’m **Rahul Mehta**, a Computational Engineer and final-year PhD candidate at **ETH Zurich**, specializing in **finite element methods (FEM)**, **structural mechanics**, and **multiphysics simulation**.
+I’m **Ashwani Kumar**, a Computational Engineer and final-year PhD candidate at **ETH Zurich**, specializing in **finite element methods (FEM)**, **structural mechanics**, and **multiphysics simulation**.
 
 Before entering academia, I worked for **4 years in automotive R&D**, focusing on structural testing, validation, and correlation between physical and virtual models. My current research combines numerical modeling with experimental data to improve the reliability and performance of complex materials and structures.
 
@@ -13,10 +12,10 @@ Before entering academia, I worked for **4 years in automotive R&D**, focusing o
 
 ## 🎓 Education
 
-- **PhD in Computational Engineering**, ETH Zurich  
-  *Multiscale modeling of composite materials using FEM & data-driven validation*
-- **M.Sc. Computational Engineering**, TU Munich  
-- **B.Tech Mechanical Engineering**, India
+- **PhD in Computational Engineering**, ETH Zurich, Switzerland  
+<!---*Multiscale modeling of composite materials using FEM & data-driven validation*--->
+- **M.Sc. Computational Engineering**, Ruhr University Bochum, Germany  
+- **B.Tech Mechanical Engineering**, National Institutite of Technology, Jalandhar, India
 
 ---
 
