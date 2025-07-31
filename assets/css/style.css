@@ -2,6 +2,63 @@
   #style.css
 \*-----------------------------------*/
 
+/**
+ * Mobile Portfolio Fix - Force override browser link colors
+ */
+@media (max-width: 768px) {
+  /* Force all elements to inherit color properly */
+  * {
+    -webkit-text-fill-color: inherit !important;
+  }
+  
+  /* Override browser default link colors globally */
+  a, a:link, a:visited, a:hover, a:active {
+    color: inherit !important;
+    text-decoration: none !important;
+  }
+  
+  /* Specific portfolio overrides */
+  .portfolio a, .portfolio a * {
+    color: inherit !important;
+  }
+
+  /* Apply correct colors to portfolio elements */
+  .portfolio .project-title,
+  .portfolio h3 {
+    color: var(--white-2) !important;
+  }
+  
+  .portfolio .project-category {
+    color: var(--light-gray-70) !important;
+  }
+  
+  .portfolio .project-summary {
+    color: var(--light-gray) !important;
+  }
+  
+  .portfolio .skills-title {
+    color: var(--light-gray-70) !important;
+  }
+  
+  /* Reduce image sizes in mobile */
+  .project-img-horizontal {
+    height: 180px !important;
+    max-height: 180px !important;
+  }
+  
+  .project-img {
+    height: 180px !important;
+    max-height: 180px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-img-horizontal,
+  .project-img {
+    height: 160px !important;
+    max-height: 160px !important;
+  }
+}
 
 /**
  * copyright 2022 @codewithsadee
@@ -125,7 +182,29 @@
   box-sizing: border-box;
 }
 
-a { text-decoration: none; }
+a { 
+  text-decoration: none; 
+  color: inherit;
+}
+
+a:visited,
+a:link,
+a:any-link {
+  color: inherit;
+}
+
+/* Strong override for all portfolio links */
+article.portfolio a,
+article.portfolio a:link,
+article.portfolio a:visited,
+article.portfolio a:any-link,
+.project-horizontal,
+.project-horizontal:link,
+.project-horizontal:visited,
+.project-horizontal:any-link {
+  color: inherit !important;
+  text-decoration: none !important;
+}
 
 li { list-style: none; }
 
@@ -874,6 +953,20 @@ main {
 /*-----------------------------------*\
   #PORTFOLIO
 \*-----------------------------------*/
+
+/* Portfolio Link Color Overrides */
+.portfolio a,
+.portfolio a:link,
+.portfolio a:visited,
+.portfolio a:any-link {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+
+.portfolio .project-horizontal h3,
+.portfolio .project-horizontal p {
+  color: inherit !important;
+}
 
 .filter-list { display: none; }
 
@@ -1976,11 +2069,75 @@ textarea.form-input::-webkit-resizer { display: none; }
     .project-horizontal {
       flex-direction: column;
       gap: 15px;
+      padding: 15px;
     }
 
     .project-img-horizontal {
       width: 100%;
-      height: 200px;
+      height: 180px;
+      max-width: 100%;
+    }
+
+    .project-content .project-title {
+      color: var(--white-2) !important;
+      font-size: var(--fs-4);
+    }
+
+    .project-content .project-category {
+      color: var(--light-gray-70) !important;
+    }
+
+    .project-content .project-summary {
+      color: var(--light-gray) !important;
+    }
+
+    /* Override any default link colors - stronger selectors */
+    .project-horizontal,
+    .project-horizontal:visited,
+    .project-horizontal:link,
+    .project-horizontal:any-link {
+      color: inherit !important;
+      text-decoration: none !important;
+    }
+
+    .project-horizontal .project-title,
+    .project-horizontal .project-category,
+    .project-horizontal .project-summary {
+      color: inherit !important;
+    }
+
+    /* Specific targeting for project content elements */
+    .project-horizontal .project-content h3,
+    .project-horizontal .project-content p {
+      color: inherit !important;
+    }
+
+    /* Ensure h3 and p elements specifically inherit proper colors */
+    .project-horizontal h3.project-title {
+      color: var(--white-2) !important;
+    }
+
+    .project-horizontal p.project-category {
+      color: var(--light-gray-70) !important;
+    }
+
+    .project-horizontal p.project-summary {
+      color: var(--light-gray) !important;
+    }
+  }
+
+  /* Additional mobile styles for very small screens */
+  @media (max-width: 480px) {
+    .project-horizontal {
+      padding: 12px;
+    }
+
+    .project-img-horizontal {
+      height: 160px;
+    }
+
+    .project-content .project-title {
+      font-size: var(--fs-5);
     }
   }
 
@@ -2327,6 +2484,72 @@ textarea.form-input::-webkit-resizer { display: none; }
     .nav-button {
       width: 100%;
       justify-content: center;
+    }
+  }
+
+  /* Additional mobile portfolio fixes */
+  @media (max-width: 768px) {
+    /* Regular portfolio grid items */
+    .project-img {
+      height: 180px;
+      max-height: 180px;
+    }
+
+    .project-title {
+      color: var(--white-2) !important;
+    }
+
+    .project-category {
+      color: var(--light-gray-70) !important;
+    }
+
+    /* Ensure all portfolio links maintain proper colors */
+    .project-item > a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .project-item > a:visited,
+    .project-item > a:link {
+      color: inherit;
+    }
+
+    /* Nuclear option for blue text override */
+    article.portfolio * {
+      color: inherit !important;
+    }
+
+    /* Then re-apply the correct colors */
+    article.portfolio .project-title,
+    article.portfolio h3.project-title {
+      color: var(--white-2) !important;
+    }
+
+    article.portfolio .project-category,
+    article.portfolio p.project-category {
+      color: var(--light-gray-70) !important;
+    }
+
+    article.portfolio .project-summary,
+    article.portfolio p.project-summary {
+      color: var(--light-gray) !important;
+    }
+
+    /* Skills section colors */
+    article.portfolio .skills-title {
+      color: var(--light-gray-70) !important;
+    }
+
+    article.portfolio .skill-tag {
+      background: var(--orange-yellow-crayola) !important;
+      color: var(--smoky-black) !important;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .project-img {
+      height: 160px;
+      max-height: 160px;
     }
   }
 
