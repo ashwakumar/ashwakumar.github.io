@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact - Richard Hanrick</title>
+  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+
+  <main>
+    <!-- Sidebar Container -->
+    <div id="sidebar-container">
+      <!-- Sidebar will be loaded here by JavaScript -->
+    </div>
+
+    <div class="main-content">
+
+      <!-- Navbar -->
+      <nav class="navbar">
+        <ul class="navbar-list">
+          <li class="navbar-item"><a href="index.html" class="navbar-link">About</a></li>
+          <li class="navbar-item"><a href="resume.html" class="navbar-link">Resume</a></li>
+          <li class="navbar-item"><a href="portfolio.html" class="navbar-link">Portfolio</a></li>
+          <li class="navbar-item"><a href="blog.html" class="navbar-link">Blog</a></li>
+          <li class="navbar-item"><a href="contact.html" class="navbar-link active">Contact</a></li>
+        </ul>
+      </nav>
+
+      <article class="contact active" data-page="contact">
+
+        <header>
+          <h2 class="h2 article-title">Contact</h2>
+        </header>
+
+        <section class="mapbox" data-mapbox>
+          <figure>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d21612.30558033407!2d8.556010424484501!3d47.38193103459556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sch!4v1753450894703!5m2!1sen!2sch"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </figure>
+        </section>
+
+        <section class="contact-form">
+
+          <h3 class="h3 form-title">Contact Form</h3>
+
+          <form action="#" class="form" data-form id="contact-form">
+
+            <div class="input-wrapper">
+              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+
+              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+            </div>
+
+            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+
+            <button class="form-btn" type="submit" disabled data-form-btn>
+              <ion-icon name="paper-plane"></ion-icon>
+              <span id="btn-text">Send Message</span>
+            </button>
+
+          </form>
+
+          <!-- Status message -->
+          <div id="form-status" style="margin-top: 1rem; padding: 1rem; border-radius: 8px; display: none;"></div>
+
+        </section>
+
+      </article>
+
+    </div>
+  </main>
+
+  <!-- custom js -->
+  <script src="./assets/js/script.js"></script>
+  
+  <!-- Contact form handler -->
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      
+      const formBtn = document.querySelector('[data-form-btn]');
+      const btnText = document.getElementById('btn-text');
+      const statusDiv = document.getElementById('form-status');
+      
+      // Get form data
+      const formData = new FormData(this);
+      const data = {
+        fullname: formData.get('fullname'),
+        email: formData.get('email'),
+        message: formData.get('message')
+      };
+      
+      // Update button state
+      formBtn.disabled = true;
+      btnText.textContent = 'Sending...';
+      statusDiv.style.display = 'none';
+      
+      try {
+        const response = await fetch('http://localhost:3000/api/contact', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data)
+        });
+        
+        const result = await response.json();
+        
+        if (response.ok) {
+          // Success
+          statusDiv.style.display = 'block';
+          statusDiv.style.backgroundColor = '#d4edda';
+          statusDiv.style.color = '#155724';
+          statusDiv.style.border = '1px solid #c3e6cb';
+          statusDiv.textContent = 'Message sent successfully! Thank you for reaching out.';
+          
+          // Reset form
+          this.reset();
+          formBtn.disabled = true; // Will be re-enabled by existing script when form is filled
+        } else {
+          throw new Error(result.message || 'Failed to send message');
+        }
+      } catch (error) {
+        // Error
+        statusDiv.style.display = 'block';
+        statusDiv.style.backgroundColor = '#f8d7da';
+        statusDiv.style.color = '#721c24';
+        statusDiv.style.border = '1px solid #f5c6cb';
+        statusDiv.textContent = 'Failed to send message. Please try again or contact directly via email.';
+      } finally {
+        // Reset button
+        btnText.textContent = 'Send Message';
+        formBtn.disabled = false;
+      }
+    });
+  </script>
+
+  <!-- ionicon js -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
+
+

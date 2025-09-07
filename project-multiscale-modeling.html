@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multiscale Modeling Project - Ashwani Kumar</title>
+    <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+
+    <main>
+        <!-- Sidebar Container -->
+        <div id="sidebar-container">
+            <!-- Sidebar will be loaded here by JavaScript -->
+        </div>
+
+        <div class="main-content">
+
+            <nav class="navbar">
+                <ul class="navbar-list">
+                    <li class="navbar-item"><a href="index.html" class="navbar-link">About</a></li>
+                    <li class="navbar-item"><a href="resume.html" class="navbar-link">Resume</a></li>
+                    <li class="navbar-item"><a href="portfolio.html" class="navbar-link">Portfolio</a></li>
+                    <li class="navbar-item"><a href="blog.html" class="navbar-link">Blog</a></li>
+                    <li class="navbar-item"><a href="contact.html" class="navbar-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <article class="project-detail active" data-page="project-detail">
+                <header class="project-header">
+                    <div class="breadcrumb">
+                        <a href="portfolio.html" class="breadcrumb-link">Portfolio</a>
+                        <span class="breadcrumb-separator">></span>
+                        <span class="breadcrumb-current">Multiscale Modeling</span>
+                    </div>
+                    <h1 class="project-main-title">Multiscale Modeling of Sintering Processes</h1>
+                    <p class="project-subtitle">Computational Engineering & Materials Science</p>
+                </header>
+
+                <section class="project-overview">
+                    <div class="project-hero-image">
+                        <img src="./assets/images/project-1.jpg" alt="Multiscale Modeling Visualization" loading="lazy">
+                    </div>
+
+                    <div class="project-meta">
+                        <div class="meta-item">
+                            <h4>Duration</h4>
+                            <p>January 2023 - December 2023</p>
+                        </div>
+                        <div class="meta-item">
+                            <h4>Role</h4>
+                            <p>Lead Computational Engineer</p>
+                        </div>
+                        <div class="meta-item">
+                            <h4>Institution</h4>
+                            <p>ETH Zurich</p>
+                        </div>
+                        <div class="meta-item">
+                            <h4>Status</h4>
+                            <p>Completed</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="project-description">
+                    <h2 class="section-title">Project Overview</h2>
+                    <p class="project-text">
+                        This research project focuses on developing advanced multiscale modeling techniques for complex engineering systems, 
+                        specifically targeting the sintering process in powder metallurgy. The work integrates molecular dynamics (MD) 
+                        simulations with continuum mechanics approaches to predict material behavior across different length scales, 
+                        from atomic-level interactions to macroscopic material properties.
+                    </p>
+                    
+                    <p class="project-text">
+                        The primary challenge addressed is the computational prediction of material microstructure evolution during 
+                        sintering processes, which involves complex phenomena including particle coalescence, grain growth, and 
+                        densification mechanisms. By bridging multiple length and time scales, this approach enables accurate 
+                        prediction of final material properties based on processing conditions.
+                    </p>
+                </section>
+
+                <section class="project-objectives">
+                    <h2 class="section-title">Key Objectives</h2>
+                    <ul class="objectives-list">
+                        <li>Develop a coupled MD-FEM framework for multiscale simulations</li>
+                        <li>Implement efficient data transfer mechanisms between scale levels</li>
+                        <li>Validate models against experimental sintering data</li>
+                        <li>Optimize computational algorithms for parallel processing</li>
+                        <li>Create predictive tools for material property estimation</li>
+                    </ul>
+                </section>
+
+                <section class="project-methodology">
+                    <h2 class="section-title">Methodology & Approach</h2>
+                    
+                    <div class="methodology-section">
+                        <h3 class="subsection-title">Molecular Dynamics Simulations</h3>
+                        <p class="project-text">
+                            Utilized LAMMPS (Large-scale Atomic/Molecular Massively Parallel Simulator) to model atomic-scale 
+                            interactions during the initial stages of sintering. Implemented embedded atom method (EAM) potentials 
+                            for metallic systems and developed custom analysis scripts for microstructure characterization.
+                        </p>
+                    </div>
+
+                    <div class="methodology-section">
+                        <h3 class="subsection-title">Continuum Mechanics Integration</h3>
+                        <p class="project-text">
+                            Employed ANSYS Mechanical for finite element analysis of larger-scale deformation and stress 
+                            distribution. Developed homogenization techniques to transfer material properties from MD 
+                            simulations to continuum models, ensuring consistency across length scales.
+                        </p>
+                    </div>
+
+                    <div class="methodology-section">
+                        <h3 class="subsection-title">Computational Framework</h3>
+                        <p class="project-text">
+                            Created a Python-based coupling framework that manages data exchange between different simulation 
+                            environments. Implemented adaptive meshing algorithms and developed optimization routines for 
+                            computational efficiency on high-performance computing clusters.
+                        </p>
+                    </div>
+                </section>
+
+                <section class="project-results">
+                    <h2 class="section-title">Key Results & Achievements</h2>
+                    
+                    <div class="results-grid">
+                        <div class="result-item">
+                            <h4>Simulation Accuracy</h4>
+                            <p>Achieved 95% accuracy in predicting final density compared to experimental results</p>
+                        </div>
+                        <div class="result-item">
+                            <h4>Computational Efficiency</h4>
+                            <p>Reduced simulation time by 60% through parallel processing optimization</p>
+                        </div>
+                        <div class="result-item">
+                            <h4>Scale Integration</h4>
+                            <p>Successfully bridged 6 orders of magnitude in length scale (nm to mm)</p>
+                        </div>
+                        <div class="result-item">
+                            <h4>Publications</h4>
+                            <p>2 peer-reviewed papers submitted to Journal of Computational Physics</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="project-technologies">
+                    <h2 class="section-title">Technologies & Tools</h2>
+                    
+                    <div class="tech-category">
+                        <h3 class="tech-category-title">Simulation Software</h3>
+                        <div class="tech-tags">
+                            <span class="tech-tag">LAMMPS</span>
+                            <span class="tech-tag">ANSYS Mechanical</span>
+                            <span class="tech-tag">COMSOL Multiphysics</span>
+                            <span class="tech-tag">ParaView</span>
+                        </div>
+                    </div>
+
+                    <div class="tech-category">
+                        <h3 class="tech-category-title">Programming & Scripting</h3>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">C++</span>
+                            <span class="tech-tag">MATLAB</span>
+                            <span class="tech-tag">Bash Scripting</span>
+                        </div>
+                    </div>
+
+                    <div class="tech-category">
+                        <h3 class="tech-category-title">High-Performance Computing</h3>
+                        <div class="tech-tags">
+                            <span class="tech-tag">MPI</span>
+                            <span class="tech-tag">OpenMP</span>
+                            <span class="tech-tag">SLURM</span>
+                            <span class="tech-tag">CUDA</span>
+                        </div>
+                    </div>
+
+                    <div class="tech-category">
+                        <h3 class="tech-category-title">Data Analysis & Visualization</h3>
+                        <div class="tech-tags">
+                            <span class="tech-tag">NumPy</span>
+                            <span class="tech-tag">SciPy</span>
+                            <span class="tech-tag">Matplotlib</span>
+                            <span class="tech-tag">VTK</span>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="project-challenges">
+                    <h2 class="section-title">Technical Challenges & Solutions</h2>
+                    
+                    <div class="challenge-item">
+                        <h4>Scale Bridging</h4>
+                        <p>
+                            <strong>Challenge:</strong> Efficiently transferring information between atomic and continuum scales 
+                            without losing critical physical details.
+                        </p>
+                        <p>
+                            <strong>Solution:</strong> Developed a hierarchical homogenization approach using representative 
+                            volume elements (RVEs) and statistical averaging techniques.
+                        </p>
+                    </div>
+
+                    <div class="challenge-item">
+                        <h4>Computational Complexity</h4>
+                        <p>
+                            <strong>Challenge:</strong> Managing massive computational requirements for multiscale simulations 
+                            spanning multiple time and length scales.
+                        </p>
+                        <p>
+                            <strong>Solution:</strong> Implemented adaptive time-stepping algorithms and domain decomposition 
+                            methods for optimal resource utilization.
+                        </p>
+                    </div>
+
+                    <div class="challenge-item">
+                        <h4>Validation & Verification</h4>
+                        <p>
+                            <strong>Challenge:</strong> Ensuring model accuracy across different scales with limited 
+                            experimental data for intermediate scales.
+                        </p>
+                        <p>
+                            <strong>Solution:</strong> Designed comprehensive validation framework using multiple experimental 
+                            datasets and analytical solutions for benchmark cases.
+                        </p>
+                    </div>
+                </section>
+
+                <section class="project-impact">
+                    <h2 class="section-title">Impact & Future Work</h2>
+                    <p class="project-text">
+                        This multiscale modeling framework has significant implications for the powder metallurgy industry, 
+                        enabling predictive design of sintering processes and optimization of material properties. The 
+                        computational tools developed are being integrated into industrial workflows for process optimization 
+                        and quality control.
+                    </p>
+                    
+                    <p class="project-text">
+                        Future research directions include extending the framework to include chemical reactions during sintering, 
+                        incorporating machine learning for faster property prediction, and developing real-time process monitoring 
+                        capabilities based on the simulation results.
+                    </p>
+                </section>
+
+                <div class="project-navigation">
+                    <a href="portfolio.html" class="nav-button back-button">
+                        <ion-icon name="arrow-back-outline"></ion-icon>
+                        Back to Portfolio
+                    </a>
+                    <a href="#" class="nav-button next-button">
+                        Next Project
+                        <ion-icon name="arrow-forward-outline"></ion-icon>
+                    </a>
+                </div>
+
+            </article>
+
+        </div>
+    </main>
+
+    <!-- custom js -->
+    <script src="./assets/js/script.js"></script>
+
+    <!-- ionicon js -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
