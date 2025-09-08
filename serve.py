@@ -12,7 +12,7 @@ import webbrowser
 from pathlib import Path
 
 # Configuration
-PORT = 3000
+PORT = 8000
 HOST = "localhost"
 
 class CustomHTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
