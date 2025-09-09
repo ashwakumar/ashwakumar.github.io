@@ -829,6 +829,32 @@ main {
   line-height: 1.6;
 }
 
+.timeline .timeline-text ul {
+  color: var(--white-2) !important;
+  margin: 10px 0;
+  padding-left: 25px;
+  list-style: disc !important;
+  list-style-position: outside !important;
+}
+
+.timeline .timeline-text li {
+  color: var(--white-2) !important;
+  margin-bottom: 8px;
+  line-height: 1.6;
+  list-style: disc !important;
+  list-style-position: outside !important;
+  display: list-item !important;
+  margin-left: 0 !important;
+}
+
+.timeline-item ul {
+  color: var(--white-2) !important;
+}
+
+.timeline-item li {
+  color: var(--white-2) !important;
+}
+
 
 /**
  * skills 
@@ -882,25 +908,36 @@ main {
   padding: 20px;
 }
 
-.skill-category {
-  margin-bottom: 20px;
+/* Resume Skills Section - Single Line Layout */
+.timeline .skill-category {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--jet);
 }
 
-.skill-category:last-child {
+.timeline .skill-category:last-child {
   margin-bottom: 0;
+  border-bottom: none;
 }
 
-.skill-category-title {
+.timeline .skill-category-title {
   color: var(--white-2);
   font-size: var(--fs-6);
   font-weight: var(--fw-500);
-  margin-bottom: 8px;
+  margin-bottom: 0;
+  margin-right: 20px;
+  min-width: 200px;
+  flex-shrink: 0;
 }
 
-.skill-list-text {
+.timeline .skill-list-text {
   color: var(--light-gray);
   font-size: var(--fs-7);
   line-height: 1.6;
+  margin: 0;
+  flex: 1;
 }
 
 
@@ -926,7 +963,8 @@ main {
   gap: 20px;
 }
 
-.skill-category {
+/* Technical Expertise Section - Tile Layout */
+.skills-grid .skill-category {
   background: var(--border-gradient-onyx);
   border: 1px solid var(--jet);
   border-radius: 16px;
@@ -937,14 +975,17 @@ main {
   min-height: 160px;
   display: flex;
   flex-direction: column;
+  margin-bottom: 0;
+  border-bottom: none;
 }
 
-.skill-category:hover {
+.skills-grid .skill-category:hover {
   transform: translateY(-5px);
   box-shadow: var(--shadow-2);
 }
 
-.skill-category-title {
+/* Technical Expertise Section - Tile Titles */
+.skills-grid .skill-category-title {
   color: var(--white-2);
   font-size: var(--fs-5);
   font-weight: var(--fw-500);
@@ -992,6 +1033,7 @@ main {
   list-style: none;
   flex-grow: 1;
   align-content: flex-start;
+  margin: 0;
 }
 
 .skill-tag {

@@ -59,12 +59,37 @@ def main():
             print("Press Ctrl+C to stop the server")
             print("=" * 50)
             
-            # Optionally open browser automatically
+            # Optionally open browser automatically (Brave Browser)
             try:
-                webbrowser.open(server_url)
-                print("🔍 Opening website in your default browser...")
+                # Try to open in Brave browser specifically
+                brave_path = None
+                
+                # Common Brave browser paths on Windows
+                possible_brave_paths = [
+                    r"C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe",
+                    r"C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe",
+                    r"C:\Program Files (x86)\BraveSoftware\Brave-Browser\Application\brave.exe",
+                    r"C:\Users\{}\AppData\Local\BraveSoftware\Brave-Browser\Application\brave.exe".format(os.getenv('USERNAME', '')),
+                ]
+                
+                # Find Brave installation
+                for path in possible_brave_paths:
+                    if os.path.exists(path):
+                        brave_path = path
+                        break
+                
+                if brave_path:
+                    webbrowser.register('brave', None, webbrowser.BackgroundBrowser(brave_path))
+                    webbrowser.get('brave').open(server_url)
+                    print("🦁 Opening website in Brave browser...")
+                else:
+                    # Fallback to default browser if Brave is not found
+                    webbrowser.open(server_url)
+                    print("🔍 Brave browser not found. Opening in default browser...")
+                    
             except Exception as e:
                 print(f"Could not open browser automatically: {e}")
+                print(f"You can manually visit: {server_url}")
             
             # Start serving
             httpd.serve_forever()
