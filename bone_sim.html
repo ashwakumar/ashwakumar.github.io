@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Finance Project - Portfolio</title>
+  <title>Multi-Agent RL Research - Portfolio</title>
 
   <!--
     - favicon
@@ -42,7 +42,7 @@
       <div class="sidebar-info">
 
         <figure class="avatar-box">
-          <img src="./assets/images/my-avatar.png" alt="Richard hanrick" width="80">
+          <img src="./assets/images/my_pic.jpg" alt="Richard hanrick" width="80">
         </figure>
 
         <div class="info-content">
@@ -216,57 +216,79 @@
       -->
 
       <article class="project-details active" data-page="project-details">
-
+        <a href="index.html" class="back-link">← Back to Portfolio</a>
         <header>
-          <h2 class="h2 article-title">Finance Project</h2>
-          <a href="index.html" class="back-link">← Back to Portfolio</a>
+          <h2 class="h2 article-title">Bone Tunnel Stress in AC Joint Reconstruction</h2>
         </header>
 
         <section class="project-content">
-
           <div class="project-hero">
             <img src="./assets/images/DFE2_Image.png" alt="Finance Project" loading="lazy">
           </div>
 
-          <div class="project-info">
-            <h3 class="h3 project-title">Finance</h3>
-            <p class="project-category">Web Development</p>
-            
+    <!--
+    Here include the project information
+    
+
+    -->
+             <h4 class="h4">Bone Tunnel Placement Influences Shear Stresses at the Coracoid Process after Coracoclavicular Ligament Reconstruction: A Finite Element Study and Radiological Analysis</h4>
+
+
+
             <div class="project-description">
               <h4 class="h4">Project Overview</h4>
               <p>
-                A comprehensive finance management application built with modern web technologies. 
-                This project demonstrates advanced web development skills including responsive design, 
-                interactive user interfaces, and data visualization.
+                This study investigated how bone tunnel placement during coracoclavicular (CC) ligament reconstruction affects shear stresses on the coracoid process. 
+                Using a 3D finite element (FE) model combined with a radiological analysis of patient data, the project evaluated different bone tunnel configurations to identify safer surgical techniques that reduce the risk of coracoid fractures.
               </p>
-              
-              <h4 class="h4">Technologies Used</h4>
-              <ul class="tech-list">
-                <li>HTML5</li>
-                <li>CSS3 / SCSS</li>
-                <li>JavaScript (ES6+)</li>
-                <li>React.js</li>
-                <li>Node.js</li>
-                <li>MongoDB</li>
-              </ul>
-              
-              <h4 class="h4">Key Features</h4>
+              <h4 class="h4">Problem & Motivation</h4>
+              <p>
+                Arthroscopically assisted AC joint reconstructions often involve drilling tunnels in the clavicle and coracoid. However, stress fractures at the coracoid are a known complication, leading to poor clinical outcomes. Cadaver studies offer limited insights due to variable bone quality, so there is a need for computational and clinical analyses to identify optimal bone tunnel configurations that minimize mechanical stress.
+              </p>
+
+              <h4 class="h4">Key Contributions</h4>
               <ul class="feature-list">
-                <li>Real-time financial data tracking</li>
-                <li>Interactive charts and graphs</li>
-                <li>Responsive design for all devices</li>
-                <li>User authentication and security</li>
-                <li>Data export and reporting</li>
+                <li>Built a 3D finite element model of the AC joint using CT imaging and virtual bone tunnels.</li>
+                <li>Tested six different tunnel configurations for clavicle–coracoid reconstruction.</li>
+                <li>Conducted a radiological review of 40 patient cases to validate tunnel placement in real surgeries.</li>
+                <li>Identified that a proximal coracoid tunnel combined with a lateral clavicle tunnel minimized shear stresses.</li>
+                <li>Showed that certain configurations increased stress by up to 23%, raising fracture risk.</li>
               </ul>
               
+              <h4 class="h4">Technical Highlights</h4>
+              <ul class="tech-list">
+                <li>Tools & Platforms: CT-based 3D modeling, 3D Slicer, GiD pre/post-processing, Kratos FE solver.</li>
+                <li>Methods: Finite Element Analysis (Von Mises stress evaluation), radiological measurement of clavicle drill holes, statistical analysis with SPSS.</li>
+                <li>Model Details: 420,793 tetrahedral finite elements, applied surface loading, Dirichlet boundary conditions.</li>
+                <li>Validation: Compared FE predictions with radiological evidence from post-surgical X-rays of AC joint reconstructions.</li>
+              </ul>
+
+              <h4 class="h4">Results & Impact</h4>
+              <p>
+               The study demonstrated that bone tunnel placement strongly influences stress distribution at the coracoid. 
+               A lateral traction direction with a proximal tunnel significantly lowered stresses, while medial or distal placements increased fracture risk. 
+               Radiological analysis confirmed that anatomical placement alone does not always ensure safe configurations. 
+               These findings provide actionable insights for surgeons to optimize tunnel placement, ultimately reducing complications and improving outcomes in AC joint reconstruction procedures.</p>
+
+              <h4 class="h4">Publication Details</h4>
+              <p>
+                <strong>arXiv Preprint:</strong> 2412.01350v1 [cs.AI] 2 Dec 2024<br>
+                <strong>Subject Areas:</strong> Artificial Intelligence, Machine Learning, Multi-Agent Systems<br>
+                <strong>Keywords:</strong> Multi-Agent Reinforcement Learning, Sparse Rewards, Stochastic Games, Policy Optimization
+              </p>
+
               <div class="project-links">
                 <a href="#" class="btn-link">
-                  <ion-icon name="globe-outline"></ion-icon>
-                  Live Demo
+                  <ion-icon name="document-text-outline"></ion-icon>
+                  Read Paper (arXiv)
                 </a>
                 <a href="#" class="btn-link">
                   <ion-icon name="logo-github"></ion-icon>
-                  GitHub
+                  Code Repository
+                </a>
+                <a href="#" class="btn-link">
+                  <ion-icon name="bar-chart-outline"></ion-icon>
+                  Experimental Data
                 </a>
               </div>
             </div>

@@ -42,7 +42,7 @@
       <div class="sidebar-info">
 
         <figure class="avatar-box">
-          <img src="./assets/images/my-avatar.png" alt="Ashwani Kumar" width="80">
+          <img src="./assets/images/my_pic.jpg" alt="Ashwani Kumar" width="80">
         </figure>
 
         <div class="info-content">
@@ -263,15 +263,14 @@
             <li class="service-item">
 
               <div class="service-icon-box">
-                <img src="./assets/images/icon-design.svg
-                " alt="design icon" width="40">
+                <ion-icon name="flask-outline" style="font-size: 40px; color: var(--orange-yellow-crayola);"></ion-icon>
               </div>
 
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Web design</h4>
+                <h4 class="h4 service-item-title">Research in Multiphysics Simulation</h4>
 
                 <p class="service-item-text">
-                  The most modern and high-quality design made at a professional level.
+                  Advancing numerical models to study coupled thermal, electrical, and mechanical processes in manufacturing.
                 </p>
               </div>
 
@@ -280,14 +279,14 @@
             <li class="service-item">
 
               <div class="service-icon-box">
-                <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
+                <ion-icon name="code-slash-outline" style="font-size: 40px; color: var(--orange-yellow-crayola);"></ion-icon>
               </div>
 
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Web development</h4>
+                <h4 class="h4 service-item-title">Machine Learning for Materials</h4>
 
                 <p class="service-item-text">
-                  High-quality development of sites at the professional level.
+                  Integrating data-driven models with physics-based simulations to accelerate material design and process optimization.
                 </p>
               </div>
 
@@ -296,14 +295,14 @@
             <li class="service-item">
 
               <div class="service-icon-box">
-                <img src="./assets/images/icon-app.svg" alt="mobile app icon" width="40">
+                <ion-icon name="cog-outline" style="font-size: 40px; color: var(--orange-yellow-crayola);"></ion-icon>
               </div>
 
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Mobile apps</h4>
+                <h4 class="h4 service-item-title">Advanced Manufacturing Focus</h4>
 
                 <p class="service-item-text">
-                  Professional development of applications for iOS and Android.
+                  Investigating Spark Plasma Sintering (SPS) and other innovative processes to improve material performance.
                 </p>
               </div>
 
@@ -312,14 +311,14 @@
             <li class="service-item">
 
               <div class="service-icon-box">
-                <img src="./assets/images/icon-photo.svg" alt="camera icon" width="40">
+                <ion-icon name="calculator-outline" style="font-size: 40px; color: var(--orange-yellow-crayola);"></ion-icon>
               </div>
 
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Photography</h4>
+                <h4 class="h4 service-item-title">Applied Computational Engineering</h4>
 
                 <p class="service-item-text">
-                  I make high-quality photos of any category at a professional level.
+                  Applying finite element methods and multiscale modeling to real-world challenges in materials and mechanical engineering.
                 </p>
               </div>
 
@@ -516,8 +515,8 @@
 
         <span>ETH Zürich, Switzerland | 2021 — Present</span>
 
-        <p class="timeline-text">
-          <ul>
+        <p class="timeline-text">          
+          <ul class="tech-list">
             <li>Develop Direct FE² methods for multiphysics simulations to link microscale powder behavior with macroscale sintering outcomes.</li>
             <li>Build advanced finite element models for single- and multi-material Spark Plasma Sintering (SPS) processes.</li>
             <li>Design and train machine learning models to accelerate multiscale simulations through microscale representative volume element (RVE) modeling.</li>
@@ -533,7 +532,7 @@
         <span>Ruhr University Bochum, Germany | 2019 — 2021</span>
 
         <p class="timeline-text">
-          <ul>
+          <ul class="tech-list">
             <li>Optimized bone tunnel placement for shoulder surgery through FEM simulations, improving surgical outcomes.</li>
             <li>Developed FEM-based diffusion models for fluid flow in fractured rock systems.</li>
             <li>Conducted nonlinear FEM analysis of tunnel boring machine grout using Abaqus.</li>
@@ -549,7 +548,7 @@
         <span>Hero MotoCorp Ltd, India | 2014 — 2018</span>
 
         <p class="timeline-text">
-          <ul>
+          <ul class="tech-list">
             <li>Executed structural testing & analysis for new vehicle products, performing data acquisition using strain gauges, accelerometers, and LVDTs.</li>
             <li>Performed fatigue testing, modal analysis, and NVH testing on structural components using SIEMENS LMS, HBM eDAQ, and 2D Data Recorder hardware systems.</li>
             <li>Conducted damage correlation studies between proving ground test tracks and laboratory simulators; developed load block cycles and optimized durability testing.</li>
@@ -750,16 +749,21 @@
             </li>
 
             <li class="filter-item">
-              <button data-filter-btn>Web design</button>
+              <button data-filter-btn>Multiscale</button>
             </li>
 
             <li class="filter-item">
-              <button data-filter-btn>Applications</button>
+              <button data-filter-btn>Multiphysics</button>
             </li>
 
             <li class="filter-item">
-              <button data-filter-btn>Web development</button>
+              <button data-filter-btn>Machine Learning</button>
             </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>FEM</button>
+            </li>
+
 
           </ul>
 
@@ -782,15 +786,16 @@
               </li>
 
               <li class="select-item">
-                <button data-select-item>Web design</button>
+                <button data-select-item>Multiscale</button>
               </li>
 
               <li class="select-item">
-                <button data-select-item>Applications</button>
+                <button data-select-item>Multiphysics</button>
               </li>
-
               <li class="select-item">
-                <button data-select-item>Web development</button>
+                <button data-select-item>Machine Learning</button>
+              <li class="select-item">
+                <button data-select-item>FEM</button>
               </li>
 
             </ul>
@@ -799,98 +804,46 @@
 
           <ul class="project-list">
 
-            <li class="project-item active" data-filter-item data-category="web development">
-              <a href="finance.html" class="project-link">
+            <li class="project-item active" data-filter-item data-category="Multiscale">
+              <a href="multiscale_sps.html" class="project-link">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/DFE2_Image.png" alt="finance" loading="lazy">
+                  <img src="./assets/images/DFE2_Image_HeroImage.png" alt="finance" loading="lazy">
                 </figure>
 
                 <div class="project-content">
-                  <h3 class="project-title">Finance Management System</h3>
-                  <p class="project-category">Web development</p>
-                  
+                  <h3 class="project-title">Multiscale Modeling of SPS with Direct FE2 Framework</h3>
+                  <p class="project-category">Multiscale</p>
                   <p class="project-description">
-                    A comprehensive finance management application with real-time data tracking, 
-                    interactive charts, and advanced reporting features for personal and business use.
+                    Developed a novel Direct FE2 framework that integrates microscale powder characteristics with macroscale electro-thermal-mechanical effects, improving both accuracy and computational efficiency for SPS simulations.
                   </p>
                 </div>
 
               </a>
             </li>
 
-            <li class="project-item active" data-filter-item data-category="web development">
-              <a href="orizon.html" class="project-link">
+            <li class="project-item active" data-filter-item data-category="Multiphysics">
+              <a href="sps_sim.html" class="project-link">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/project-2.png" alt="orizon" loading="lazy">
+                  <img src="./assets/images/DFE2_Image.png" alt="orizon" loading="lazy">
                 </figure>
 
                 <div class="project-content">
-                  <h3 class="project-title">Orizon Platform</h3>
-                  <p class="project-category">Web development</p>
-                  
+                  <h3 class="project-title">Multiphysics Simulations of Spark Plasma Sintering Process</h3>
+                  <p class="project-category">Multiphysics</p>
+
                   <p class="project-description">
-                    A modern web application showcasing advanced frontend techniques with focus on 
-                    user experience, performance optimization, and progressive web app capabilities.
-                    A modern web application showcasing advanced frontend techniques with focus on 
-                    user experience, performance optimization, 
-                  </p>
-                </div>
-
-              </a>
-            </li>
-
-            <li class="project-item active" data-filter-item data-category="web design">
-              <a href="fundo.html" class="project-link">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-3.jpg" alt="fundo" loading="lazy">
-                </figure>
-
-                <div class="project-content">
-                  <h3 class="project-title">Fundo Creative Studio</h3>
-                  <p class="project-category">Web design</p>
-                  
-                  <p class="project-description">
-                    A creative web design project emphasizing visual storytelling and modern design 
-                    principles with smooth animations and typography-focused layouts.
-                  </p>
-                </div>
-
-              </a>
-            </li>
-
-            <li class="project-item active" data-filter-item data-category="applications">
-              <a href="brawlhalla.html" class="project-link">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-4.png" alt="brawlhalla" loading="lazy">
-                </figure>
-
-                <div class="project-content">
-                  <h3 class="project-title">Brawlhalla Gaming App</h3>
-                  <p class="project-category">Applications</p>
-                  
-                  <p class="project-description">
-                    An interactive gaming application with real-time multiplayer support, character 
-                    customization, and cross-platform compatibility built with Unity engine.
+                   Developed a two-stage numerical–experimental approach to identify material parameters in spark plasma sintering, enabling accurate density prediction across different heating rates for copper and nickel.
+                    This method improves accuracy, reduces experimental cost, and is transferable to other SPS materials.
                   </p>
                 </div>
 
@@ -898,47 +851,23 @@
             </li>
 
             <li class="project-item active" data-filter-item data-category="web design">
-              <a href="dsm.html" class="project-link">
+              <a href="bone_sim.html" class="project-link">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/project-5.png" alt="dsm." loading="lazy">
+                  <img src="./assets/images/DFE2_Image.png" alt="metaspark" loading="lazy">
                 </figure>
 
                 <div class="project-content">
-                  <h3 class="project-title">DSM Design System</h3>
+                  <h3 class="project-title">Bone Tunnel Stress in AC Joint Reconstruction</h3>
                   <p class="project-category">Web design</p>
                   
                   <p class="project-description">
-                    A comprehensive design system management platform with reusable component library, 
-                    design token management, and documentation portal for scalable design workflows.
-                  </p>
-                </div>
-
-              </a>
-            </li>
-
-            <li class="project-item active" data-filter-item data-category="web design">
-              <a href="metaspark.html" class="project-link">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-6.png" alt="metaspark" loading="lazy">
-                </figure>
-
-                <div class="project-content">
-                  <h3 class="project-title">MetaSpark Metaverse</h3>
-                  <p class="project-category">Web design</p>
-                  
-                  <p class="project-description">
-                    An innovative web design project for next-generation digital experiences with 
-                    immersive 3D environments, AR/VR compatibility, and real-time rendering.
+                    Studied how bone tunnel placement in coracoclavicular ligament reconstruction influences shear stresses in the coracoid process. 
+                    Using finite element modeling and radiological analysis of patient data, the project identified safer tunnel configurations that minimize fracture risk and improve surgical outcomes.
                   </p>
                 </div>
 
@@ -946,7 +875,7 @@
             </li>
 
             <li class="project-item active" data-filter-item data-category="web development">
-              <a href="summary.html" class="project-link">
+              <a href="dolomite_sim.html" class="project-link">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
@@ -957,42 +886,20 @@
                 </figure>
 
                 <div class="project-content">
-                  <h3 class="project-title">Summary Analytics</h3>
+                  <h3 class="project-title">Stress Regime Effects on Carbonate Permeability</h3>
                   <p class="project-category">Web development</p>
                   
                   <p class="project-description">
-                    A content aggregation and analysis platform with automated summarization, 
-                    real-time processing, and intelligent content management using AI technologies.
+                    Investigated the impact of changing tectonic stress regimes on fracture aperture and permeability in the Latemar carbonate buildup (Dolomites). 
+                    Through outcrop data, finite element geomechanics, and flow simulations, the study showed that superimposed stresses increase permeability by up to 62%, highlighting the importance of stress history in predicting fluid flow in fractured reservoirs.
                   </p>
                 </div>
 
               </a>
             </li>
 
-            <li class="project-item active" data-filter-item data-category="applications">
-              <a href="task-manager.html" class="project-link">
 
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-8.jpg" alt="task manager" loading="lazy">
-                </figure>
-
-                <div class="project-content">
-                  <h3 class="project-title">Task Manager Pro</h3>
-                  <p class="project-category">Applications</p>
-                  
-                  <p class="project-description">
-                    A comprehensive productivity application with real-time collaboration, priority tracking, 
-                    team workspace integration, and advanced analytics for efficient task management.
-                  </p>
-                </div>
-
-              </a>
-            </li>
-
+             <!-- Copy the project template below and paste it here to add more projects
             <li class="project-item active" data-filter-item data-category="web development">
               <a href="arrival.html" class="project-link">
 
@@ -1017,6 +924,9 @@
               </a>
             </li>
 
+
+              -->
+
           </ul>
 
         </section>
@@ -1040,7 +950,7 @@
         <section class="mapbox" data-mapbox>
           <figure>
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d199666.5651251294!2d-121.58334177520186!3d38.56165006739519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809ac672b28397f9%3A0x921f6aaa74197fdb!2sSacramento%2C%20CA%2C%20USA!5e0!3m2!1sen!2sbd!4v1647608789441!5m2!1sen!2sbd"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d86023.97143735697!2d8.468568216962871!3d47.36683336460395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47900b9749bea219%3A0xe66e8df1e71fdc03!2sZ%C3%BCrich%2C%20Switzerland!5e0!3m2!1sen!2sch!4v1647608789441!5m2!1sen!2sch"
               width="400" height="300" loading="lazy"></iframe>
           </figure>
         </section>

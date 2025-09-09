@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Summary Project - Portfolio</title>
+  <title>Multi-Agent RL Research - Portfolio</title>
 
   <!--
     - favicon
@@ -42,7 +42,7 @@
       <div class="sidebar-info">
 
         <figure class="avatar-box">
-          <img src="./assets/images/my-avatar.png" alt="Ashwani Kumar" width="80">
+          <img src="./assets/images/my_pic.jpg" alt="Richard hanrick" width="80">
         </figure>
 
         <div class="info-content">
@@ -132,20 +132,7 @@
 
           </li>
 
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="calendar-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Birthday</p>
-
-              <time datetime="1982-06-23">June 23, 1982</time>
-            </div>
-
-          </li>
-
+          
           <li class="contact-item">
 
             <div class="icon-box">
@@ -229,57 +216,84 @@
       -->
 
       <article class="project-details active" data-page="project-details">
-
+        <a href="index.html" class="back-link">← Back to Portfolio</a>
         <header>
-          <h2 class="h2 article-title">Summary Project</h2>
-          <a href="index.html" class="back-link">← Back to Portfolio</a>
+          <h2 class="h2 article-title">Multiscale Simulations for Spark Plasma Sintering</h2>
         </header>
 
         <section class="project-content">
-
           <div class="project-hero">
-            <img src="./assets/images/project-7.png" alt="Summary Project" loading="lazy">
+            <img src="./assets/images/Multiscale_dfe2_project_Image.png" alt="Finance Project" loading="lazy">
           </div>
 
-          <div class="project-info">
-            <h3 class="h3 project-title">Summary</h3>
-            <p class="project-category">Web Development</p>
-            
+    <!--
+    Here include the project information
+    
+
+    -->
+             <h4 class="h4">Enhancing Multiscale Simulations for Spark Plasma Sintering with a Direct FE2 Framework</h4>
+
+
+
             <div class="project-description">
               <h4 class="h4">Project Overview</h4>
               <p>
-                Summary is a content aggregation and analysis web application that demonstrates expertise 
-                in data processing, API integration, and creating intelligent content management systems. 
-                This project showcases skills in full-stack development and machine learning integration.
+                This project focuses on improving the simulation of spark plasma sintering (SPS), a key process in advanced materials manufacturing. 
+                Traditional finite element models either miss microscale powder interactions or become too computationally expensive. 
+                To address this, a Direct FE2 multiscale framework was developed that directly integrates microscale powder behavior into macroscale electro-thermal-mechanical simulations.
+              </p>
+
+              <h4 class="h4">Problem & Motivation</h4>
+              <p>
+                SPS involves complex electrical, thermal, and mechanical interactions across different scales. 
+                Existing models either treat powder as a continuum (ignoring particle-level detail) or use particle-based methods (accurate but computationally prohibitive). 
+                This gap made it difficult to simulate large-scale SPS with both accuracy and efficiency.
               </p>
               
-              <h4 class="h4">Technologies Used</h4>
-              <ul class="tech-list">
-                <li>HTML5</li>
-                <li>CSS3 / Bootstrap</li>
-                <li>JavaScript (ES6+)</li>
-                <li>Node.js</li>
-                <li>Express.js</li>
-                <li>Python / AI APIs</li>
-              </ul>
-              
-              <h4 class="h4">Key Features</h4>
+              <h4 class="h4">Research Contributions</h4>
               <ul class="feature-list">
-                <li>Automated content summarization</li>
-                <li>Multiple data source integration</li>
-                <li>Real-time content processing</li>
-                <li>Advanced search and filtering</li>
-                <li>User preference learning</li>
+                <li>Designed a Direct FE2 approach for fully coupled electro-thermal-mechanical SPS simulations.</li>
+                <li>Achieved temperature & displacement error below 1% compared to full FE analysis.</li>
+                <li>Reduced computational cost by factors up to 70x, with degrees of freedom reduced up to 44x.</li>
+                <li>Demonstrated flexibility in handling different powder morphologies (SC, BCC, FCC).</li>
+                <li>Validated the model against the Heckel equation.</li>
               </ul>
               
+              <h4 class="h4">Technical Highlights</h4>
+              <ul class="tech-list">
+                <li>Tools & Platforms: Abaqus FE solver, Python scripting for automation.</li>
+                <li>Methods: Finite Element Analysis (FEA), multiscale FE2 coupling, representative volume elements (RVEs), periodic boundary conditions, multi-point constraints.</li>
+                <li>Models Used: Coupled electro-thermal-mechanical FE models, Johnson–Cook material law for copper powders.</li>
+                <li>Performance: Demonstrated scalable efficiency with 8–70x faster runtime compared to full FE methods.</li>
+              </ul>
+
+              <h4 class="h4">Results & Impact</h4>
+              <p>
+                The Direct FE2 framework produced results nearly identical to full FE simulations while drastically lowering computational cost.
+                It revealed how powder morphology, mesh scaling, and current intensity affect densification during SPS. 
+                The method makes it feasible to simulate realistic SPS geometries that were previously computationally intractable.
+                This work advances multiscale modeling in materials processing and provides a foundation for future studies on non-spherical powders and complex geometries.
+              </p>
+
+              <h4 class="h4">Publication Details</h4>
+              <p>
+                <strong>arXiv Preprint:</strong> 2412.01350v1 [cs.AI] 2 Dec 2024<br>
+                <strong>Subject Areas:</strong> Artificial Intelligence, Machine Learning, Multi-Agent Systems<br>
+                <strong>Keywords:</strong> Multi-Agent Reinforcement Learning, Sparse Rewards, Stochastic Games, Policy Optimization
+              </p>
+
               <div class="project-links">
                 <a href="#" class="btn-link">
-                  <ion-icon name="globe-outline"></ion-icon>
-                  Live Demo
+                  <ion-icon name="document-text-outline"></ion-icon>
+                  Read Paper (arXiv)
                 </a>
                 <a href="#" class="btn-link">
                   <ion-icon name="logo-github"></ion-icon>
-                  GitHub
+                  Code Repository
+                </a>
+                <a href="#" class="btn-link">
+                  <ion-icon name="bar-chart-outline"></ion-icon>
+                  Experimental Data
                 </a>
               </div>
             </div>

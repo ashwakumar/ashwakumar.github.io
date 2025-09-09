@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Arrival Project - Portfolio</title>
+  <title>Multi-Agent RL Research - Portfolio</title>
 
   <!--
     - favicon
@@ -42,7 +42,7 @@
       <div class="sidebar-info">
 
         <figure class="avatar-box">
-          <img src="./assets/images/my-avatar.png" alt="Ashwani Kumar" width="80">
+          <img src="./assets/images/my_pic.jpg" alt="Richard hanrick" width="80">
         </figure>
 
         <div class="info-content">
@@ -132,20 +132,7 @@
 
           </li>
 
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="calendar-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Birthday</p>
-
-              <time datetime="1982-06-23">June 23, 1982</time>
-            </div>
-
-          </li>
-
+          
           <li class="contact-item">
 
             <div class="icon-box">
@@ -229,57 +216,80 @@
       -->
 
       <article class="project-details active" data-page="project-details">
-
+        <a href="index.html" class="back-link">← Back to Portfolio</a>
         <header>
-          <h2 class="h2 article-title">Arrival Project</h2>
-          <a href="index.html" class="back-link">← Back to Portfolio</a>
+          <h2 class="h2 article-title">Multiphysics Simulations of Spark Plasma Sintering Process</h2>
         </header>
 
         <section class="project-content">
-
           <div class="project-hero">
-            <img src="./assets/images/project-9.png" alt="Arrival Project" loading="lazy">
+            <img src="./assets/images/DFE2_Image.png" alt="Finance Project" loading="lazy">
           </div>
 
-          <div class="project-info">
-            <h3 class="h3 project-title">Arrival</h3>
-            <p class="project-category">Web Development</p>
-            
+    <!--
+    Here include the project information
+    
+
+    -->
+             <h4 class="h4">A Two-Stage Approach for Material Parameters Identification in Spark Plasma Sintering</h4>
+
+
+
             <div class="project-description">
               <h4 class="h4">Project Overview</h4>
               <p>
-                Arrival is a modern web application focused on travel and logistics management. This project 
-                demonstrates advanced web development skills including real-time data processing, geolocation 
-                services, and creating intuitive user interfaces for complex workflows.
+                This project presents a numerical–experimental framework to identify key material parameters in spark plasma sintering (SPS). 
+                By dividing the densification process into two stages—initial (high porosity) and final (low porosity); a more accurate determination of porosity-dependent parameters was achieved. 
+                The method combines COMSOL Multiphysics simulations with experimental validation on copper and nickel powders, enabling reliable predictions across different heating rates.</p>
+
+              <h4 class="h4">Problem & Motivation</h4>
+              <p>
+                Accurate SPS modeling requires knowledge of porosity-dependent material parameters such as shear and bulk viscous moduli. 
+                Existing approaches often rely on oversimplified homogenization assumptions or expensive, specialized experiments. 
+                These limitations lead to poor prediction of density evolution across varying heating rates, which is critical for optimizing SPS processes.
               </p>
               
-              <h4 class="h4">Technologies Used</h4>
-              <ul class="tech-list">
-                <li>HTML5</li>
-                <li>CSS3 / Sass</li>
-                <li>JavaScript (ES6+)</li>
-                <li>Angular</li>
-                <li>Node.js</li>
-                <li>Google Maps API</li>
-              </ul>
-              
-              <h4 class="h4">Key Features</h4>
+              <h4 class="h4">Key Contributions</h4>
               <ul class="feature-list">
-                <li>Real-time location tracking</li>
-                <li>Route optimization</li>
-                <li>Multi-platform synchronization</li>
-                <li>Interactive mapping interface</li>
-                <li>Notification and alert system</li>
+                <li>Proposed a two-stage framework for parameter identification, separating high-porosity and low-porosity regimes.</li>
+                <li>Achieved average prediction error below 1.5% for copper and nickel SPS experiments.</li>
+                <li>Validated the model for heating rates of 25, 50, and 100 K/min, ensuring robustness.</li>
+                <li>Reduced computational effort by restricting inverse parameter identification to the initial stage only.</li>
+                <li>Demonstrated transferability of the method to multiple materials.</li>
               </ul>
               
+              <h4 class="h4">Technical Highlights</h4>
+              <ul class="tech-list">
+                <li>Tools & Platforms: COMSOL Multiphysics (FEM-based SPS model), experimental SPS setup.</li>
+                <li>Models Used: Olevsky’s continuum sintering model, Norton-Green creep law, composite sphere homogenization.</li>
+                <li>Methods: Coupled electro-thermal-mechanical FEM, inverse parameter identification, experimental validation with copper & nickel powders.</li>
+                <li>Parameters Identified: Porosity-dependent shear modulus (φ) and bulk modulus (ψ).</li>
+              </ul>
+
+              <h4 class="h4">Results & Impact</h4>
+              <p>
+               The framework delivered highly accurate predictions of density and temperature evolution across different heating rates, significantly outperforming conventional homogenization-based methods. It provides a systematic and generalizable approach to parameter identification, reducing experimental costs and improving the reliability of SPS simulations. 
+               This work advances the ability to optimize porous material processing, with potential applications across metals and ceramics.</p>
+
+              <h4 class="h4">Publication Details</h4>
+              <p>
+                <strong>arXiv Preprint:</strong> 2412.01350v1 [cs.AI] 2 Dec 2024<br>
+                <strong>Subject Areas:</strong> Artificial Intelligence, Machine Learning, Multi-Agent Systems<br>
+                <strong>Keywords:</strong> Multi-Agent Reinforcement Learning, Sparse Rewards, Stochastic Games, Policy Optimization
+              </p>
+
               <div class="project-links">
                 <a href="#" class="btn-link">
-                  <ion-icon name="globe-outline"></ion-icon>
-                  Live Demo
+                  <ion-icon name="document-text-outline"></ion-icon>
+                  Read Paper (arXiv)
                 </a>
                 <a href="#" class="btn-link">
                   <ion-icon name="logo-github"></ion-icon>
-                  GitHub
+                  Code Repository
+                </a>
+                <a href="#" class="btn-link">
+                  <ion-icon name="bar-chart-outline"></ion-icon>
+                  Experimental Data
                 </a>
               </div>
             </div>
