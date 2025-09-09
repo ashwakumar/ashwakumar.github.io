@@ -1,19 +1,21 @@
 'use strict';
 
-// Wait for DOM to be fully loaded
-document.addEventListener('DOMContentLoaded', function() {
-
 // element toggle function
 const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
 
+// Wait for DOM to be fully loaded
+document.addEventListener('DOMContentLoaded', function() {
 
+console.log("DOM loaded, initializing scripts...");
 
 // sidebar variables
 const sidebar = document.querySelector("[data-sidebar]");
 const sidebarBtn = document.querySelector("[data-sidebar-btn]");
 
 // sidebar toggle functionality for mobile
-sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); });
+if (sidebar && sidebarBtn) {
+  sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); });
+}
 
 
 
@@ -140,38 +142,45 @@ for (let i = 0; i < formInputs.length; i++) {
 
 
 
-// page navigation variables
-const navigationLinks = document.querySelectorAll("[data-nav-link]");
-const pages = document.querySelectorAll("[data-page]");
+// Simple page navigation
+const navLinks = document.querySelectorAll("[data-nav-link]");
+const pageArticles = document.querySelectorAll("[data-page]");
 
-console.log("Navigation links found:", navigationLinks.length);
-console.log("Pages found:", pages.length);
+console.log("Found navigation links:", navLinks.length);
+console.log("Found pages:", pageArticles.length);
 
-// add event to all nav link
-for (let i = 0; i < navigationLinks.length; i++) {
-  navigationLinks[i].addEventListener("click", function () {
-    console.log("Clicked navigation:", this.innerHTML.toLowerCase());
+// Add click event to each navigation link
+navLinks.forEach(function(link, index) {
+  link.addEventListener("click", function(e) {
+    e.preventDefault();
     
-    // Remove active class from all pages and nav links
-    for (let j = 0; j < pages.length; j++) {
-      pages[j].classList.remove("active");
-    }
-    for (let k = 0; k < navigationLinks.length; k++) {
-      navigationLinks[k].classList.remove("active");
-    }
-
+    const targetPage = this.textContent.toLowerCase().trim();
+    console.log("Clicked:", targetPage);
+    
+    // Remove active class from all nav links
+    navLinks.forEach(function(nav) {
+      nav.classList.remove("active");
+    });
+    
+    // Remove active class from all pages  
+    pageArticles.forEach(function(page) {
+      page.classList.remove("active");
+    });
+    
     // Add active class to clicked nav link
     this.classList.add("active");
-
-    // Find and activate the corresponding page
-    for (let j = 0; j < pages.length; j++) {
-      if (this.innerHTML.toLowerCase() === pages[j].dataset.page) {
-        pages[j].classList.add("active");
-        console.log("Activated page:", pages[j].dataset.page);
-        window.scrollTo(0, 0);
-        break;
-      }
+    
+    // Add active class to target page
+    const targetArticle = document.querySelector(`[data-page="${targetPage}"]`);
+    if (targetArticle) {
+      targetArticle.classList.add("active");
+      console.log("Activated page:", targetPage);
+    } else {
+      console.log("Page not found:", targetPage);
     }
-
+    
+    window.scrollTo(0, 0);
   });
-}
+});
+
+}); // End of DOMContentLoaded
