@@ -1,7 +1,1 @@
-## Contact
-
-If you want to contact me you can reach me at [Twitter](https://www.x.com/codewithsadee_).
-
-## License
-
-MIT
+Thanks to the [Sadee ](https://www.x.com/codewithsadee_) for providing the base template. 
