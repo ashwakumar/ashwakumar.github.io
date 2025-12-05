@@ -4,9 +4,9 @@
 const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
 
 // Wait for DOM to be fully loaded
-document.addEventListener('DOMContentLoaded', function () {
-
-  console.log("DOM loaded, initializing scripts...");
+// function to handle initialization
+function initScript() {
+  console.log("Initializing script...");
 
   // sidebar variables
   const sidebar = document.querySelector("[data-sidebar]");
@@ -205,11 +205,19 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Handle Initial Load (Deep Linking)
   const hash = window.location.hash.substring(1);
+  console.log("Current hash:", hash);
   if (hash) {
     activatePage(hash);
   } else {
-    // Default to 'about' if no hash
+    console.log("No hash, defaulting to about");
     activatePage("about");
   }
 
-}); // End of DOMContentLoaded
+} // End of initScript
+
+// Run initialization
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initScript);
+} else {
+  initScript();
+}
