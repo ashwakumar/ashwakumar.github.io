@@ -204,14 +204,12 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   // Handle Initial Load (Deep Linking)
-  document.addEventListener("DOMContentLoaded", () => {
-    const hash = window.location.hash.substring(1);
-    if (hash) {
-      activatePage(hash);
-    } else {
-      // Default to 'about' if no hash, but don't duplicate state if already there
-      // activatePage("about"); // 'about' contains 'active' class in HTML by default usually
-    }
-  });
+  const hash = window.location.hash.substring(1);
+  if (hash) {
+    activatePage(hash);
+  } else {
+    // Default to 'about' if no hash
+    activatePage("about");
+  }
 
 }); // End of DOMContentLoaded

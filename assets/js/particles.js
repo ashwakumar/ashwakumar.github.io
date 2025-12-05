@@ -100,15 +100,24 @@ class Particle {
 // Create particle array
 function init() {
     particlesArray = [];
-    let numberOfParticles = (canvas.height * canvas.width) / 9000; // Density
+
+    // Mobile optimization: significantly reduce particle count on small screens
+    let divisor = 9000;
+    if (window.innerWidth < 768) {
+        divisor = 20000; // Much lower density for mobile
+    }
+
+    let numberOfParticles = (canvas.height * canvas.width) / divisor;
 
     for (let i = 0; i < numberOfParticles; i++) {
-        let size = (Math.random() * 2) + 1; // Random size between 1 and 3
+        let size = (Math.random() * 2) + 1;
         let x = (Math.random() * ((innerWidth - size * 2) - (size * 2)) + size * 2);
         let y = (Math.random() * ((innerHeight - size * 2) - (size * 2)) + size * 2);
-        let directionX = (Math.random() * 2) - 1; // Random speed/direction
-        let directionY = (Math.random() * 2) - 1;
-        let color = '#FFD700'; // Gold/Yellowish color to match the theme (or white)
+
+        // Slower speed: reduced from range [-1, 1] to [-0.2, 0.2]
+        let directionX = (Math.random() * 0.4) - 0.2;
+        let directionY = (Math.random() * 0.4) - 0.2;
+        let color = '#FFD700';
 
         particlesArray.push(new Particle(x, y, directionX, directionY, size, color));
     }
