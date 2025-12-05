@@ -5,7 +5,25 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>vCard - Personal Portfolio</title>
+  <title>Ashwani Kumar | Computational Engineering Researcher</title>
+  <meta name="description"
+    content="Portfolio of Ashwani Kumar, a Computational Engineer specializing in Multiphysics simulations, Machine Learning, and Material Modeling at ETH Zürich.">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ashwakumar.github.io/">
+  <meta property="og:title" content="Ashwani Kumar | Computational Engineering Researcher">
+  <meta property="og:description"
+    content="Portfolio of Ashwani Kumar, specializing in Multiphysics simulations, Machine Learning, and Material Modeling at ETH Zürich.">
+  <meta property="og:image" content="https://ashwakumar.github.io/assets/images/my_pic.jpg">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://ashwakumar.github.io/">
+  <meta property="twitter:title" content="Ashwani Kumar | Computational Engineering Researcher">
+  <meta property="twitter:description"
+    content="Portfolio of Ashwani Kumar, specializing in Multiphysics simulations, Machine Learning, and Material Modeling at ETH Zürich.">
+  <meta property="twitter:image" content="https://ashwakumar.github.io/assets/images/my_pic.jpg">
 
   <!--
     - favicon
@@ -26,6 +44,7 @@
 </head>
 
 <body>
+  <canvas id="bg-canvas"></canvas>
 
   <!--
     - #MAIN
@@ -66,43 +85,44 @@
         <ul class="contacts-list">
 
           <li class="contact-item">
-        
-            <div class="icon-box">
-                <ion-icon name="logo-linkedin"></ion-icon>
-            </div>
-        
-            <div class="contact-info">
-                <p class="contact-title">LinkedIn</p>
-                <a href="https://www.linkedin.com/in/ashwanikumareth" class="contact-link">ashwanikumareth</a>
-            </div>
-        
-        </li>
-        
-        <li class="contact-item">
-        
-            <div class="icon-box">
-                <ion-icon name="logo-github"></ion-icon>
-            </div>
-        
-            <div class="contact-info">
-                <p class="contact-title">GitHub</p>
-                <a href="https://github.com/ashwakumar" class="contact-link">ashwakumar</a>
-            </div>
-        
-        </li>
 
-        <li class="contact-item">
-        
             <div class="icon-box">
-                <ion-icon name="school-outline"></ion-icon>
+              <ion-icon name="logo-linkedin"></ion-icon>
             </div>
-        
+
             <div class="contact-info">
-                <p class="contact-title">Google Scholar</p>
-                <a href="https://scholar.google.com/citations?user=ashwanikjangir@gmail.com" class="contact-link">ashwanikjangir</a>
+              <p class="contact-title">LinkedIn</p>
+              <a href="https://www.linkedin.com/in/ashwanikumareth" class="contact-link">ashwanikumareth</a>
             </div>
-        
-        </li>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="logo-github"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">GitHub</p>
+              <a href="https://github.com/ashwakumar" class="contact-link">ashwakumar</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="school-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Google Scholar</p>
+              <a href="https://scholar.google.com/citations?user=ashwanikjangir@gmail.com"
+                class="contact-link">ashwanikjangir</a>
+            </div>
+
+          </li>
 
           <li class="contact-item">
 
@@ -132,7 +152,7 @@
 
           </li>
 
-          
+
           <li class="contact-item">
 
             <div class="icon-box">
@@ -231,20 +251,27 @@
 
         <section class="about-text">
           <p>
-            I am Ashwani Kumar, a computational engineering researcher specializing in multiphysics and multiscale modeling. 
-            Currently pursuing my Doctor of Science in Mechanical Engineering at ETH Zürich, I focus on advanced simulation techniques for manufacturing processes such as Spark Plasma Sintering (SPS). 
-            My work combines finite element methods, machine learning, and material modeling to bridge microscale phenomena with macroscale engineering applications.
+            I am Ashwani Kumar, a computational engineering researcher specializing in multiphysics and multiscale
+            modeling.
+            Currently pursuing my Doctor of Science in Mechanical Engineering at ETH Zürich, I focus on advanced
+            simulation techniques for manufacturing processes such as Spark Plasma Sintering (SPS).
+            My work combines finite element methods, machine learning, and material modeling to bridge microscale
+            phenomena with macroscale engineering applications.
           </p>
 
           <p>
-          With professional experience spanning academia and industry—from developing fracture models in complex materials to leading structural analysis in the automotive sector—I bring both technical depth and practical problem-solving skills. 
-          I am passionate about applying computational tools to innovate in manufacturing, materials science, and product design.
+            With professional experience spanning academia and industry—from developing fracture models in complex
+            materials to leading structural analysis in the automotive sector—I bring both technical depth and practical
+            problem-solving skills.
+            I am passionate about applying computational tools to innovate in manufacturing, materials science, and
+            product design.
 
           </p>
 
           <p>
 
-            Outside of work, I enjoy exploring new technologies and collaborating on multidisciplinary projects that push the boundaries of engineering research.
+            Outside of work, I enjoy exploring new technologies and collaborating on multidisciplinary projects that
+            push the boundaries of engineering research.
 
           </p>
         </section>
@@ -270,7 +297,8 @@
                 <h4 class="h4 service-item-title">Research in Multiphysics Simulation</h4>
 
                 <p class="service-item-text">
-                  Advancing numerical models to study coupled thermal, electrical, and mechanical processes in manufacturing.
+                  Advancing numerical models to study coupled thermal, electrical, and mechanical processes in
+                  manufacturing.
                 </p>
               </div>
 
@@ -279,14 +307,16 @@
             <li class="service-item">
 
               <div class="service-icon-box">
-                <ion-icon name="code-slash-outline" style="font-size: 40px; color: var(--orange-yellow-crayola);"></ion-icon>
+                <ion-icon name="code-slash-outline"
+                  style="font-size: 40px; color: var(--orange-yellow-crayola);"></ion-icon>
               </div>
 
               <div class="service-content-box">
                 <h4 class="h4 service-item-title">Machine Learning for Materials</h4>
 
                 <p class="service-item-text">
-                  Integrating data-driven models with physics-based simulations to accelerate material design and process optimization.
+                  Integrating data-driven models with physics-based simulations to accelerate material design and
+                  process optimization.
                 </p>
               </div>
 
@@ -302,7 +332,8 @@
                 <h4 class="h4 service-item-title">Advanced Manufacturing Focus</h4>
 
                 <p class="service-item-text">
-                  Investigating Spark Plasma Sintering (SPS) and other innovative processes to improve material performance.
+                  Investigating Spark Plasma Sintering (SPS) and other innovative processes to improve material
+                  performance.
                 </p>
               </div>
 
@@ -311,14 +342,16 @@
             <li class="service-item">
 
               <div class="service-icon-box">
-                <ion-icon name="calculator-outline" style="font-size: 40px; color: var(--orange-yellow-crayola);"></ion-icon>
+                <ion-icon name="calculator-outline"
+                  style="font-size: 40px; color: var(--orange-yellow-crayola);"></ion-icon>
               </div>
 
               <div class="service-content-box">
                 <h4 class="h4 service-item-title">Applied Computational Engineering</h4>
 
                 <p class="service-item-text">
-                  Applying finite element methods and multiscale modeling to real-world challenges in materials and mechanical engineering.
+                  Applying finite element methods and multiscale modeling to real-world challenges in materials and
+                  mechanical engineering.
                 </p>
               </div>
 
@@ -331,7 +364,7 @@
         <!--
           - skills
         -->
-         
+
         <section class="skills-overview">
 
           <h3 class="h3 skills-title">Technical Expertise</h3>
@@ -445,284 +478,301 @@
           <h2 class="h2 article-title">Resume</h2>
         </header>
 
-  <section class="timeline">
+        <section class="timeline">
 
-    <div class="title-wrapper">
-      <div class="icon-box">
-        <ion-icon name="book-outline"></ion-icon>
-      </div>
-
-      <h3 class="h3">Education</h3>
-    </div>
-
-    <ol class="timeline-list">
-
-      <li class="timeline-item">
-
-        <h4 class="h4 timeline-item-title">Doctor of Science in Mechanical Engineering</h4>
-
-        <span>ETH Zürich, Switzerland | 2021 — present</span>
-
-        <p class="timeline-text">
-          Thesis: Numerical modeling of spark plasma sintering process.
-        </p>
-
-      </li>
-
-      <li class="timeline-item">
-
-        <h4 class="h4 timeline-item-title">Master of Science in Computational Engineering</h4>
-
-        <span>Ruhr University Bochum, Germany | 2018 — 2021</span>
-
-        <p class="timeline-text">
-          Thesis: Computational Modeling of crack propagation in 3D using strain injection technique.
-        </p>
-
-      </li>
-
-      <li class="timeline-item">
-
-        <h4 class="h4 timeline-item-title">Bachelor of Technology (B.Tech.) in Mechanical Engineering</h4>
-
-        <span>National Institute of Technology, Jalandhar, India | 2010 — 2014</span>
-
-        <p class="timeline-text">
-          Thesis: Experimental evaluation of damping behavior of fly ash filled fiber reinforced polymer composites.
-        </p>
-
-      </li>
-
-    </ol>
-
-  </section>
-
-  <section class="timeline">
-
-    <div class="title-wrapper">
-      <div class="icon-box">
-        <ion-icon name="book-outline"></ion-icon>
-      </div>
-
-      <h3 class="h3">Professional Experience</h3>
-    </div>
-
-    <ol class="timeline-list">
-
-      <li class="timeline-item">
-
-        <h4 class="h4 timeline-item-title">Research Scientist - Advanced Manufacturing Lab</h4>
-
-        <span>ETH Zürich, Switzerland | 2021 — Present</span>
-
-        <p class="timeline-text">          
-          <ul class="tech-list">
-            <li>Develop Direct FE² methods for multiphysics simulations to link microscale powder behavior with macroscale sintering outcomes.</li>
-            <li>Build advanced finite element models for single- and multi-material Spark Plasma Sintering (SPS) processes.</li>
-            <li>Design and train machine learning models to accelerate multiscale simulations through microscale representative volume element (RVE) modeling.</li>
-          </ul>
-        </p>
-
-      </li>
-
-      <li class="timeline-item">
-
-        <h4 class="h4 timeline-item-title">Research Assistant (HiWi) - Chair of Statics and Dynamics</h4>
-
-        <span>Ruhr University Bochum, Germany | 2019 — 2021</span>
-
-        <p class="timeline-text">
-          <ul class="tech-list">
-            <li>Optimized bone tunnel placement for shoulder surgery through FEM simulations, improving surgical outcomes.</li>
-            <li>Developed FEM-based diffusion models for fluid flow in fractured rock systems.</li>
-            <li>Conducted nonlinear FEM analysis of tunnel boring machine grout using Abaqus.</li>
-          </ul>
-        </p>
-
-      </li>
-
-      <li class="timeline-item">
-
-        <h4 class="h4 timeline-item-title">Deputy Manager - Chassis Simulation & Analysis</h4>
-
-        <span>Hero MotoCorp Ltd, India | 2014 — 2018</span>
-
-        <p class="timeline-text">
-          <ul class="tech-list">
-            <li>Executed structural testing & analysis for new vehicle products, performing data acquisition using strain gauges, accelerometers, and LVDTs.</li>
-            <li>Performed fatigue testing, modal analysis, and NVH testing on structural components using SIEMENS LMS, HBM eDAQ, and 2D Data Recorder hardware systems.</li>
-            <li>Conducted damage correlation studies between proving ground test tracks and laboratory simulators; developed load block cycles and optimized durability testing.</li>
-            <li>Managed a cross-functional team of up to 6 riders and engineers.</li>
-          </ul>
-        </p>
-
-      </li>
-
-    </ol>
-
-  </section>
-
-  
-  <section class="timeline">
-
-    <div class="title-wrapper">
-      <div class="icon-box">
-        <ion-icon name="settings-outline"></ion-icon>
-      </div>
-
-      <h3 class="h3">Skills</h3>
-    </div>
-         
-            <div class="skill-category">
-              <h4 class="skill-category-title">Simulation & Design:</h4>
-              <p class="skill-list-text">Abaqus, ANSYS, COMSOL, SolidWorks, AutoCAD, CATIA</p>
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
             </div>
 
-            <div class="skill-category">
-              <h4 class="skill-category-title">Programming & ML:</h4>
-              <p class="skill-list-text">Python, C++, Java, MATLAB, PyTorch, TensorFlow, Machine Learning, Surrogate Modeling</p>
-            </div>
+            <h3 class="h3">Education</h3>
+          </div>
 
-            <div class="skill-category">
-              <h4 class="skill-category-title">Data Acquisition:</h4>
-              <p class="skill-list-text">LMS TestLab, SIEMENS LMS, HBM eDAQ, nCode Glyph, Strain Gauges, Accelerometers</p>
-            </div>
+          <ol class="timeline-list">
 
-            <div class="skill-category">
-              <h4 class="skill-category-title">Specialized Skills:</h4>
-              <p class="skill-list-text">Multiphysics & Multiscale Modeling, FEM Analysis, Fatigue Testing, Modal Analysis, NVH Testing</p>
-            </div>
+            <li class="timeline-item">
 
-            <div class="skill-category">
-              <h4 class="skill-category-title">Languages:</h4>
-              <p class="skill-list-text">English (C2), German (B1), Hindi (Native), Rajasthani (Native)</p>
-            </div>
+              <h4 class="h4 timeline-item-title">Doctor of Science in Mechanical Engineering</h4>
 
-        
+              <span>ETH Zürich, Switzerland | 2021 — present</span>
+
+              <p class="timeline-text">
+                Thesis: Numerical modeling of spark plasma sintering process.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Master of Science in Computational Engineering</h4>
+
+              <span>Ruhr University Bochum, Germany | 2018 — 2021</span>
+
+              <p class="timeline-text">
+                Thesis: Computational Modeling of crack propagation in 3D using strain injection technique.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Bachelor of Technology (B.Tech.) in Mechanical Engineering</h4>
+
+              <span>National Institute of Technology, Jalandhar, India | 2010 — 2014</span>
+
+              <p class="timeline-text">
+                Thesis: Experimental evaluation of damping behavior of fly ash filled fiber reinforced polymer
+                composites.
+              </p>
+
+            </li>
+
+          </ol>
+
         </section>
-
-        <!-- Awards & Accomplishments Section -->
-       
-  <section class="timeline">
-
-    <div class="title-wrapper">
-      <div class="icon-box">
-        <ion-icon name="star-outline"></ion-icon>
-      </div>
-
-      <h3 class="h3">Awards & Accomplishments</h3>
-    </div>
-
-    <ol class="timeline-list">
-
-      <li class="timeline-item">
-        <p class="timeline-text">
-          <strong><span>Deutschlandstipendium, 2019</span></strong> Awarded for excellence as an international student at Ruhr University Bochum
-        </p>
-      </li>
-
-      <li class="timeline-item">
-        <p class="timeline-text">
-          <strong><span>Achiever Award, 2017–18</span></strong> Recognized for exemplary performance at Hero MotoCorp Ltd
-        </p>
-      </li>
-
-      <li class="timeline-item">
-        <p class="timeline-text">
-          <strong><span>Gold Medal (Roll of Honour), 2014</span></strong> First rank in B.Tech. Mechanical Engineering, NIT Jalandhar
-        </p>
-      </li>
-
-    </ol>
-
-  </section>
 
         <section class="timeline">
 
-    <div class="title-wrapper">
-      <div class="icon-box">
-        <ion-icon name="document-text-outline"></ion-icon>
-      </div>
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
 
-      <h3 class="h3">Certifications</h3>
-    </div>
+            <h3 class="h3">Professional Experience</h3>
+          </div>
 
-    <ol class="timeline-list">
+          <ol class="timeline-list">
 
-      <li class="timeline-item">
-        <p class="timeline-text">
-          <strong>Training on 2D Data Acquisition Hardware & Software</strong> (2016)
-        </p>
-      </li>
+            <li class="timeline-item">
 
-      <li class="timeline-item">
-        <p class="timeline-text">
-          <strong>Training on Vibration Analysis</strong> (2015)
-        </p>
-      </li>
+              <h4 class="h4 timeline-item-title">Research Scientist - Advanced Manufacturing Lab</h4>
 
-      <li class="timeline-item">
-        <p class="timeline-text">
-          <strong>Training on nCode Glyphwork</strong> (2015)
-        </p>
-      </li>
+              <span>ETH Zürich, Switzerland | 2021 — Present</span>
 
-      <li class="timeline-item">
-        <p class="timeline-text">
-          <strong>Training on Experimental Stress Analysis</strong> (2015)
-        </p>
-      </li>
+              <p class="timeline-text">
+              <ul class="tech-list">
+                <li>Develop Direct FE² methods for multiphysics simulations to link microscale powder behavior with
+                  macroscale sintering outcomes.</li>
+                <li>Build advanced finite element models for single- and multi-material Spark Plasma Sintering (SPS)
+                  processes.</li>
+                <li>Design and train machine learning models to accelerate multiscale simulations through microscale
+                  representative volume element (RVE) modeling.</li>
+              </ul>
+              </p>
 
-    </ol>
+            </li>
 
-  </section>
+            <li class="timeline-item">
 
-  <section class="timeline">
+              <h4 class="h4 timeline-item-title">Research Assistant (HiWi) - Chair of Statics and Dynamics</h4>
 
-    <div class="title-wrapper">
-      <div class="icon-box">
-        <ion-icon name="library-outline"></ion-icon>
-      </div>
+              <span>Ruhr University Bochum, Germany | 2019 — 2021</span>
 
-      <h3 class="h3">Publications</h3>
-    </div>
+              <p class="timeline-text">
+              <ul class="tech-list">
+                <li>Optimized bone tunnel placement for shoulder surgery through FEM simulations, improving surgical
+                  outcomes.</li>
+                <li>Developed FEM-based diffusion models for fluid flow in fractured rock systems.</li>
+                <li>Conducted nonlinear FEM analysis of tunnel boring machine grout using Abaqus.</li>
+              </ul>
+              </p>
 
-    <ol class="timeline-list">
+            </li>
 
-      <li class="timeline-item">
-        <p class="timeline-text">
-          <strong>Enhancing multiscale simulations for spark plasma sintering with a novel Direct FE² framework</strong><br>
-          <em>Journal of Manufacturing Processes</em>, 2025
-        </p>
-      </li>
+            <li class="timeline-item">
 
-      <li class="timeline-item">
-        <p class="timeline-text">
-          <strong>A two-stage approach for material parameters identification in spark plasma sintering</strong><br>
-          <em>Mechanics of Materials / Elsevier</em>, 2024
-        </p>
-      </li>
+              <h4 class="h4 timeline-item-title">Deputy Manager - Chassis Simulation & Analysis</h4>
 
-      <li class="timeline-item">
-        <p class="timeline-text">
-          <strong>Bone tunnel placement influences shear stresses at the coracoid process after coracoclavicular ligament reconstruction: a finite element study and radiological analysis</strong><br>
-          <em>Archives of Orthopaedic and Trauma Surgery / Springer</em>, 2023
-        </p>
-      </li>
+              <span>Hero MotoCorp Ltd, India | 2014 — 2018</span>
 
-    </ol>
+              <p class="timeline-text">
+              <ul class="tech-list">
+                <li>Executed structural testing & analysis for new vehicle products, performing data acquisition using
+                  strain gauges, accelerometers, and LVDTs.</li>
+                <li>Performed fatigue testing, modal analysis, and NVH testing on structural components using SIEMENS
+                  LMS, HBM eDAQ, and 2D Data Recorder hardware systems.</li>
+                <li>Conducted damage correlation studies between proving ground test tracks and laboratory simulators;
+                  developed load block cycles and optimized durability testing.</li>
+                <li>Managed a cross-functional team of up to 6 riders and engineers.</li>
+              </ul>
+              </p>
 
-  </section>
+            </li>
 
-  <!-- Download CV Button -->
-  <section class="download-cv">
-    <div class="cv-download-wrapper">
-      <a href="./assets/CV_Ashwani_Kumar.pdf" download="CV_Ashwani_Kumar.pdf" class="cv-download-btn">
-        <ion-icon name="download-outline"></ion-icon>
-        <span>Download CV</span>
-      </a>
-    </div>
-  </section>
+          </ol>
+
+        </section>
+
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="settings-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Skills</h3>
+          </div>
+
+          <div class="skill-category">
+            <h4 class="skill-category-title">Simulation & Design:</h4>
+            <p class="skill-list-text">Abaqus, ANSYS, COMSOL, SolidWorks, AutoCAD, CATIA</p>
+          </div>
+
+          <div class="skill-category">
+            <h4 class="skill-category-title">Programming & ML:</h4>
+            <p class="skill-list-text">Python, C++, Java, MATLAB, PyTorch, TensorFlow, Machine Learning, Surrogate
+              Modeling</p>
+          </div>
+
+          <div class="skill-category">
+            <h4 class="skill-category-title">Data Acquisition:</h4>
+            <p class="skill-list-text">LMS TestLab, SIEMENS LMS, HBM eDAQ, nCode Glyph, Strain Gauges, Accelerometers
+            </p>
+          </div>
+
+          <div class="skill-category">
+            <h4 class="skill-category-title">Specialized Skills:</h4>
+            <p class="skill-list-text">Multiphysics & Multiscale Modeling, FEM Analysis, Fatigue Testing, Modal
+              Analysis, NVH Testing</p>
+          </div>
+
+          <div class="skill-category">
+            <h4 class="skill-category-title">Languages:</h4>
+            <p class="skill-list-text">English (C2), German (B1), Hindi (Native), Rajasthani (Native)</p>
+          </div>
+
+
+        </section>
+
+        <!-- Awards & Accomplishments Section -->
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="star-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Awards & Accomplishments</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+              <p class="timeline-text">
+                <strong><span>Deutschlandstipendium, 2019</span></strong> Awarded for excellence as an international
+                student at Ruhr University Bochum
+              </p>
+            </li>
+
+            <li class="timeline-item">
+              <p class="timeline-text">
+                <strong><span>Achiever Award, 2017–18</span></strong> Recognized for exemplary performance at Hero
+                MotoCorp Ltd
+              </p>
+            </li>
+
+            <li class="timeline-item">
+              <p class="timeline-text">
+                <strong><span>Gold Medal (Roll of Honour), 2014</span></strong> First rank in B.Tech. Mechanical
+                Engineering, NIT Jalandhar
+              </p>
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="document-text-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Certifications</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+              <p class="timeline-text">
+                <strong>Training on 2D Data Acquisition Hardware & Software</strong> (2016)
+              </p>
+            </li>
+
+            <li class="timeline-item">
+              <p class="timeline-text">
+                <strong>Training on Vibration Analysis</strong> (2015)
+              </p>
+            </li>
+
+            <li class="timeline-item">
+              <p class="timeline-text">
+                <strong>Training on nCode Glyphwork</strong> (2015)
+              </p>
+            </li>
+
+            <li class="timeline-item">
+              <p class="timeline-text">
+                <strong>Training on Experimental Stress Analysis</strong> (2015)
+              </p>
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="library-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Publications</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+              <p class="timeline-text">
+                <strong>Enhancing multiscale simulations for spark plasma sintering with a novel Direct FE²
+                  framework</strong><br>
+                <em>Journal of Manufacturing Processes</em>, 2025
+              </p>
+            </li>
+
+            <li class="timeline-item">
+              <p class="timeline-text">
+                <strong>A two-stage approach for material parameters identification in spark plasma
+                  sintering</strong><br>
+                <em>Mechanics of Materials / Elsevier</em>, 2024
+              </p>
+            </li>
+
+            <li class="timeline-item">
+              <p class="timeline-text">
+                <strong>Bone tunnel placement influences shear stresses at the coracoid process after coracoclavicular
+                  ligament reconstruction: a finite element study and radiological analysis</strong><br>
+                <em>Archives of Orthopaedic and Trauma Surgery / Springer</em>, 2023
+              </p>
+            </li>
+
+          </ol>
+
+        </section>
+
+        <!-- Download CV Button -->
+        <section class="download-cv">
+          <div class="cv-download-wrapper">
+            <a href="./assets/CV_Ashwani_Kumar.pdf" download="CV_Ashwani_Kumar.pdf" class="cv-download-btn">
+              <ion-icon name="download-outline"></ion-icon>
+              <span>Download CV</span>
+            </a>
+          </div>
+        </section>
 
       </article>
 
@@ -819,7 +869,9 @@
                   <h3 class="project-title">Multiscale Modeling of SPS with Direct FE2 Framework</h3>
                   <p class="project-category">Multiscale</p>
                   <p class="project-description">
-                    Developed a novel Direct FE2 framework that integrates microscale powder characteristics with macroscale electro-thermal-mechanical effects, improving both accuracy and computational efficiency for SPS simulations.
+                    Developed a novel Direct FE2 framework that integrates microscale powder characteristics with
+                    macroscale electro-thermal-mechanical effects, improving both accuracy and computational efficiency
+                    for SPS simulations.
                   </p>
                 </div>
 
@@ -842,8 +894,11 @@
                   <p class="project-category">Multiphysics</p>
 
                   <p class="project-description">
-                   Developed a two-stage numerical–experimental approach to identify material parameters in spark plasma sintering, enabling accurate density prediction across different heating rates for copper and nickel.
-                    This method improves accuracy, reduces experimental cost, and is transferable to other SPS materials.
+                    Developed a two-stage numerical–experimental approach to identify material parameters in spark
+                    plasma sintering, enabling accurate density prediction across different heating rates for copper and
+                    nickel.
+                    This method improves accuracy, reduces experimental cost, and is transferable to other SPS
+                    materials.
                   </p>
                 </div>
 
@@ -864,10 +919,12 @@
                 <div class="project-content">
                   <h3 class="project-title">Bone Tunnel Stress in AC Joint Reconstruction</h3>
                   <p class="project-category">Web design</p>
-                  
+
                   <p class="project-description">
-                    Studied how bone tunnel placement in coracoclavicular ligament reconstruction influences shear stresses in the coracoid process. 
-                    Using finite element modeling and radiological analysis of patient data, the project identified safer tunnel configurations that minimize fracture risk and improve surgical outcomes.
+                    Studied how bone tunnel placement in coracoclavicular ligament reconstruction influences shear
+                    stresses in the coracoid process.
+                    Using finite element modeling and radiological analysis of patient data, the project identified
+                    safer tunnel configurations that minimize fracture risk and improve surgical outcomes.
                   </p>
                 </div>
 
@@ -888,10 +945,13 @@
                 <div class="project-content">
                   <h3 class="project-title">Stress Regime Effects on Carbonate Permeability</h3>
                   <p class="project-category">Web development</p>
-                  
+
                   <p class="project-description">
-                    Investigated the impact of changing tectonic stress regimes on fracture aperture and permeability in the Latemar carbonate buildup (Dolomites). 
-                    Through outcrop data, finite element geomechanics, and flow simulations, the study showed that superimposed stresses increase permeability by up to 62%, highlighting the importance of stress history in predicting fluid flow in fractured reservoirs.
+                    Investigated the impact of changing tectonic stress regimes on fracture aperture and permeability in
+                    the Latemar carbonate buildup (Dolomites).
+                    Through outcrop data, finite element geomechanics, and flow simulations, the study showed that
+                    superimposed stresses increase permeability by up to 62%, highlighting the importance of stress
+                    history in predicting fluid flow in fractured reservoirs.
                   </p>
                 </div>
 
@@ -899,7 +959,7 @@
             </li>
 
 
-             <!-- Copy the project template below and paste it here to add more projects
+            <!-- Copy the project template below and paste it here to add more projects
             <li class="project-item active" data-filter-item data-category="web development">
               <a href="arrival.html" class="project-link">
 
@@ -989,16 +1049,19 @@
 
 
 
-  <!--
-    - custom js link
-  -->
-  <script src="./assets/js/script.js"></script>
+
 
   <!--
     - ionicon link
   -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+  <script src="./assets/js/particles.js"></script>
 
 </body>
 
