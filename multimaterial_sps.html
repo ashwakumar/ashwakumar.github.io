@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Material SPS Interface Behavior | Ashwani Kumar</title>
+    <meta name="description"
+        content="Predicting interface behavior and final geometry in multi-material spark plasma sintering using validated multiphysics modeling.">
+
+    <!--
+    - favicon
+  -->
+    <link rel="shortcut icon" href="./assets/images/logo-ak.png" type="image/png">
+
+    <!--
+    - custom css link
+  -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <!--
+    - google font link
+  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <canvas id="bg-canvas"></canvas>
+
+    <main>
+
+        <!--
+      - #SIDEBAR
+    -->
+
+        <aside class="sidebar" data-sidebar>
+
+            <div class="sidebar-info">
+
+                <figure class="avatar-box">
+                    <img src="./assets/images/my_pic.jpg" alt="Richard hanrick" width="80">
+                </figure>
+
+                <div class="info-content">
+                    <h1 class="name" title="Ashwani Kumar">Ashwani Kumar</h1>
+
+                    <p class="title">Computational Engineer</p>
+                </div>
+
+                <button class="info_more-btn" data-sidebar-btn>
+                    <span>Show Contacts</span>
+
+                    <ion-icon name="chevron-down"></ion-icon>
+                </button>
+
+            </div>
+
+            <div class="sidebar-info_more">
+
+                <div class="separator"></div>
+
+                <ul class="contacts-list">
+
+                    <li class="contact-item">
+
+                        <div class="icon-box">
+                            <ion-icon name="logo-linkedin"></ion-icon>
+                        </div>
+
+                        <div class="contact-info">
+                            <p class="contact-title">LinkedIn</p>
+                            <a href="https://www.linkedin.com/in/ashwanikumareth"
+                                class="contact-link">ashwanikumareth</a>
+                        </div>
+
+                    </li>
+
+                    <li class="contact-item">
+
+                        <div class="icon-box">
+                            <ion-icon name="logo-github"></ion-icon>
+                        </div>
+
+                        <div class="contact-info">
+                            <p class="contact-title">GitHub</p>
+                            <a href="https://github.com/ashwakumar" class="contact-link">ashwakumar</a>
+                        </div>
+
+                    </li>
+
+                    <li class="contact-item">
+
+                        <div class="icon-box">
+                            <ion-icon name="school-outline"></ion-icon>
+                        </div>
+
+                        <div class="contact-info">
+                            <p class="contact-title">Google Scholar</p>
+                            <a href="https://scholar.google.com/citations?user=ashwanikjangir@gmail.com"
+                                class="contact-link">ashwanikjangir</a>
+                        </div>
+
+                    </li>
+
+                    <li class="contact-item">
+
+                        <div class="icon-box">
+                            <ion-icon name="mail-outline"></ion-icon>
+                        </div>
+
+                        <div class="contact-info">
+                            <p class="contact-title">Email</p>
+
+                            <a href="mailto:ashwanikjangir@gmail.com" class="contact-link">ashwanikjangir@gmail.com</a>
+                        </div>
+
+                    </li>
+
+                    <li class="contact-item">
+
+                        <div class="icon-box">
+                            <ion-icon name="phone-portrait-outline"></ion-icon>
+                        </div>
+
+                        <div class="contact-info">
+                            <p class="contact-title">Phone</p>
+
+                            <a href="tel:+41 782303498" class="contact-link">+41 782303498</a>
+                        </div>
+
+                    </li>
+
+
+                    <li class="contact-item">
+
+                        <div class="icon-box">
+                            <ion-icon name="location-outline"></ion-icon>
+                        </div>
+
+                        <div class="contact-info">
+                            <p class="contact-title">Location</p>
+
+                            <address>Zürich, Switzerland</address>
+                        </div>
+
+                    </li>
+
+                </ul>
+
+                <div class="separator"></div>
+
+                <ul class="social-list">
+
+                    <li class="social-item">
+                        <a href="#" class="social-link">
+                            <ion-icon name="logo-facebook"></ion-icon>
+                        </a>
+                    </li>
+
+                    <li class="social-item">
+                        <a href="#" class="social-link">
+                            <ion-icon name="logo-twitter"></ion-icon>
+                        </a>
+                    </li>
+
+                    <li class="social-item">
+                        <a href="#" class="social-link">
+                            <ion-icon name="logo-instagram"></ion-icon>
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </aside>
+
+        <!--
+      - #main-content
+    -->
+
+        <div class="main-content">
+
+            <!--
+        - #NAVBAR
+      -->
+
+            <nav class="navbar">
+
+                <ul class="navbar-list">
+
+                    <li class="navbar-item">
+                        <a href="index.html" class="navbar-link">About</a>
+                    </li>
+
+                    <li class="navbar-item">
+                        <a href="index.html#resume" class="navbar-link">Resume</a>
+                    </li>
+
+                    <li class="navbar-item">
+                        <a href="index.html#portfolio" class="navbar-link">Portfolio</a>
+                    </li>
+
+                    <li class="navbar-item">
+                        <a href="index.html#contact" class="navbar-link">Contact</a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+            <!--
+        - #PROJECT DETAILS
+      -->
+
+            <article class="project-details active" data-page="project-details">
+                <a href="index.html#portfolio" class="back-link"
+                    onclick="localStorage.setItem('activePage','portfolio')">← Back
+                    to Portfolio</a>
+                <header>
+                    <h2 class="h2 article-title">Multi-Material SPS with Direct FE2 Framework</h2>
+                </header>
+
+                <section class="project-content">
+                    <div class="project-hero">
+                        <img src="./assets/images/Multiscale_dfe2_project_Image.png" alt="Multi-Material SPS"
+                            loading="lazy">
+                    </div>
+
+                    <h4 class="h4">Predicting Interface Behavior and Final Geometry in Multi-Material Spark Plasma
+                        Sintering</h4>
+
+                    <div class="project-description">
+                        <ul class="author-info-box">
+                            <li class="author-info-item">
+                                <span class="info-label">Main Author:</span>
+                                <span class="info-value">Ashwani Kumar</span>
+                            </li>
+                            <li class="author-info-item">
+                                <span class="info-label">Affiliation:</span>
+                                <span class="info-value">ETH Zurich</span>
+                            </li>
+                            <li class="author-info-item">
+                                <span class="info-label">Online:</span>
+                                <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5700109" target="_blank"
+                                    class="info-value text-link">SSRN</a>
+                            </li>
+                            <li class="author-info-item">
+                                <span class="info-label">Co-Authors:</span>
+                                <span class="info-value">M. Bernet, L. Deillon, M. Bambach, M. Afrasiabi</span>
+                            </li>
+                            <li class="author-info-item">
+                                <span class="info-label">Date:</span>
+                                <span class="info-value">3rd Nov 2025</span>
+                            </li>
+                            <li class="author-info-item">
+                                <span class="info-label">Journal:</span>
+                                <span class="info-value">SSRN (Preprint)</span>
+                            </li>
+                        </ul>
+
+                        <h4 class="h4">Project Overview</h4>
+                        <p>
+                            Multi-material spark plasma sintering (SPS) enables architected components with tailored
+                            properties but
+                            introduces challenges in controlling differential densification, geometric precision, and
+                            interface
+                            alignment. This project develops and uniquely validates a fully coupled
+                            electro–thermo–mechanical
+                            model for Cu-Ni systems, enabling precise prediction of final geometries and interface
+                            behavior.
+                        </p>
+
+                        <h4 class="h4">Problem & Motivation</h4>
+                        <p>
+                            Experimental trial-and-error in multi-material SPS offers limited insight into the complex
+                            electro-thermo-mechanical conditions that govern sintering. Challenges such as porosity
+                            imbalance driving
+                            interface displacement and localized Joule heating effects make it difficult to achieve
+                            precise geometric
+                            tolerances and bonding quality without predictive tools.
+                        </p>
+
+                        <h4 class="h4">Key Contributions</h4>
+                        <ul class="feature-list">
+                            <li>Developed a fully coupled electro–thermo–mechanical finite element model for
+                                multi-material SPS.</li>
+                            <li>Validated temperature histories and densification kinetics across three interface
+                                orientations
+                                (horizontal, inclined, vertical) with &lt;1% deviation.</li>
+                            <li>Achieved &gt;93% accuracy in predicting final geometries and interface displacements.
+                            </li>
+                            <li>Identified that interface orientation influences current paths more strongly than
+                                applied thermal
+                                loads.</li>
+                            <li>Proposed initial interface location as a key design lever for alignment control.</li>
+                        </ul>
+
+                        <h4 class="h4">Technical Highlights</h4>
+                        <ul class="tech-list">
+                            <li>Tools & Platforms: Finite Element Analysis (FEA), Multiphysics Simulation.</li>
+                            <li>Methods: Porosity-dependent constitutive parameter calibration, transferability from
+                                single to
+                                multi-material systems without extra fitting.</li>
+                            <li>Validation: Comparison with experimental trials on Copper-Nickel (Cu-Ni) systems.</li>
+                        </ul>
+
+                        <h4 class="h4">Results & Impact</h4>
+                        <p>
+                            The simulations uncovered that interface orientation critically governs densification
+                            behavior by altering
+                            current paths and localized heating. The validated framework serves as a powerful design
+                            tool, enabling
+                            engineers to optimize powder deposition strategies and predict component shape before
+                            manufacturing. This
+                            reduces experimental waste and accelerates the development of complex multi-material
+                            components.
+                        </p>
+
+                        <h4 class="h4">Publication Details</h4>
+                        <p>
+                            <strong>Journal:</strong> SSRN Preprint<br>
+                            <strong>Year:</strong> 2025<br>
+                            <strong>DOI:</strong> <a href="http://dx.doi.org/10.2139/ssrn.5700109" target="_blank"
+                                class="text-link">10.2139/ssrn.5700109</a>
+                        </p>
+
+                        <div class="project-links">
+                            <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5700109" target="_blank"
+                                class="btn-link">
+                                <ion-icon name="document-text-outline"></ion-icon>
+                                Read Paper (SSRN)
+                            </a>
+                            <a href="#" class="btn-link">
+                                <ion-icon name="logo-github"></ion-icon>
+                                Code Repository
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+            </article>
+
+        </div>
+
+    </main>
+
+    <!--
+    - custom js link
+  -->
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/particles.js"></script>
+
+    <!--
+    - ionicon link
+  -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

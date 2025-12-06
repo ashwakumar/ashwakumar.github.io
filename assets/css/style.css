@@ -200,6 +200,58 @@ article {
   margin: 16px 0;
 }
 
+.text-link {
+  color: var(--orange-yellow-crayola);
+  display: inline-block;
+  transition: var(--transition-1);
+}
+
+.text-link:hover {
+  text-decoration: underline;
+}
+
+/* Author Info Box */
+.project-description {
+  margin-top: 30px;
+}
+
+.author-info-box {
+  background: var(--border-gradient-onyx);
+  border: 1px solid var(--jet);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 30px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+@media (min-width: 580px) {
+  .author-info-box {
+    grid-template-columns: 1.5fr 1fr 1.5fr;
+  }
+}
+
+.author-info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.info-label {
+  color: var(--orange-yellow-crayola);
+  font-size: var(--fs-7);
+  font-weight: var(--fw-500);
+  text-transform: uppercase;
+}
+
+.info-value {
+  color: var(--white-2);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-300);
+}
+
+
 .icon-box {
   position: relative;
   background: var(--border-gradient-onyx);
