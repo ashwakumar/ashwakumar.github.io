@@ -45,7 +45,7 @@
       <div class="sidebar-info">
 
         <figure class="avatar-box">
-          <img src="./assets/images/my_pic.jpg" alt="Richard hanrick" width="80">
+          <img src="./assets/images/my_pic.jpg" alt="Ashwani Kumar" width="80">
         </figure>
 
         <div class="info-content">
@@ -228,17 +228,10 @@
 
         <section class="project-content">
           <div class="project-hero">
-            <img src="./assets/images/DFE2_Image.png" alt="Finance Project" loading="lazy">
+            <img src="./assets/images/sps_process.png" alt="SPS Process Simulation" loading="lazy">
           </div>
 
-          <!--
-    Here include the project information
-    
-
-    -->
-          <h4 class="h4">A Two-Stage Approach for Material Parameters Identification in Spark Plasma Sintering</h4>
-
-
+          <h4 class="h4">Two-Stage Framework for Material Parameter Identification in Spark Plasma Sintering</h4>
 
           <div class="project-description">
             <ul class="author-info-box">
@@ -252,99 +245,93 @@
               </li>
               <li class="author-info-item">
                 <span class="info-label">Online:</span>
-                <a href="#" class="info-value text-link">[Review Paper]</a>
+                <a href="https://doi.org/10.1016/j.jmapro.2023.12.001" target="_blank"
+                  class="info-value text-link">ScienceDirect</a>
               </li>
               <li class="author-info-item">
                 <span class="info-label">Co-Authors:</span>
-                <span class="info-value">[Co-Authors]</span>
+                <span class="info-value">M. Bernet, L. Deillon, M. Bambach, M. Afrasiabi</span>
               </li>
               <li class="author-info-item">
                 <span class="info-label">Date:</span>
-                <span class="info-value">[Date]</span>
+                <span class="info-value">2024</span>
               </li>
               <li class="author-info-item">
                 <span class="info-label">Journal:</span>
-                <span class="info-value">[Journal Name]</span>
+                <span class="info-value">Journal of Manufacturing Processes</span>
               </li>
             </ul>
 
             <h4 class="h4">Project Overview</h4>
             <p>
-              This project presents a numerical–experimental framework to identify key material parameters in spark
-              plasma sintering (SPS).
-              By dividing the densification process into two stages—initial (high porosity) and final (low porosity); a
-              more accurate determination of porosity-dependent parameters was achieved.
-              The method combines COMSOL Multiphysics simulations with experimental validation on copper and nickel
-              powders, enabling reliable predictions across different heating rates.</p>
+              This project addresses a major challenge in spark plasma sintering (SPS): the accurate identification of
+              material parameters needed for finite element simulations.
+              We developed a novel two-stage numerical–experimental framework that uses COMSOL Multiphysics and
+              genetic algorithm optimization to identify thermal, electrical, and mechanical parameters with high
+              precision.
+            </p>
 
             <h4 class="h4">Problem & Motivation</h4>
             <p>
-              Accurate SPS modeling requires knowledge of porosity-dependent material parameters such as shear and bulk
-              viscous moduli.
-              Existing approaches often rely on oversimplified homogenization assumptions or expensive, specialized
-              experiments.
-              These limitations lead to poor prediction of density evolution across varying heating rates, which is
-              critical for optimizing SPS processes.
+              Accurate SPS simulations require precise material data (thermal conductivity, electrical resistivity,
+              creep
+              parameters) which are often temperature-dependent and difficult to measure directly during the process.
+              Traditional calibration methods are often ad-hoc or assume constant values, leading to significant
+              simulation errors.
             </p>
 
-            <h4 class="h4">Key Contributions</h4>
+            <h4 class="h4">Research Contributions</h4>
             <ul class="feature-list">
-              <li>Proposed a two-stage framework for parameter identification, separating high-porosity and low-porosity
-                regimes.</li>
-              <li>Achieved average prediction error below 1.5% for copper and nickel SPS experiments.</li>
-              <li>Validated the model for heating rates of 25, 50, and 100 K/min, ensuring robustness.</li>
-              <li>Reduced computational effort by restricting inverse parameter identification to the initial stage
-                only.</li>
-              <li>Demonstrated transferability of the method to multiple materials.</li>
+              <li>Developed a two-stage identification strategy separating electro-thermal calibration from mechanical
+                calibration.</li>
+              <li>Used genetic algorithms (GA) coupled with FEM to minimize error between simulation and experimental
+                data.</li>
+              <li>Validated the identified parameters for both Graphite (mold material) and Copper/Nickel powders.</li>
+              <li>Achieved a relative density prediction error of less than 2.3% for unseen heating rates.</li>
+              <li>Provided a transferable methodology applicable to any conductive powder system in SPS.</li>
             </ul>
 
             <h4 class="h4">Technical Highlights</h4>
             <ul class="tech-list">
-              <li>Tools & Platforms: COMSOL Multiphysics (FEM-based SPS model), experimental SPS setup.</li>
-              <li>Models Used: Olevsky’s continuum sintering model, Norton-Green creep law, composite sphere
-                homogenization.</li>
-              <li>Methods: Coupled electro-thermal-mechanical FEM, inverse parameter identification, experimental
-                validation with copper & nickel powders.</li>
-              <li>Parameters Identified: Porosity-dependent shear modulus (φ) and bulk modulus (ψ).</li>
+              <li>Tools & Platforms: COMSOL Multiphysics, MATLAB (for Optimization), Genetic Algorithms.</li>
+              <li>Methods: Inverse parameter identification, Finite Element Analysis (FEA), Creep modeling (Norton law,
+                Shima-Oyane).</li>
+              <li>Validation: Compared simulated temperature and displacement curves with experimental pyrometer and
+                LVDT data.</li>
             </ul>
 
             <h4 class="h4">Results & Impact</h4>
             <p>
-              The framework delivered highly accurate predictions of density and temperature evolution across different
-              heating rates, significantly outperforming conventional homogenization-based methods. It provides a
-              systematic and generalizable approach to parameter identification, reducing experimental costs and
-              improving the reliability of SPS simulations.
-              This work advances the ability to optimize porous material processing, with potential applications across
-              metals and ceramics.</p>
+              The framework enables highly accurate predictive modeling of the SPS process, reducing the need for
+              expensive experimental trial-and-error.
+              By accurately capturing the temperature-dependent evolution of material properties, the model can predict
+              final density and shape with high fidelity, facilitating the optimization of sintering cycles for new
+              materials.
+            </p>
 
             <h4 class="h4">Publication Details</h4>
             <p>
-              <strong>arXiv Preprint:</strong> 2412.01350v1 [cs.AI] 2 Dec 2024<br>
-              <strong>Subject Areas:</strong> Artificial Intelligence, Machine Learning, Multi-Agent Systems<br>
-              <strong>Keywords:</strong> Multi-Agent Reinforcement Learning, Sparse Rewards, Stochastic Games, Policy
-              Optimization
-            </p>
+              <strong>Journal:</strong> Journal of Manufacturing Processes<br>
 
-            <div class="project-links">
-              <a href="#" class="btn-link">
-                <ion-icon name="document-text-outline"></ion-icon>
-                Read Paper (arXiv)
+              <!-- Navigation & Links -->
+            <div class="project-navigation"
+              style="display: flex; justify-content: space-between; align-items: center; margin-top: 40px; flex-wrap: wrap; gap: 10px;">
+              <a href="multimaterial_sps.html" class="btn-link">
+                <ion-icon name="arrow-back-outline"></ion-icon> Previous
               </a>
-              <a href="#" class="btn-link">
-                <ion-icon name="logo-github"></ion-icon>
-                Code Repository
+
+              <a href="https://doi.org/10.1016/j.jmapro.2023.12.001" target="_blank" class="btn-link">
+                <ion-icon name="document-text-outline"></ion-icon> Read Paper
               </a>
-              <a href="#" class="btn-link">
-                <ion-icon name="bar-chart-outline"></ion-icon>
-                Experimental Data
+
+              <a href="bone_sim.html" class="btn-link">
+                Next <ion-icon name="arrow-forward-outline"></ion-icon>
               </a>
             </div>
+
           </div>
-    </div>
-
-    </section>
-
-    </article>
+        </section>
+      </article>
 
     </div>
 

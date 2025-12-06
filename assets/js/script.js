@@ -67,18 +67,20 @@ function initScript() {
   const selectValue = document.querySelector("[data-selecct-value]");
   const filterBtn = document.querySelectorAll("[data-filter-btn]");
 
-  select.addEventListener("click", function () { elementToggleFunc(this); });
+  if (select) {
+    select.addEventListener("click", function () { elementToggleFunc(this); });
 
-  // add event in all select items
-  for (let i = 0; i < selectItems.length; i++) {
-    selectItems[i].addEventListener("click", function () {
+    // add event in all select items
+    for (let i = 0; i < selectItems.length; i++) {
+      selectItems[i].addEventListener("click", function () {
 
-      let selectedValue = this.innerText.toLowerCase();
-      selectValue.innerText = this.innerText;
-      elementToggleFunc(select);
-      filterFunc(selectedValue);
+        let selectedValue = this.innerText.toLowerCase();
+        selectValue.innerText = this.innerText;
+        elementToggleFunc(select);
+        filterFunc(selectedValue);
 
-    });
+      });
+    }
   }
 
   // filter variables
@@ -101,22 +103,24 @@ function initScript() {
   }
 
   // add event in all filter button items for large screen
-  let lastClickedBtn = filterBtn[0];
+  if (filterBtn.length > 0) {
+    let lastClickedBtn = filterBtn[0];
 
-  for (let i = 0; i < filterBtn.length; i++) {
+    for (let i = 0; i < filterBtn.length; i++) {
 
-    filterBtn[i].addEventListener("click", function () {
+      filterBtn[i].addEventListener("click", function () {
 
-      let selectedValue = this.innerText.toLowerCase();
-      selectValue.innerText = this.innerText;
-      filterFunc(selectedValue);
+        let selectedValue = this.innerText.toLowerCase();
+        selectValue.innerText = this.innerText;
+        filterFunc(selectedValue);
 
-      lastClickedBtn.classList.remove("active");
-      this.classList.add("active");
-      lastClickedBtn = this;
+        lastClickedBtn.classList.remove("active");
+        this.classList.add("active");
+        lastClickedBtn = this;
 
-    });
+      });
 
+    }
   }
 
 
@@ -141,6 +145,20 @@ function initScript() {
   }
 
 
+  // Share Button Functionality
+  const shareBtn = document.getElementById("shareBtn");
+  if (shareBtn) {
+    shareBtn.addEventListener("click", async () => {
+      try {
+        await navigator.clipboard.writeText(window.location.href);
+        alert("Link copied to clipboard!");
+      } catch (err) {
+        console.error("Failed to copy link: ", err);
+      }
+    });
+  }
+
+
 
   // Page navigation variables
   const navLinks = document.querySelectorAll("[data-nav-link]");
@@ -150,6 +168,10 @@ function initScript() {
   function activatePage(pageName) {
     // Normalize page name
     const targetPage = pageName.toLowerCase().trim();
+
+    // Check if target page exists in DOM before switching
+    const targetExists = Array.from(pageArticles).some(page => page.dataset.page === targetPage);
+    if (!targetExists) return;
 
     // Remove active class from all nav links
     navLinks.forEach(nav => {

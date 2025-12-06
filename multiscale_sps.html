@@ -41,7 +41,7 @@
       <div class="sidebar-info">
 
         <figure class="avatar-box">
-          <img src="./assets/images/my_pic.jpg" alt="Richard hanrick" width="80">
+          <img src="./assets/images/my_pic.jpg" alt="Ashwani Kumar" width="80">
         </figure>
 
         <div class="info-content">
@@ -224,15 +224,10 @@
 
         <section class="project-content">
           <div class="project-hero">
-            <img src="./assets/images/Multiscale_dfe2_project_Image.png" alt="Finance Project" loading="lazy">
+            <img src="./assets/images/sps_multiscale.png" alt="Multiscale SPS Simulation" loading="lazy">
           </div>
 
-          <!--
-    Here include the project information
-    
-
-    -->
-          <h4 class="h4">Enhancing Multiscale Simulations for Spark Plasma Sintering with a Direct FE2 Framework</h4>
+          <h4 class="h4">Direct FE2 Framework for Multiscale SPS Simulations</h4>
 
           <div class="project-description">
 
@@ -268,7 +263,8 @@
             <p>
               This project focuses on improving the simulation of spark plasma sintering (SPS), a key process in
               advanced materials manufacturing.
-              Traditional finite element models either miss microscale powder interactions or become too computationally
+              Traditional finite element models either miss microscale powder interactions or become too
+              computationally
               expensive.
               To address this, a Direct FE2 multiscale framework was developed that directly integrates microscale
               powder behavior into macroscale electro-thermal-mechanical simulations.
@@ -285,7 +281,8 @@
 
             <h4 class="h4">Research Contributions</h4>
             <ul class="feature-list">
-              <li>Designed a Direct FE2 approach for fully coupled electro-thermal-mechanical SPS simulations.</li>
+              <li>Designed a Direct FE2 approach for fully coupled electro-thermal-mechanical SPS simulations.
+              </li>
               <li>Achieved temperature & displacement error below 1% compared to full FE analysis.</li>
               <li>Reduced computational cost by factors up to 70x, with degrees of freedom reduced up to 44x.</li>
               <li>Demonstrated flexibility in handling different powder morphologies (SC, BCC, FCC).</li>
@@ -299,7 +296,8 @@
                 (RVEs), periodic boundary conditions, multi-point constraints.</li>
               <li>Models Used: Coupled electro-thermal-mechanical FE models, Johnson–Cook material law for copper
                 powders.</li>
-              <li>Performance: Demonstrated scalable efficiency with 8–70x faster runtime compared to full FE methods.
+              <li>Performance: Demonstrated scalable efficiency with 8–70x faster runtime compared to full FE
+                methods.
               </li>
             </ul>
 
@@ -307,8 +305,10 @@
             <p>
               The Direct FE2 framework produced results nearly identical to full FE simulations while drastically
               lowering computational cost.
-              It revealed how powder morphology, mesh scaling, and current intensity affect densification during SPS.
-              The method makes it feasible to simulate realistic SPS geometries that were previously computationally
+              It revealed how powder morphology, mesh scaling, and current intensity affect densification during
+              SPS.
+              The method makes it feasible to simulate realistic SPS geometries that were previously
+              computationally
               intractable.
               This work advances multiscale modeling in materials processing and provides a foundation for future
               studies on non-spherical powders and complex geometries.
@@ -322,26 +322,25 @@
                 class="text-link">10.1016/j.jmapro.2025.07.006</a>
             </p>
 
-            <div class="project-links">
+            <!-- Navigation & Links -->
+            <div class="project-navigation"
+              style="display: flex; justify-content: space-between; align-items: center; margin-top: 40px; flex-wrap: wrap; gap: 10px;">
+              <a href="dolomite_sim.html" class="btn-link">
+                <ion-icon name="arrow-back-outline"></ion-icon> Previous
+              </a>
+
               <a href="https://doi.org/10.1016/j.jmapro.2025.07.006" target="_blank" class="btn-link">
-                <ion-icon name="document-text-outline"></ion-icon>
-                Read Paper
+                <ion-icon name="document-text-outline"></ion-icon> Read Paper
               </a>
-              <a href="#" class="btn-link">
-                <ion-icon name="logo-github"></ion-icon>
-                Code Repository
-              </a>
-              <a href="#" class="btn-link">
-                <ion-icon name="bar-chart-outline"></ion-icon>
-                Experimental Data
+
+              <a href="multimaterial_sps.html" class="btn-link">
+                Next <ion-icon name="arrow-forward-outline"></ion-icon>
               </a>
             </div>
           </div>
-    </div>
 
-    </section>
-
-    </article>
+        </section>
+      </article>
 
     </div>
 
@@ -350,7 +349,6 @@
   <!--
     - custom js link
   -->
-  <script src="./assets/js/script.js"></script>
   <script src="./assets/js/particles.js"></script>
 
   <!--
