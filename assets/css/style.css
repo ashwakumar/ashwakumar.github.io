@@ -3457,3 +3457,36 @@ textarea.form-input::-webkit-resizer {
   transform: translateY(-2px);
   border-color: var(--orange-yellow-crayola);
 }
+
+/*-----------------------------------*\
+  #PROJECT NAVIGATION
+\*-----------------------------------*/
+
+.project-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.project-navigation .btn-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+}
+
+/* Mobile Layout for Navigation */
+@media (max-width: 900px) {
+  .project-navigation {
+    flex-direction: column;
+    width: 100%;
+    align-items: stretch;
+  }
+
+  .project-navigation .btn-link {
+    width: 100%;
+  }
+}
