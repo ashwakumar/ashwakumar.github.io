@@ -117,6 +117,51 @@
   }
 
   /*---------------------------------------------------------
+    3.B. CV Sticky Side-Nav ScrollSpy & Smooth Click Handler
+  ---------------------------------------------------------*/
+  const cvTabs = Array.prototype.slice.call(document.querySelectorAll('.cv-tab'));
+  const cvBlocks = Array.prototype.slice.call(document.querySelectorAll('[data-cv-section]'));
+
+  cvTabs.forEach(function (tab) {
+    tab.addEventListener('click', function (e) {
+      const targetId = tab.getAttribute('data-cv-tab');
+      const targetEl = document.getElementById(targetId);
+      if (targetEl) {
+        e.preventDefault();
+        targetEl.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  if (cvBlocks.length && 'IntersectionObserver' in window) {
+    const cvVisibility = new Map();
+
+    const cvSpy = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        cvVisibility.set(entry.target.id, entry.isIntersecting ? entry.intersectionRatio : 0);
+      });
+
+      let topCvId = null;
+      let maxRatio = 0;
+      cvVisibility.forEach(function (ratio, id) {
+        if (ratio > maxRatio) {
+          maxRatio = ratio;
+          topCvId = id;
+        }
+      });
+
+      if (topCvId) {
+        cvTabs.forEach(function (tab) {
+          const target = tab.getAttribute('data-cv-tab');
+          tab.classList.toggle('active', target === topCvId);
+        });
+      }
+    }, { threshold: [0.1, 0.25, 0.5, 0.75], rootMargin: '-15% 0px -40% 0px' });
+
+    cvBlocks.forEach(function (block) { cvSpy.observe(block); });
+  }
+
+  /*---------------------------------------------------------
     4. Interactive Hero Particle & FEA Mesh Canvas
   ---------------------------------------------------------*/
   const canvas = document.getElementById('hero-canvas');

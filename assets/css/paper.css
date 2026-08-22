@@ -27,9 +27,9 @@
   --fs-body: clamp(1rem, 0.96rem + 0.18vw, 1.0625rem);
   --fs-caption: 0.72rem;
 
-  --measure: 68ch;
-  --container: min(92vw, 1180px);
-  --content: min(92vw, 760px);
+  --measure: 96ch;
+  --container: min(94vw, 1280px);
+  --content: min(94vw, 1080px);
 
   --radius: 6px;
   --radius-lg: 10px;
@@ -147,7 +147,8 @@ img {
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  padding-block: clamp(3rem, 2rem + 4vw, 6rem) clamp(2rem, 1.5rem + 2vw, 3.5rem);
+  padding-top: clamp(2.5rem, 1.8rem + 3vw, 4.5rem);
+  padding-bottom: 0.75rem;
 }
 
 /* faint blueprint grid, radially masked */
@@ -352,14 +353,35 @@ img {
 \*-----------------------------------*/
 
 .fig {
-  margin-block: clamp(2rem, 1.5rem + 2vw, 3rem);
+  margin-top: 0.75rem;
+  margin-bottom: clamp(1.8rem, 1.2rem + 1.5vw, 3rem);
 }
 
 .fig img {
   width: 100%;
+  max-height: 380px;
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   background: var(--bg-soft);
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Aspect ratio modifiers */
+.fig img.aspect-16-9 {
+  aspect-ratio: 16 / 9;
+}
+
+.fig img.aspect-21-9 {
+  aspect-ratio: 21 / 9;
+}
+
+.fig img.aspect-16-10 {
+  aspect-ratio: 16 / 10;
+}
+
+.fig img.aspect-4-3 {
+  aspect-ratio: 4 / 3;
 }
 
 .fig figcaption {
@@ -455,7 +477,7 @@ img {
   margin-top: 1.1rem;
   max-width: var(--measure);
   display: grid;
-  gap: 0.6rem;
+  gap: 0.65rem;
 }
 
 .bullets li {
@@ -474,27 +496,93 @@ img {
   background: var(--accent);
 }
 
+.bullets.check-bullets li {
+  padding-left: 1.6rem;
+}
+
+.bullets.check-bullets li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  top: -0.1em;
+  width: auto;
+  height: auto;
+  background: none;
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.bullets.arrow-bullets li {
+  padding-left: 1.4rem;
+}
+
+.bullets.arrow-bullets li::before {
+  content: '›';
+  position: absolute;
+  left: 0;
+  top: -0.1em;
+  width: auto;
+  height: auto;
+  background: none;
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 1.3rem;
+  line-height: 1.2;
+}
+
+.publication-details-card {
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.4rem 1.6rem;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.publication-details-card p {
+  margin-top: 0;
+  font-size: 1.02rem;
+  color: var(--text-muted);
+}
+
+.publication-details-card strong {
+  color: var(--text);
+}
+
+.publication-details-card a {
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-weight: 600;
+}
+
 /*-----------------------------------*\
   #CALLOUT
 \*-----------------------------------*/
 
 .callout {
-  background: var(--bg-soft);
-  border: 1px solid var(--border);
-  border-left: 3px solid var(--text);
-  border-radius: 0 var(--radius) var(--radius) 0;
-  padding: 1.2rem 1.45rem;
-  margin-block: 2rem;
+  background: color-mix(in srgb, var(--accent) 6%, var(--bg-soft));
+  border: 1px solid color-mix(in srgb, var(--accent) 22%, var(--border));
+  border-left: 4px solid var(--accent);
+  border-radius: var(--radius-lg);
+  padding: 1.2rem 1.5rem;
+  margin-block: 1.6rem;
   max-width: var(--measure);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
 }
 
 .callout p {
   margin-top: 0;
-  color: var(--text-muted);
+  color: var(--text);
+  font-size: 1.02rem;
+  line-height: 1.6;
 }
 
 .callout strong {
-  color: var(--text);
+  color: var(--accent);
+  font-weight: 700;
 }
 
 /*-----------------------------------*\

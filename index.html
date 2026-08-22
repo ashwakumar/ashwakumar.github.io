@@ -32,7 +32,7 @@
     href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter+Tight:ital,wght@0,400;0,500;1,400&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap"
     rel="stylesheet">
 
-  <link rel="stylesheet" href="./assets/css/main.css">
+  <link rel="stylesheet" href="./assets/css/main.css?v=4.1">
 
   <script type="application/ld+json">
   {
@@ -128,7 +128,7 @@
           <div class="rail-track">
             <div class="rail-group">
               <span class="rail-item">Doctorate · ETH Zürich</span>
-              <span class="rail-item">4 peer-reviewed journal papers</span>
+              <span class="rail-item">Peer-reviewed journal papers</span>
               <span class="rail-item">8+ years R&amp;D</span>
               <span class="rail-item">Direct FE² multiscale framework</span>
               <span class="rail-item">Spark plasma sintering</span>
@@ -137,7 +137,7 @@
             </div>
             <div class="rail-group">
               <span class="rail-item">Doctorate · ETH Zürich</span>
-              <span class="rail-item">4 peer-reviewed journal papers</span>
+              <span class="rail-item">Peer-reviewed journal papers</span>
               <span class="rail-item">8+ years R&amp;D</span>
               <span class="rail-item">Direct FE² multiscale framework</span>
               <span class="rail-item">Spark plasma sintering</span>
@@ -160,9 +160,10 @@
       <ul class="anchor-items">
         <li><a href="#approach" class="anchor-link">Approach</a></li>
         <li><a href="#focus" class="anchor-link">Focus</a></li>
-        <li><a href="#research" class="anchor-link">Research</a></li>
         <li><a href="#work" class="anchor-link">Work</a></li>
         <li><a href="#track" class="anchor-link">Track record</a></li>
+        <li><a href="#research" class="anchor-link">Publications</a></li>
+        <li><a href="#hobbies" class="anchor-link">Hobbies</a></li>
         <li><a href="#contact" class="anchor-link">Contact</a></li>
       </ul>
     </div>
@@ -183,8 +184,11 @@
         <div class="who-i-am-layout">
           <!-- 2-Column Row: Left Small Pic, Right Bio Text -->
           <div class="who-i-am-row">
-            <div class="profile-portrait-compact" data-reveal>
-              <img src="./assets/images/my_pic.jpg" alt="Ashwani Kumar" class="profile-portrait-img-sm">
+            <div class="profile-portrait-col">
+              <div class="profile-portrait-compact" data-reveal>
+                <img src="./assets/images/my_pic.jpg" alt="Ashwani Kumar" class="profile-portrait-img-sm">
+              </div>
+              <div class="profile-name-outside" data-reveal>Ashwani Kumar</div>
             </div>
 
             <div class="intro-body prose" data-reveal style="--i:2">
@@ -228,6 +232,7 @@
         </div>
 
         <div class="bento-grid">
+          <!-- Tile 01: Multiphysics Modelling -->
           <div class="bento-card bento-card-wide" data-reveal style="--i:1">
             <div class="bento-header">
               <span class="bento-num">01 // MULTIPHYSICS</span>
@@ -238,16 +243,19 @@
               Fully coupled electro-thermo-mechanical frameworks that simulate electric current flow, Joule heating, and
               densification as one unified continuum system rather than three separate solves.
             </p>
-            <div class="bento-stat">
-              3-in-1 <span class="bento-stat-label">Electro-Thermo-Mechanical Coupling</span>
-            </div>
             <div class="bento-footer">
-              <span class="bento-tag">Joule Heating</span>
-              <span class="bento-tag">Sintering Physics</span>
-              <span class="bento-tag">Finite Elements</span>
+              <span class="bento-tag">Electrical</span>
+              <span class="bento-tag">Thermal</span>
+              <span class="bento-tag">Mechanical</span>
+              <span class="bento-tag">Abaqus</span>
+              <span class="bento-tag">COMSOL</span>
+              <span class="bento-tag">ANSYS</span>
+              <span class="bento-tag">FEniCS</span>
+              <span class="bento-tag">Kratos</span>
             </div>
           </div>
 
+          <!-- Tile 02: Multiscale Direct FE² -->
           <div class="bento-card bento-card-narrow" data-reveal style="--i:2">
             <div class="bento-header">
               <span class="bento-num">02 // MULTISCALE</span>
@@ -259,11 +267,17 @@
               inform macro predictions seamlessly.
             </p>
             <div class="bento-footer">
-              <span class="bento-tag">FE² Framework</span>
-              <span class="bento-tag">Grain Mechanics</span>
+              <span class="bento-tag">Micro-Scale</span>
+              <span class="bento-tag">Macro-Scale</span>
+              <span class="bento-tag">Direct FE²</span>
+              <span class="bento-tag">ParaView</span>
+              <span class="bento-tag">SolidWorks</span>
+              <span class="bento-tag">CATIA</span>
+              <span class="bento-tag">nCode</span>
             </div>
           </div>
 
+          <!-- Tile 03: Surrogate Models for FEM -->
           <div class="bento-card bento-card-narrow" data-reveal style="--i:3">
             <div class="bento-header">
               <span class="bento-num">03 // AI &amp; SURROGATES</span>
@@ -274,15 +288,18 @@
               Python ML pipelines trained on high-fidelity simulation data that stand in for expensive FE solves,
               turning hours of compute into seconds in optimization loops.
             </p>
-            <div class="bento-stat">
-              10,000× <span class="bento-stat-label">Acceleration Speedup</span>
-            </div>
             <div class="bento-footer">
-              <span class="bento-tag">PyTorch / Scikit</span>
-              <span class="bento-tag">Design Loops</span>
+              <span class="bento-tag">Machine Learning</span>
+              <span class="bento-tag">Neural Surrogates</span>
+              <span class="bento-tag">Python</span>
+              <span class="bento-tag">PyTorch</span>
+              <span class="bento-tag">C++</span>
+              <span class="bento-tag">Fortran</span>
+              <span class="bento-tag">MATLAB</span>
             </div>
           </div>
 
+          <!-- Tile 04: Computational Engineering & HPC -->
           <div class="bento-card bento-card-wide" data-reveal style="--i:4">
             <div class="bento-header">
               <span class="bento-num">04 // HPC COMPUTE</span>
@@ -294,16 +311,18 @@
               automated meshing and dataset generation pipelines.
             </p>
             <div class="bento-footer">
-              <span class="bento-tag">Euler Cluster</span>
-              <span class="bento-tag">Abaqus / COMSOL</span>
-              <span class="bento-tag">Parallel Python</span>
+              <span class="bento-tag">HPC Clusters</span>
+              <span class="bento-tag">Parallel Compute</span>
+              <span class="bento-tag">ETH Euler HPC</span>
+              <span class="bento-tag">MPI / OpenMP</span>
+              <span class="bento-tag">Docker</span>
+              <span class="bento-tag">Git</span>
+              <span class="bento-tag">Linux</span>
             </div>
           </div>
         </div>
       </div>
     </section>
-
-
 
     <!--=====================================
       SELECTED WORK
@@ -344,7 +363,7 @@
             <h3 class="project-title">Multi-material spark plasma sintering</h3>
             <p class="project-desc">
               A fully coupled electro-thermo-mechanical framework for multi-material SPS, predicting interface behaviour
-              and final part geometry against experimental validation.
+              and final geometry against experimental validation.
             </p>
             <ul class="project-tags">
               <li class="tag">Multiphysics</li>
@@ -410,85 +429,246 @@
     </section>
 
     <!--=====================================
-      TRACK RECORD
+      CAREER CV & TRACK RECORD (STICKY SIDE-NAV LAYOUT)
     ======================================-->
     <section class="section bg-dark" id="track">
-      <div class="container">
+      <div class="container cv-container">
 
-        <!-- Section 1: Where I have worked -->
-        <div style="margin-bottom: var(--space-xl)">
-          <div class="section-head" data-reveal>
-            <!-- <p class="label">05 // WORK EXPERIENCE</p> -->
-            <h2 class="h-md" data-anim-words>Where I have worked</h2>
+        <!-- Sticky Side Menu (Left) -->
+        <aside class="cv-sidebar">
+          <nav class="cv-sticky-nav">
+            <a href="#cv-work" class="cv-tab active" data-cv-tab="cv-work">
+              <span class="tab-num">01</span>
+              <span class="tab-label">Where I have worked</span>
+              <span class="tab-dot"></span>
+            </a>
+            <a href="#cv-education" class="cv-tab" data-cv-tab="cv-education">
+              <span class="tab-num">02</span>
+              <span class="tab-label">Where I have studied</span>
+              <span class="tab-dot"></span>
+            </a>
+            <a href="#cv-skills" class="cv-tab" data-cv-tab="cv-skills">
+              <span class="tab-num">03</span>
+              <span class="tab-label">Tech stack &amp; skills</span>
+              <span class="tab-dot"></span>
+            </a>
+            <a href="#cv-awards" class="cv-tab" data-cv-tab="cv-awards">
+              <span class="tab-num">04</span>
+              <span class="tab-label">Awards &amp; accomplishments</span>
+              <span class="tab-dot"></span>
+            </a>
+          </nav>
+        </aside>
+
+        <!-- Right Content Area -->
+        <div class="cv-content">
+
+          <!-- 01: Where I have worked -->
+          <div id="cv-work" class="cv-block" data-cv-section>
+            <div class="section-head" data-reveal>
+              <h2 class="h-md" data-anim-words>Where I have worked</h2>
+            </div>
+            <ol class="tl">
+              <li class="tl-item" data-reveal>
+                <span class="tl-date">2021 — NOW</span>
+                <img src="./assets/images/eth_logo.png" alt="ETH Zürich Logo" class="org-logo">
+                <div>
+                  <h3 class="tl-role">Doctorate Researcher · Advanced Manufacturing Lab</h3>
+                  <p class="tl-org">ETH ZÜRICH, SWITZERLAND</p>
+                </div>
+              </li>
+              <li class="tl-item" data-reveal>
+                <span class="tl-date">2019 — 2021</span>
+                <img src="./assets/images/rub_logo.png" alt="Ruhr University Bochum Logo" class="org-logo">
+                <div>
+                  <h3 class="tl-role">Research Assistant · Chair of Statics &amp; Dynamics</h3>
+                  <p class="tl-org">RUHR UNIVERSITY BOCHUM, GERMANY</p>
+                </div>
+              </li>
+              <li class="tl-item" data-reveal>
+                <span class="tl-date">2014 — 2018</span>
+                <img src="./assets/images/hero_logo.png" alt="Hero MotoCorp Logo" class="org-logo">
+                <div>
+                  <h3 class="tl-role">Deputy Manager · Chassis Simulation &amp; Analysis</h3>
+                  <p class="tl-org">HERO MOTOCORP LTD, INDIA</p>
+                </div>
+              </li>
+            </ol>
+          </div>
+          <!-- 02: Where I have studied -->
+          <div id="cv-education" class="cv-block" data-cv-section>
+            <div class="section-head" data-reveal>
+              <h2 class="h-md" data-anim-words>Where I have studied</h2>
+            </div>
+            <ol class="tl">
+              <li class="tl-item" data-reveal>
+                <span class="tl-date">2021 — NOW</span>
+                <img src="./assets/images/eth_logo.png" alt="ETH Zürich Logo" class="org-logo">
+                <div>
+                  <h3 class="tl-role">Dr. sc. Mechanical Engineering</h3>
+                  <p class="tl-org">ETH ZÜRICH, SWITZERLAND</p>
+                </div>
+              </li>
+              <li class="tl-item" data-reveal>
+                <span class="tl-date">2019 — 2021</span>
+                <img src="./assets/images/rub_logo.png" alt="Ruhr University Bochum Logo" class="org-logo">
+                <div>
+                  <h3 class="tl-role">M.Sc. Computational Engineering</h3>
+                  <p class="tl-org">RUHR UNIVERSITY BOCHUM, GERMANY · DEUTSCHLANDSTIPENDIUM</p>
+                </div>
+              </li>
+              <li class="tl-item" data-reveal>
+                <span class="tl-date">2010 — 2014</span>
+                <img src="./assets/images/nitj_logo.png" alt="NIT Jalandhar Logo" class="org-logo">
+                <div>
+                  <h3 class="tl-role">B.Tech. Mechanical Engineering</h3>
+                  <p class="tl-org">NIT JALANDHAR, INDIA · GOLD MEDAL &amp; ROLL OF HONOUR (RANK 1)</p>
+                </div>
+              </li>
+            </ol>
           </div>
 
-          <ol class="tl">
-            <li class="tl-item" data-reveal>
-              <span class="tl-date">2021 — NOW</span>
-              <img src="./assets/images/eth_logo.png" alt="ETH Zürich Logo" class="org-logo">
-              <div>
-                <h3 class="tl-role">Doctorate Researcher · Advanced Manufacturing Lab</h3>
-                <p class="tl-org">ETH ZÜRICH, SWITZERLAND</p>
+          <!-- 03: Tech stack & skills -->
+          <div id="cv-skills" class="cv-block" data-cv-section>
+            <div class="section-head" data-reveal>
+              <h2 class="h-md" data-anim-words>Tech stack &amp; skills</h2>
+            </div>
+            <div class="skills-matrix-grid">
+              <!-- Category 1: Simulation & Modeling -->
+              <div class="skills-card" data-reveal style="--i:1">
+                <div class="skills-category-header">
+                  <span class="category-icon">🧮</span>
+                  <h3 class="category-title">Simulation &amp; Modeling</h3>
+                </div>
+                <div class="skills-pills-wrap">
+                  <span class="skill-chip"><img src="./assets/images/tech/abaqus.png" class="chip-logo-img"
+                      alt="Abaqus"> Abaqus</span>
+                  <span class="skill-chip"><img src="./assets/images/tech/comsol.png" class="chip-logo-img"
+                      alt="COMSOL"> COMSOL</span>
+                  <span class="skill-chip"><img src="./assets/images/tech/ansys.png" class="chip-logo-img" alt="ANSYS">
+                    ANSYS</span>
+                  <span class="skill-chip"><img src="./assets/images/tech/fenics.png" class="chip-logo-img"
+                      alt="FEniCS"> FEniCS</span>
+                  <span class="skill-chip"><img src="./assets/images/tech/kratos.png" class="chip-logo-img"
+                      alt="Kratos"> Kratos</span>
+                </div>
               </div>
-            </li>
 
-            <li class="tl-item" data-reveal>
-              <span class="tl-date">2019 — 2021</span>
-              <img src="./assets/images/rub_logo.png" alt="Ruhr University Bochum Logo" class="org-logo">
-              <div>
-                <h3 class="tl-role">Research Assistant · Chair of Statics &amp; Dynamics</h3>
-                <p class="tl-org">RUHR UNIVERSITY BOCHUM, GERMANY</p>
+              <!-- Category 2: Programming & Libraries -->
+              <div class="skills-card" data-reveal style="--i:2">
+                <div class="skills-category-header">
+                  <span class="category-icon">&lt;/&gt;</span>
+                  <h3 class="category-title">Programming &amp; Libraries</h3>
+                </div>
+                <div class="skills-pills-wrap">
+                  <span class="skill-chip"><img src="./assets/images/tech/python.svg" class="chip-logo-img"
+                      alt="Python"> Python</span>
+                  <span class="skill-chip"><span class="chip-logo">🔥</span> PyTorch</span>
+                  <span class="skill-chip"><img src="./assets/images/tech/cplusplus.svg" class="chip-logo-img"
+                      alt="C++"> C++</span>
+                  <span class="skill-chip"><span class="chip-logo">🏎️</span> Fortran</span>
+                  <span class="skill-chip"><img src="./assets/images/tech/matlab.svg" class="chip-logo-img"
+                      alt="MATLAB"> MATLAB</span>
+                  <span class="skill-chip"><img src="./assets/images/tech/java.webp" class="chip-logo-img" alt="Java">
+                    Java</span>
+                </div>
               </div>
-            </li>
 
-            <li class="tl-item" data-reveal>
-              <span class="tl-date">2014 — 2018</span>
-              <img src="./assets/images/hero_logo.png" alt="Hero MotoCorp Logo" class="org-logo">
-              <div>
-                <h3 class="tl-role">Deputy Manager · Chassis Simulation &amp; Analysis</h3>
-                <p class="tl-org">HERO MOTOCORP LTD, INDIA</p>
+              <!-- Category 3: Computing & Development -->
+              <div class="skills-card" data-reveal style="--i:3">
+                <div class="skills-category-header">
+                  <span class="category-icon">🖥️</span>
+                  <h3 class="category-title">Computing &amp; Infrastructure</h3>
+                </div>
+                <div class="skills-pills-wrap">
+                  <span class="skill-chip"><img src="./assets/images/tech/hpc.jpg" class="chip-logo-img"
+                      alt="ETH Euler HPC"> ETH Euler HPC</span>
+                  <span class="skill-chip"><span class="chip-logo">⚡</span> OpenMP</span>
+                  <span class="skill-chip"><img src="./assets/images/tech/docker.svg" class="chip-logo-img"
+                      alt="Docker"> Docker</span>
+                  <span class="skill-chip"><img src="./assets/images/tech/git.svg" class="chip-logo-img" alt="Git">
+                    Git</span>
+                  <span class="skill-chip"><img src="./assets/images/tech/linux.svg" class="chip-logo-img" alt="Linux">
+                    Linux</span>
+                </div>
               </div>
-            </li>
-          </ol>
-        </div>
 
-        <div style="margin-top: var(--space-md)"></div>
+              <!-- Category 4: Data Acquisition & Analysis -->
+              <div class="skills-card" data-reveal style="--i:4">
+                <div class="skills-category-header">
+                  <span class="category-icon">🔧</span>
+                  <h3 class="category-title">Data Acquisition &amp; Analysis</h3>
+                </div>
+                <div class="skills-pills-wrap">
+                  <span class="skill-chip"><span class="chip-logo">📈</span> LMS TestLab</span>
+                  <span class="skill-chip"><img src="./assets/images/tech/paraview.png" class="chip-logo-img"
+                      alt="ParaView"> ParaView</span>
+                  <span class="skill-chip"><span class="chip-logo">🔬</span> nCode DesignLife</span>
+                  <span class="skill-chip"><span class="chip-logo">📉</span> Scikit-Learn</span>
+                </div>
+              </div>
 
-        <!-- Section 2: Where I have studied -->
-        <div>
-          <div class="section-head" data-reveal>
-            <!-- <p class="label">05.B // ACADEMIC EDUCATION</p> -->
-            <h2 class="h-md" data-anim-words>Where I have studied</h2>
+              <!-- Category 5: Languages -->
+              <div class="skills-card" data-reveal style="--i:5">
+                <div class="skills-category-header">
+                  <span class="category-icon">🗣️</span>
+                  <h3 class="category-title">Languages</h3>
+                </div>
+                <div class="skills-pills-wrap">
+                  <span class="skill-chip">English <span class="chip-sub">(C2 Professional)</span></span>
+                  <span class="skill-chip">German <span class="chip-sub">(B1 Intermediate)</span></span>
+                  <span class="skill-chip">Hindi <span class="chip-sub">(Native)</span></span>
+                  <span class="skill-chip">Rajasthani <span class="chip-sub">(Native)</span></span>
+                </div>
+              </div>
+
+              <!-- Category 6: Technical Skills -->
+              <div class="skills-card" data-reveal style="--i:6">
+                <div class="skills-category-header">
+                  <span class="category-icon">🔬</span>
+                  <h3 class="category-title">Technical Competencies</h3>
+                </div>
+                <div class="skills-pills-wrap">
+                  <span class="skill-chip">Fatigue & Vibration Analysis</span>
+                  <span class="skill-chip">Modal Analysis</span>
+                  <span class="skill-chip">Track Correlation</span>
+                  <span class="skill-chip">Sensor Data Analysis</span>
+                </div>
+              </div>
+
+            </div>
           </div>
 
-          <ol class="tl">
-            <li class="tl-item" data-reveal>
-              <span class="tl-date">2021 — NOW</span>
-              <img src="./assets/images/eth_logo.png" alt="ETH Zürich Logo" class="org-logo">
-              <div>
-                <h3 class="tl-role">Dr. sc. Mechanical Engineering</h3>
-                <p class="tl-org">ETH ZÜRICH, SWITZERLAND</p>
-              </div>
-            </li>
+          <!-- 04: Awards & accomplishments -->
+          <div id="cv-awards" class="cv-block" data-cv-section>
+            <div class="section-head" data-reveal>
+              <h2 class="h-md" data-anim-words>Awards &amp; accomplishments</h2>
+            </div>
+            <ol class="awards-timeline">
+              <li class="award-item" data-reveal>
+                <span class="award-dot"></span>
+                <div class="award-content">
+                  <h3 class="award-title">Deutschlandstipendium, 2019</h3>
+                  <p class="award-desc">Awarded for excellence as an international student at Ruhr University Bochum</p>
+                </div>
+              </li>
+              <li class="award-item" data-reveal>
+                <span class="award-dot"></span>
+                <div class="award-content">
+                  <h3 class="award-title">Achiever Award, 2017–18</h3>
+                  <p class="award-desc">Recognized for exemplary performance at Hero MotoCorp Ltd</p>
+                </div>
+              </li>
+              <li class="award-item" data-reveal>
+                <span class="award-dot"></span>
+                <div class="award-content">
+                  <h3 class="award-title">Gold Medal (Roll of Honour), 2014</h3>
+                  <p class="award-desc">First rank in B.Tech. Mechanical Engineering, NIT Jalandhar</p>
+                </div>
+              </li>
+            </ol>
+          </div>
 
-            <li class="tl-item" data-reveal>
-              <span class="tl-date">2019 — 2021</span>
-              <img src="./assets/images/rub_logo.png" alt="Ruhr University Bochum Logo" class="org-logo">
-              <div>
-                <h3 class="tl-role">M.Sc. Computational Engineering</h3>
-                <p class="tl-org">RUHR UNIVERSITY BOCHUM, GERMANY · DEUTSCHLANDSTIPENDIUM</p>
-              </div>
-            </li>
-
-            <li class="tl-item" data-reveal>
-              <span class="tl-date">2010 — 2014</span>
-              <img src="./assets/images/nitj_logo.png" alt="NIT Jalandhar Logo" class="org-logo">
-              <div>
-                <h3 class="tl-role">B.Tech. Mechanical Engineering</h3>
-                <p class="tl-org">NIT JALANDHAR, INDIA · GOLD MEDAL &amp; ROLL OF HONOUR (RANK 1)</p>
-              </div>
-            </li>
-          </ol>
         </div>
       </div>
     </section>
@@ -500,7 +680,7 @@
       <div class="container">
         <div class="section-head" data-reveal>
           <!--<p class="label">03 // PEER-REVIEWED RESEARCH</p>-->
-          <h2 class="h-md" data-anim-words>Peer-reviewed publications</h2>
+          <h2 class="h-md" data-anim-words>Publications</h2>
         </div>
 
         <div class="papers">
@@ -586,96 +766,62 @@
     </section>
 
     <!--=====================================
-      COMPUTATIONAL TOOLKIT & TECH STACK
+      BEYOND THE LAB (HOBBIES & OUTDOORS)
     ======================================-->
-    <section class="section bg-dark">
+    <section class="section bg-dark" id="hobbies">
       <div class="container">
-        <div>
-          <div class="section-head" data-reveal>
-            <p class="label">06 // COMPUTATIONAL TOOLKIT &amp; TECH STACK</p>
-          </div>
-
-          <div class="tech-stack-container">
-            <!-- Category 1: Simulation & Modeling -->
-            <div class="tech-category-card" data-reveal style="--i:1">
-              <div class="tech-category-title">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round">
-                  <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
-                  <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
-                </svg>
-                <span>Simulation &amp; FEM</span>
-              </div>
-              <div class="tech-pills">
-                <span class="tech-pill">Abaqus</span>
-                <span class="tech-pill">COMSOL</span>
-                <span class="tech-pill">ANSYS</span>
-                <span class="tech-pill">FEniCS</span>
-                <span class="tech-pill">Kratos</span>
-              </div>
-            </div>
-
-            <!-- Category 2: Programming & Machine Learning -->
-            <div class="tech-category-card" data-reveal style="--i:2">
-              <div class="tech-category-title">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round">
-                  <polyline points="16 18 22 12 16 6" />
-                  <polyline points="8 6 2 12 8 18" />
-                </svg>
-                <span>Programming &amp; AI</span>
-              </div>
-              <div class="tech-pills">
-                <span class="tech-pill">Python</span>
-                <span class="tech-pill">PyTorch</span>
-                <span class="tech-pill">C++</span>
-                <span class="tech-pill">Fortran</span>
-                <span class="tech-pill">MATLAB</span>
-              </div>
-            </div>
-
-            <!-- Category 3: CAD & Visualization -->
-            <div class="tech-category-card" data-reveal style="--i:3">
-              <div class="tech-category-title">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round">
-                  <path
-                    d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
-                </svg>
-                <span>CAD &amp; Visualization</span>
-              </div>
-              <div class="tech-pills">
-                <span class="tech-pill">ParaView</span>
-                <span class="tech-pill">SolidWorks</span>
-                <span class="tech-pill">CATIA</span>
-                <span class="tech-pill">LMS TestLab</span>
-                <span class="tech-pill">nCode</span>
-              </div>
-            </div>
-
-            <!-- Category 4: HPC & Dev Platforms -->
-            <div class="tech-category-card" data-reveal style="--i:4">
-              <div class="tech-category-title">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round">
-                  <rect x="2" y="2" width="20" height="8" rx="2" ry="2" />
-                  <rect x="2" y="14" width="20" height="8" rx="2" ry="2" />
-                  <line x1="6" y1="6" x2="6.01" y2="6" />
-                  <line x1="6" y1="18" x2="6.01" y2="18" />
-                </svg>
-                <span>HPC &amp; Platforms</span>
-              </div>
-              <div class="tech-pills">
-                <span class="tech-pill">ETH Euler HPC</span>
-                <span class="tech-pill">MPI / OpenMP</span>
-                <span class="tech-pill">Docker</span>
-                <span class="tech-pill">Git</span>
-                <span class="tech-pill">Linux</span>
-              </div>
-            </div>
-          </div>
+        <div class="section-head" data-reveal>
+          <!-- <p class="label">07 // BEYOND THE LAB</p> -->
+          <h2 class="h-md" data-anim-words>Beyond the lab &amp; algorithms</h2>
+          <p class="section-sub-desc" data-reveal style="--i:2">
+            When I'm not solving multiphysics equations or training neural surrogates, here is how I recharge and stay
+            active outdoors.
+          </p>
         </div>
 
+        <div class="hobbies-grid">
+          <!-- Hobby 1: Alpine Hiking -->
+          <div class="hobby-card" data-reveal style="--i:1">
+            <div class="hobby-header">
+              <div class="hobby-icon-wrap">
+                <span class="hobby-icon">🏔️</span>
+              </div>
+              <h3 class="hobby-title">Alpine Hiking &amp; Trekking</h3>
+            </div>
+            <p class="hobby-desc">
+              Living in Switzerland means the Alps are my weekend playground. Peak bagging, high-altitude trail loops,
+              and discovering mountain passes keep my perspective sharp.
+            </p>
+          </div>
+
+          <!-- Hobby 2: Badminton -->
+          <div class="hobby-card" data-reveal style="--i:2">
+            <div class="hobby-header">
+              <div class="hobby-icon-wrap">
+                <span class="hobby-icon">🏸</span>
+              </div>
+              <h3 class="hobby-title">Badminton Rallies</h3>
+            </div>
+            <p class="hobby-desc">
+              Fast-paced court agility, rapid reflexes, and competitive match play. Badminton is my go-to sport for
+              high-intensity indoor action and friendly competition.
+            </p>
+          </div>
+
+          <!-- Hobby 3: Distance Running -->
+          <div class="hobby-card" data-reveal style="--i:3">
+            <div class="hobby-header">
+              <div class="hobby-icon-wrap">
+                <span class="hobby-icon">🏃</span>
+              </div>
+              <h3 class="hobby-title">Distance Running</h3>
+            </div>
+            <p class="hobby-desc">
+              Pacing along Zurich lake trails and forest paths. Running clears the mind, builds rhythm and endurance,
+              and provides a continuous mental reset.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -689,51 +835,60 @@
           <h2 class="h-md" data-anim-words>Let's Connect!</h2>
         </div>
 
-        <div class="contact-grid">
+        <div class="contact-standalone-wrap" data-reveal>
+          <!-- 4 Icon Buttons Row -->
+          <div class="contact-icons-row">
+            <a class="contact-icon-btn email-icon" href="mailto:ashwanikjangir@gmail.com" aria-label="Email"
+              title="Email">
+              <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="4" width="20" height="16" rx="3"></rect>
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+              </svg>
+            </a>
 
-          <div class="contact-links">
-            <a class="contact-row" href="mailto:ashwanikjangir@gmail.com">
-              <span class="label">Email</span>
-              <span class="contact-value">ashwanikjangir@gmail.com</span>
+            <a class="contact-icon-btn linkedin-icon" href="https://www.linkedin.com/in/ashwanikumareth" target="_blank"
+              rel="noopener" aria-label="LinkedIn" title="LinkedIn">
+              <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor">
+                <path
+                  d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
+              </svg>
             </a>
-            <a class="contact-row" href="https://www.linkedin.com/in/ashwanikumareth" target="_blank" rel="noopener">
-              <span class="label">LinkedIn</span>
-              <span class="contact-value">ashwanikumareth</span>
+
+            <a class="contact-icon-btn github-icon" href="https://github.com/ashwakumar" target="_blank" rel="noopener"
+              aria-label="GitHub" title="GitHub">
+              <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor">
+                <path
+                  d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z" />
+              </svg>
             </a>
-            <a class="contact-row" href="https://github.com/ashwakumar" target="_blank" rel="noopener">
-              <span class="label">GitHub</span>
-              <span class="contact-value">ashwakumar</span>
+
+            <a class="contact-icon-btn scholar-icon" href="https://scholar.google.com/citations?user=ashwakumar"
+              target="_blank" rel="noopener" aria-label="Google Scholar" title="Google Scholar">
+              <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor">
+                <path
+                  d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-2a5 5 0 1 0 0-10 5 5 0 0 0 0 10zM5.242 8.08l4.083-2.732a3.8 3.8 0 0 1 5.35 0l4.083 2.732a.5.5 0 0 1-.277.92H5.519a.5.5 0 0 1-.277-.92zM12 2 1 9.5l11 7.5 11-7.5L12 2z" />
+              </svg>
             </a>
-            <!-- TODO: paste your real Google Scholar profile URL here -->
-            <a class="contact-row" href="#" target="_blank" rel="noopener">
-              <span class="label">Scholar</span>
-              <span class="contact-value">Publications</span>
-            </a>
-            <div class="contact-row">
-              <span class="label">Based in</span>
-              <span class="contact-value">Zürich, Switzerland</span>
-            </div>
           </div>
 
-          <form class="form" action="https://formspree.io/f/xjknoqqe" method="POST">
-            <label class="label" for="name">Your name</label>
-            <input class="field" id="name" type="text" name="fullname" placeholder="Name" required>
-
-            <label class="label" for="email">Your email</label>
-            <input class="field" id="email" type="email" name="email" placeholder="you@example.com" required>
-
-            <label class="label" for="message">Message</label>
-            <textarea class="field" id="message" name="message" placeholder="What are you working on?"
-              required></textarea>
-
-            <button class="btn btn-solid" type="submit" style="justify-content:center">
-              <span>Send message</span>
-              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-                <path d="M5 11 11 5m0 0H5.5M11 5v5.5" stroke-linecap="round" stroke-linejoin="round" />
+          <!-- Download CV Button -->
+          <div class="contact-cv-wrap">
+            <a href="./assets/Ashwani_Kumar_CV.pdf" class="btn btn-solid cv-download-btn" download target="_blank">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
               </svg>
-            </button>
-          </form>
+              <span>Download CV</span>
+            </a>
+          </div>
 
+          <!-- Location note -->
+          <div class="contact-location-note">
+            <span>📍</span> Based in <strong>Zürich, Switzerland 🇨🇭</strong>
+          </div>
         </div>
       </div>
     </section>
