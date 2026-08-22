@@ -116,4 +116,98 @@
     sections.forEach(function (section) { spy.observe(section); });
   }
 
+  /*---------------------------------------------------------
+    4. Interactive Hero Particle & FEA Mesh Canvas
+  ---------------------------------------------------------*/
+  const canvas = document.getElementById('hero-canvas');
+  if (canvas && !reduceMotion) {
+    const ctx = canvas.getContext('2d');
+    let width = (canvas.width = canvas.parentElement.clientWidth);
+    let height = (canvas.height = canvas.parentElement.clientHeight);
+
+    window.addEventListener('resize', function () {
+      if (!canvas.parentElement) return;
+      width = canvas.width = canvas.parentElement.clientWidth;
+      height = canvas.height = canvas.parentElement.clientHeight;
+    });
+
+    const particles = [];
+    const particleCount = Math.min(Math.floor((width * height) / 18000), 55);
+
+    for (let i = 0; i < particleCount; i++) {
+      particles.push({
+        x: Math.random() * width,
+        y: Math.random() * height,
+        vx: (Math.random() - 0.5) * 0.4,
+        vy: (Math.random() - 0.5) * 0.4,
+        radius: Math.random() * 1.8 + 1.2,
+      });
+    }
+
+    let mouseX = -1000;
+    let mouseY = -1000;
+
+    window.addEventListener('mousemove', function (e) {
+      const rect = canvas.getBoundingClientRect();
+      mouseX = e.clientX - rect.left;
+      mouseY = e.clientY - rect.top;
+    });
+
+    function draw() {
+      ctx.clearRect(0, 0, width, height);
+
+      const primaryColor = getComputedStyle(document.documentElement).getPropertyValue('--primary').trim() || '#0284c7';
+
+      particles.forEach(function (p, i) {
+        p.x += p.vx;
+        p.y += p.vy;
+
+        if (p.x < 0 || p.x > width) p.vx *= -1;
+        if (p.y < 0 || p.y > height) p.vy *= -1;
+
+        // Draw node particle
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+        ctx.fillStyle = primaryColor;
+        ctx.fill();
+
+        // Connect FEA mesh lines to nearby particles
+        for (let j = i + 1; j < particles.length; j++) {
+          const p2 = particles[j];
+          const dx = p.x - p2.x;
+          const dy = p.y - p2.y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+
+          if (dist < 130) {
+            ctx.beginPath();
+            ctx.moveTo(p.x, p.y);
+            ctx.lineTo(p2.x, p2.y);
+            ctx.strokeStyle = primaryColor;
+            ctx.globalAlpha = (1 - dist / 130) * 0.25;
+            ctx.stroke();
+            ctx.globalAlpha = 1;
+          }
+        }
+
+        // React subtly to cursor proximity
+        const mdx = p.x - mouseX;
+        const mdy = p.y - mouseY;
+        const mdist = Math.sqrt(mdx * mdx + mdy * mdy);
+        if (mdist < 140) {
+          ctx.beginPath();
+          ctx.moveTo(p.x, p.y);
+          ctx.lineTo(mouseX, mouseY);
+          ctx.strokeStyle = primaryColor;
+          ctx.globalAlpha = (1 - mdist / 140) * 0.4;
+          ctx.stroke();
+          ctx.globalAlpha = 1;
+        }
+      });
+
+      requestAnimationFrame(draw);
+    }
+
+    draw();
+  }
+
 })();

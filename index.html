@@ -25,11 +25,11 @@
 
   <link rel="shortcut icon" href="./assets/images/logo-ak.png" type="image/png">
 
-  <!-- fonts: neo-grotesk + mono -->
+  <!-- fonts: space grotesk + jetbrains mono + inter tight -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter+Tight:ital,wght@0,400;0,500;1,400&display=swap"
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter+Tight:ital,wght@0,400;0,500;1,400&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap"
     rel="stylesheet">
 
   <link rel="stylesheet" href="./assets/css/main.css">
@@ -62,13 +62,17 @@
   <header class="hero" id="top">
 
     <div class="hero-bg">
-      <img src="./assets/images/DFE2_Image_HeroImage.png" alt="" aria-hidden="true" fetchpriority="high">
+      <canvas id="hero-canvas"></canvas>
+      <img src="./assets/images/hero_custom_mesh.png" alt="" aria-hidden="true" fetchpriority="high">
     </div>
 
     <div class="hero-inner container">
 
       <div class="hero-top">
-        <p class="hero-mark">Ashwani Kumar<span> ·</span> Zürich, CH</p>
+        <div class="hero-mark">
+          <span class="hero-mark-name">Ashwani Kumar</span>
+          <span class="hero-mark-title">Computational &amp; ML Engineer</span>
+        </div>
         <a href="./assets/CV_Ashwani_Kumar.pdf" class="btn btn-ghost" target="_blank" rel="noopener">
           <span>Curriculum Vitae</span>
           <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
@@ -78,16 +82,43 @@
       </div>
 
       <div class="hero-main">
+        <div class="hero-status" data-reveal style="--i:1">
+          <span class="status-dot"></span>
+          <span>Doctorate Researcher · ETH Zürich</span>
+        </div>
+
         <h1 class="h-hero hero-title" data-anim-words>
-          Simulating how materials behave under extremes.
+          Bridging microscale physics &amp; macroscale engineering with AI.
         </h1>
-        <p class="hero-desc" data-reveal style="--i:6">
-          I build multiphysics and multiscale finite-element models of manufacturing processes — and pair them with
-          machine learning so they run fast enough to be useful.
+        <p class="hero-desc" data-reveal style="--i:4">
+          I build fully coupled electro-thermo-mechanical finite-element models of manufacturing processes — and pair
+          them with machine learning surrogates so hours of compute run in seconds.
         </p>
-        <div class="hero-actions" data-reveal style="--i:7">
-          <a href="#research" class="btn btn-solid">Research</a>
-          <a href="#work" class="btn btn-ghost">Selected work</a>
+        <div class="hero-actions" data-reveal style="--i:5">
+          <a href="#research" class="btn btn-solid">Explore Research</a>
+          <a href="#work" class="btn btn-ghost">Selected Work</a>
+        </div>
+
+        <div class="hero-social" data-reveal style="--i:6">
+          <a href="https://github.com/ashwakumar" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/in/ashwanikumareth" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+            </svg>
+          </a>
+          <a href="mailto:ashwanikjangir@gmail.com" aria-label="Email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+              <path d="M22 6l-10 7L2 6" />
+            </svg>
+          </a>
         </div>
       </div>
 
@@ -145,174 +176,134 @@
     <section class="section" id="approach">
       <div class="container">
         <div class="section-head" data-reveal>
-          <p class="label">01 — Approach</p>
+          <h2 class="h-md" data-anim-words>Who I am</h2>
+          <!-- <p class="label">01 // WHO I AM</p> -->
         </div>
+        <div style="margin-bottom: 4em;"></div>
+        <div class="who-i-am-layout">
+          <!-- 2-Column Row: Left Small Pic, Right Bio Text -->
+          <div class="who-i-am-row">
+            <div class="profile-portrait-compact" data-reveal>
+              <img src="./assets/images/my_pic.jpg" alt="Ashwani Kumar" class="profile-portrait-img-sm">
+            </div>
 
-        <div class="split">
-          <blockquote class="intro-quote" data-anim-words>
+            <div class="intro-body prose" data-reveal style="--i:2">
+              <p>
+                I am a computational engineering researcher completing a Doctorate at ETH Zürich, where I work on the
+                numerical modelling of spark plasma sintering — a process in which electric current, heat, and
+                mechanical
+                pressure act on a powder simultaneously, and where what happens between individual particles determines
+                whether the finished component is sound.
+              </p>
+              <p>
+                My work combines classical finite element methods with machine learning to bridge that gap. Fully
+                coupled electro-thermo-mechanical frameworks capture the physics; Direct FE² links the microscale to the
+                component scale; ML surrogates make the result cheap enough to run inside a design loop rather than once
+                at the
+                end of one.
+              </p>
+              <p>
+                Before ETH I spent four years in the automotive industry at Hero MotoCorp, running structural, fatigue,
+                and vibration analysis for mass-production vehicles.
+              </p>
+            </div>
+          </div>
+
+          <!-- Statement Heading Below -->
+          <blockquote class="intro-quote-below" data-anim-words>
             Microstructure decides everything. <em>Most simulations never look there.</em>
           </blockquote>
+        </div>
+      </div>
+    </section>
 
-          <div class="intro-body prose" data-reveal style="--i:2">
-            <p>
-              I am a computational engineering researcher completing a Doctorate at ETH Zürich, where I work on the
-              numerical modelling of spark plasma sintering — a process in which electric current, heat, and mechanical
-              pressure act on a powder simultaneously, and where what happens between individual particles determines
-              whether the finished component is sound.
+    <!--=====================================
+      RESEARCH FOCUS (BENTO GRID)
+    ======================================-->
+    <section class="section bg-dark" id="focus">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <!--<p class="label">02 // COMPUTATIONAL FOCUS</p>-->
+          <h2 class="h-md" data-anim-words>Domains I work on</h2>
+        </div>
+
+        <div class="bento-grid">
+          <div class="bento-card bento-card-wide" data-reveal style="--i:1">
+            <div class="bento-header">
+              <span class="bento-num">01 // MULTIPHYSICS</span>
+              <span class="bento-badge">Coupled Systems</span>
+            </div>
+            <h3 class="bento-title">Multiphysics Modelling</h3>
+            <p class="bento-text">
+              Fully coupled electro-thermo-mechanical frameworks that simulate electric current flow, Joule heating, and
+              densification as one unified continuum system rather than three separate solves.
             </p>
-            <p>
-              My work combines classical finite element methods with machine learning to bridge that gap. Fully coupled
-              electro-thermo-mechanical frameworks capture the physics; Direct FE² links the microscale to the component
-              scale; ML surrogates make the result cheap enough to run inside a design loop rather than once at the end
-              of one.
+            <div class="bento-stat">
+              3-in-1 <span class="bento-stat-label">Electro-Thermo-Mechanical Coupling</span>
+            </div>
+            <div class="bento-footer">
+              <span class="bento-tag">Joule Heating</span>
+              <span class="bento-tag">Sintering Physics</span>
+              <span class="bento-tag">Finite Elements</span>
+            </div>
+          </div>
+
+          <div class="bento-card bento-card-narrow" data-reveal style="--i:2">
+            <div class="bento-header">
+              <span class="bento-num">02 // MULTISCALE</span>
+              <span class="bento-badge">Micro-to-Macro</span>
+            </div>
+            <h3 class="bento-title">Multiscale Direct FE²</h3>
+            <p class="bento-text">
+              Embedding resolved grain-level microstructures directly into component-scale meshes so micro-mechanics
+              inform macro predictions seamlessly.
             </p>
-            <p>
-              Before ETH I spent four years in the automotive industry at Hero MotoCorp, running structural, fatigue,
-              and vibration analysis for mass-production vehicles. That experience is why I care whether a model
-              survives contact with measured data.
+            <div class="bento-footer">
+              <span class="bento-tag">FE² Framework</span>
+              <span class="bento-tag">Grain Mechanics</span>
+            </div>
+          </div>
+
+          <div class="bento-card bento-card-narrow" data-reveal style="--i:3">
+            <div class="bento-header">
+              <span class="bento-num">03 // AI &amp; SURROGATES</span>
+              <span class="bento-badge">Fast Inference</span>
+            </div>
+            <h3 class="bento-title">Surrogate Models for FEM</h3>
+            <p class="bento-text">
+              Python ML pipelines trained on high-fidelity simulation data that stand in for expensive FE solves,
+              turning hours of compute into seconds in optimization loops.
             </p>
+            <div class="bento-stat">
+              10,000× <span class="bento-stat-label">Acceleration Speedup</span>
+            </div>
+            <div class="bento-footer">
+              <span class="bento-tag">PyTorch / Scikit</span>
+              <span class="bento-tag">Design Loops</span>
+            </div>
+          </div>
+
+          <div class="bento-card bento-card-wide" data-reveal style="--i:4">
+            <div class="bento-header">
+              <span class="bento-num">04 // HPC COMPUTE</span>
+              <span class="bento-badge">Scale &amp; Optimization</span>
+            </div>
+            <h3 class="bento-title">Computational Engineering &amp; HPC</h3>
+            <p class="bento-text">
+              Structural analysis, fracture mechanics, and optimization at scale — parallelised across HPC clusters with
+              automated meshing and dataset generation pipelines.
+            </p>
+            <div class="bento-footer">
+              <span class="bento-tag">Euler Cluster</span>
+              <span class="bento-tag">Abaqus / COMSOL</span>
+              <span class="bento-tag">Parallel Python</span>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!--=====================================
-      RESEARCH FOCUS
-    ======================================-->
-    <section class="section bg-dark" id="focus">
-      <div class="container">
-        <div class="section-head" data-reveal>
-          <p class="label">02 — Focus</p>
-          <h2 class="h-md" data-anim-words>Four problems I work on</h2>
-        </div>
 
-        <ol class="pillars">
-          <li class="pillar" data-reveal>
-            <span class="pillar-num">01</span>
-            <h3 class="pillar-title">Multiphysics modelling</h3>
-            <p class="pillar-text">
-              Fully coupled electro-thermo-mechanical frameworks that simulate current flow, Joule heating, and
-              densification as one system rather than three separate ones.
-            </p>
-          </li>
-          <li class="pillar" data-reveal>
-            <span class="pillar-num">02</span>
-            <h3 class="pillar-title">Multiscale modelling</h3>
-            <p class="pillar-text">
-              Direct FE² frameworks that embed a resolved microstructure inside a component-scale mesh, so particle-level
-              mechanics inform macroscale predictions directly.
-            </p>
-          </li>
-          <li class="pillar" data-reveal>
-            <span class="pillar-num">03</span>
-            <h3 class="pillar-title">Surrogate models for FEM</h3>
-            <p class="pillar-text">
-              Python ML pipelines trained on simulation data that stand in for the expensive solve, turning hours of
-              compute into seconds inside optimisation and design loops.
-            </p>
-          </li>
-          <li class="pillar" data-reveal>
-            <span class="pillar-num">04</span>
-            <h3 class="pillar-title">Computational engineering</h3>
-            <p class="pillar-text">
-              Structural analysis, fracture mechanics, and optimisation at scale — parallelised across HPC clusters with
-              automated meshing and dataset generation.
-            </p>
-          </li>
-        </ol>
-      </div>
-    </section>
-
-    <!--=====================================
-      RESEARCH / PUBLICATIONS  (full-bleed ember block)
-    ======================================-->
-    <section class="section bg-ember" id="research">
-      <div class="container">
-        <div class="section-head" data-reveal>
-          <p class="label">03 — Research</p>
-          <h2 class="h-md" data-anim-words>Peer-reviewed publications</h2>
-        </div>
-
-        <div class="papers">
-
-          <a class="paper" href="https://doi.org/10.1016/j.jmapro.2025.07.006" target="_blank" rel="noopener">
-            <span class="paper-year">2025</span>
-            <span>
-              <span class="paper-title">Enhancing multiscale simulations for spark plasma sintering with a novel
-                Direct FE² framework</span>
-              <span class="paper-venue">Journal of Manufacturing Processes · Elsevier</span>
-            </span>
-            <span class="paper-go">
-              <span>DOI</span>
-              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-                <path d="M5 11 11 5m0 0H5.5M11 5v5.5" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
-            </span>
-          </a>
-
-          <a class="paper" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5700109" target="_blank" rel="noopener">
-            <span class="paper-year">2025</span>
-            <span>
-              <span class="paper-title">Predicting interface behaviour and final geometry in multi-material spark
-                plasma sintering</span>
-              <span class="paper-venue">Preprint · under review</span>
-            </span>
-            <span class="paper-go">
-              <span>SSRN</span>
-              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-                <path d="M5 11 11 5m0 0H5.5M11 5v5.5" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
-            </span>
-          </a>
-
-          <a class="paper" href="https://doi.org/10.5194/se-15-763-2024" target="_blank" rel="noopener">
-            <span class="paper-year">2024</span>
-            <span>
-              <span class="paper-title">Impact of stress regime change on the permeability of a naturally fractured
-                carbonate buildup (Latemar, Dolomites, Northern Italy)</span>
-              <span class="paper-venue">Solid Earth · EGU · Open access</span>
-            </span>
-            <span class="paper-go">
-              <span>DOI</span>
-              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-                <path d="M5 11 11 5m0 0H5.5M11 5v5.5" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
-            </span>
-          </a>
-
-          <a class="paper" href="https://doi.org/10.1016/j.mechmat.2023.104834" target="_blank" rel="noopener">
-            <span class="paper-year">2024</span>
-            <span>
-              <span class="paper-title">A two-stage approach for material parameters identification in spark plasma
-                sintering</span>
-              <span class="paper-venue">Mechanics of Materials · Elsevier</span>
-            </span>
-            <span class="paper-go">
-              <span>DOI</span>
-              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-                <path d="M5 11 11 5m0 0H5.5M11 5v5.5" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
-            </span>
-          </a>
-
-          <a class="paper" href="https://doi.org/10.1007/s00402-022-04382-9" target="_blank" rel="noopener">
-            <span class="paper-year">2023</span>
-            <span>
-              <span class="paper-title">Bone tunnel placement influences shear stresses at the coracoid process after
-                coracoclavicular ligament reconstruction: a finite element study and radiological analysis</span>
-              <span class="paper-venue">Archives of Orthopaedic and Trauma Surgery · Springer</span>
-            </span>
-            <span class="paper-go">
-              <span>DOI</span>
-              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-                <path d="M5 11 11 5m0 0H5.5M11 5v5.5" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
-            </span>
-          </a>
-
-        </div>
-      </div>
-    </section>
 
     <!--=====================================
       SELECTED WORK
@@ -320,7 +311,7 @@
     <section class="section" id="work">
       <div class="container">
         <div class="section-head" data-reveal>
-          <p class="label">04 — Work</p>
+          <!--<p class="label">04 // SELECTED WORK & SIMULATIONS</p>-->
           <h2 class="h-md" data-anim-words>Selected projects</h2>
         </div>
 
@@ -423,117 +414,264 @@
     ======================================-->
     <section class="section bg-dark" id="track">
       <div class="container">
-        <div class="section-head" data-reveal>
-          <p class="label">05 — Track record</p>
-          <h2 class="h-md" data-anim-words>Where I have worked</h2>
-        </div>
 
-        <ol class="tl">
-
-          <li class="tl-item" data-reveal>
-            <span class="tl-date">2021 — now</span>
-            <div>
-              <h3 class="tl-role">Research Scientist · Advanced Manufacturing Lab</h3>
-              <p class="tl-org">ETH Zürich, Switzerland</p>
-              <ul class="tl-points">
-                <li>Developed and validated nonlinear thermo-mechanical FEM models of a high-temperature process.</li>
-                <li>Built Direct FE² multiphysics frameworks linking micro- and macroscale behaviour.</li>
-                <li>Wrote Python ML pipelines for surrogate training, integrated with FEM solvers.</li>
-                <li>Automated meshing, dataset generation, and CAE pipeline integration.</li>
-                <li>Published in high-impact journals; presented at international conferences.</li>
-              </ul>
-            </div>
-          </li>
-
-          <li class="tl-item" data-reveal>
-            <span class="tl-date">2019 — 2021</span>
-            <div>
-              <h3 class="tl-role">Research Assistant · Chair of Statics and Dynamics</h3>
-              <p class="tl-org">Ruhr University Bochum, Germany</p>
-              <ul class="tl-points">
-                <li>Optimised Dog-Bone button placement for shoulder surgery using FEM.</li>
-                <li>Developed homogenisation-based bone material models at tissue and collagen level.</li>
-                <li>Extended the FEAPpv solver with PARDISO and MKL for parallel scalability.</li>
-                <li>Built FEM diffusion models for fluid flow in fractured rock systems.</li>
-              </ul>
-            </div>
-          </li>
-
-          <li class="tl-item" data-reveal>
-            <span class="tl-date">2014 — 2018</span>
-            <div>
-              <h3 class="tl-role">Deputy Manager · Chassis Simulation &amp; Analysis</h3>
-              <p class="tl-org">Hero MotoCorp Ltd, India</p>
-              <ul class="tl-points">
-                <li>Ran structural testing for new vehicles: strain gauges, accelerometers, LVDTs.</li>
-                <li>Designed correlation experiments to validate FEM predictions against measured data.</li>
-                <li>Executed vibration, fatigue, and modal analyses with Siemens LMS and HBM systems.</li>
-                <li>Correlated proving-ground loads with lab simulators for durability studies.</li>
-                <li>Led a cross-functional team of up to 6 technicians and test riders.</li>
-              </ul>
-            </div>
-          </li>
-
-          <li class="tl-item" data-reveal>
-            <span class="tl-date">Education</span>
-            <div>
-              <h3 class="tl-role">Dr. sc. Mechanical Engineering · ETH Zürich</h3>
-              <p class="tl-org">MSc Computational Engineering · Ruhr University Bochum &nbsp;·&nbsp; BTech Mechanical ·
-                NIT Jalandhar (Gold Medal, 1st rank)</p>
-              <ul class="tl-points">
-                <li>Deutschlandstipendium, 2019 — awarded for excellence as an international student.</li>
-                <li>Achiever Award, 2017–18 — Hero MotoCorp Ltd.</li>
-                <li>Gold Medal &amp; Roll of Honour, 2014 — first rank, B.Tech. Mechanical Engineering.</li>
-              </ul>
-            </div>
-          </li>
-
-        </ol>
-
-        <div style="margin-top: var(--space-md)">
+        <!-- Section 1: Where I have worked -->
+        <div style="margin-bottom: var(--space-xl)">
           <div class="section-head" data-reveal>
-            <p class="label">Toolkit</p>
+            <!-- <p class="label">05 // WORK EXPERIENCE</p> -->
+            <h2 class="h-md" data-anim-words>Where I have worked</h2>
           </div>
 
-          <div class="toolkit">
-            <div data-reveal style="--i:0">
-              <h3 class="tool-group-title">Simulation</h3>
-              <ul class="tool-list">
-                <li>Abaqus</li>
-                <li>COMSOL</li>
-                <li>ANSYS</li>
-                <li>FEniCS</li>
-                <li>Kratos</li>
-              </ul>
+          <ol class="tl">
+            <li class="tl-item" data-reveal>
+              <span class="tl-date">2021 — NOW</span>
+              <img src="./assets/images/eth_logo.png" alt="ETH Zürich Logo" class="org-logo">
+              <div>
+                <h3 class="tl-role">Doctorate Researcher · Advanced Manufacturing Lab</h3>
+                <p class="tl-org">ETH ZÜRICH, SWITZERLAND</p>
+              </div>
+            </li>
+
+            <li class="tl-item" data-reveal>
+              <span class="tl-date">2019 — 2021</span>
+              <img src="./assets/images/rub_logo.png" alt="Ruhr University Bochum Logo" class="org-logo">
+              <div>
+                <h3 class="tl-role">Research Assistant · Chair of Statics &amp; Dynamics</h3>
+                <p class="tl-org">RUHR UNIVERSITY BOCHUM, GERMANY</p>
+              </div>
+            </li>
+
+            <li class="tl-item" data-reveal>
+              <span class="tl-date">2014 — 2018</span>
+              <img src="./assets/images/hero_logo.png" alt="Hero MotoCorp Logo" class="org-logo">
+              <div>
+                <h3 class="tl-role">Deputy Manager · Chassis Simulation &amp; Analysis</h3>
+                <p class="tl-org">HERO MOTOCORP LTD, INDIA</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+
+        <div style="margin-top: var(--space-md)"></div>
+
+        <!-- Section 2: Where I have studied -->
+        <div>
+          <div class="section-head" data-reveal>
+            <!-- <p class="label">05.B // ACADEMIC EDUCATION</p> -->
+            <h2 class="h-md" data-anim-words>Where I have studied</h2>
+          </div>
+
+          <ol class="tl">
+            <li class="tl-item" data-reveal>
+              <span class="tl-date">2021 — NOW</span>
+              <img src="./assets/images/eth_logo.png" alt="ETH Zürich Logo" class="org-logo">
+              <div>
+                <h3 class="tl-role">Dr. sc. Mechanical Engineering</h3>
+                <p class="tl-org">ETH ZÜRICH, SWITZERLAND</p>
+              </div>
+            </li>
+
+            <li class="tl-item" data-reveal>
+              <span class="tl-date">2019 — 2021</span>
+              <img src="./assets/images/rub_logo.png" alt="Ruhr University Bochum Logo" class="org-logo">
+              <div>
+                <h3 class="tl-role">M.Sc. Computational Engineering</h3>
+                <p class="tl-org">RUHR UNIVERSITY BOCHUM, GERMANY · DEUTSCHLANDSTIPENDIUM</p>
+              </div>
+            </li>
+
+            <li class="tl-item" data-reveal>
+              <span class="tl-date">2010 — 2014</span>
+              <img src="./assets/images/nitj_logo.png" alt="NIT Jalandhar Logo" class="org-logo">
+              <div>
+                <h3 class="tl-role">B.Tech. Mechanical Engineering</h3>
+                <p class="tl-org">NIT JALANDHAR, INDIA · GOLD MEDAL &amp; ROLL OF HONOUR (RANK 1)</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!--=====================================
+      RESEARCH / PUBLICATIONS  (full-bleed ember block)
+    ======================================-->
+    <section class="section bg-ember" id="research">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <!--<p class="label">03 // PEER-REVIEWED RESEARCH</p>-->
+          <h2 class="h-md" data-anim-words>Peer-reviewed publications</h2>
+        </div>
+
+        <div class="papers">
+
+          <a class="paper" href="https://doi.org/10.1016/j.jmapro.2025.07.006" target="_blank" rel="noopener">
+            <span class="paper-year">2025</span>
+            <span>
+              <span class="paper-title">Enhancing multiscale simulations for spark plasma sintering with a novel
+                Direct FE² framework</span>
+              <span class="paper-venue">Journal of Manufacturing Processes · Elsevier</span>
+            </span>
+            <span class="paper-go">
+              <span>DOI</span>
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                <path d="M5 11 11 5m0 0H5.5M11 5v5.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </span>
+          </a>
+
+          <a class="paper" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5700109" target="_blank"
+            rel="noopener">
+            <span class="paper-year">2025</span>
+            <span>
+              <span class="paper-title">Predicting interface behaviour and final geometry in multi-material spark
+                plasma sintering</span>
+              <span class="paper-venue">Preprint · under review</span>
+            </span>
+            <span class="paper-go">
+              <span>SSRN</span>
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                <path d="M5 11 11 5m0 0H5.5M11 5v5.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </span>
+          </a>
+
+          <a class="paper" href="https://doi.org/10.5194/se-15-763-2024" target="_blank" rel="noopener">
+            <span class="paper-year">2024</span>
+            <span>
+              <span class="paper-title">Impact of stress regime change on the permeability of a naturally fractured
+                carbonate buildup (Latemar, Dolomites, Northern Italy)</span>
+              <span class="paper-venue">Solid Earth · EGU · Open access</span>
+            </span>
+            <span class="paper-go">
+              <span>DOI</span>
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                <path d="M5 11 11 5m0 0H5.5M11 5v5.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </span>
+          </a>
+
+          <a class="paper" href="https://doi.org/10.1016/j.mechmat.2023.104834" target="_blank" rel="noopener">
+            <span class="paper-year">2024</span>
+            <span>
+              <span class="paper-title">A two-stage approach for material parameters identification in spark plasma
+                sintering</span>
+              <span class="paper-venue">Mechanics of Materials · Elsevier</span>
+            </span>
+            <span class="paper-go">
+              <span>DOI</span>
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                <path d="M5 11 11 5m0 0H5.5M11 5v5.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </span>
+          </a>
+
+          <a class="paper" href="https://doi.org/10.1007/s00402-022-04382-9" target="_blank" rel="noopener">
+            <span class="paper-year">2023</span>
+            <span>
+              <span class="paper-title">Bone tunnel placement influences shear stresses at the coracoid process after
+                coracoclavicular ligament reconstruction: a finite element study and radiological analysis</span>
+              <span class="paper-venue">Archives of Orthopaedic and Trauma Surgery · Springer</span>
+            </span>
+            <span class="paper-go">
+              <span>DOI</span>
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                <path d="M5 11 11 5m0 0H5.5M11 5v5.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </span>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!--=====================================
+      COMPUTATIONAL TOOLKIT & TECH STACK
+    ======================================-->
+    <section class="section bg-dark">
+      <div class="container">
+        <div>
+          <div class="section-head" data-reveal>
+            <p class="label">06 // COMPUTATIONAL TOOLKIT &amp; TECH STACK</p>
+          </div>
+
+          <div class="tech-stack-container">
+            <!-- Category 1: Simulation & Modeling -->
+            <div class="tech-category-card" data-reveal style="--i:1">
+              <div class="tech-category-title">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                  <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+                </svg>
+                <span>Simulation &amp; FEM</span>
+              </div>
+              <div class="tech-pills">
+                <span class="tech-pill">Abaqus</span>
+                <span class="tech-pill">COMSOL</span>
+                <span class="tech-pill">ANSYS</span>
+                <span class="tech-pill">FEniCS</span>
+                <span class="tech-pill">Kratos</span>
+              </div>
             </div>
-            <div data-reveal style="--i:1">
-              <h3 class="tool-group-title">Programming</h3>
-              <ul class="tool-list">
-                <li>Python</li>
-                <li>C++</li>
-                <li>Fortran</li>
-                <li>MATLAB</li>
-                <li>PyTorch</li>
-              </ul>
+
+            <!-- Category 2: Programming & Machine Learning -->
+            <div class="tech-category-card" data-reveal style="--i:2">
+              <div class="tech-category-title">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <polyline points="16 18 22 12 16 6" />
+                  <polyline points="8 6 2 12 8 18" />
+                </svg>
+                <span>Programming &amp; AI</span>
+              </div>
+              <div class="tech-pills">
+                <span class="tech-pill">Python</span>
+                <span class="tech-pill">PyTorch</span>
+                <span class="tech-pill">C++</span>
+                <span class="tech-pill">Fortran</span>
+                <span class="tech-pill">MATLAB</span>
+              </div>
             </div>
-            <div data-reveal style="--i:2">
-              <h3 class="tool-group-title">Computing</h3>
-              <ul class="tool-list">
-                <li>HPC (ETH Euler)</li>
-                <li>MPI · OpenMP</li>
-                <li>Docker</li>
-                <li>Git</li>
-                <li>Linux</li>
-              </ul>
+
+            <!-- Category 3: CAD & Visualization -->
+            <div class="tech-category-card" data-reveal style="--i:3">
+              <div class="tech-category-title">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path
+                    d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+                </svg>
+                <span>CAD &amp; Visualization</span>
+              </div>
+              <div class="tech-pills">
+                <span class="tech-pill">ParaView</span>
+                <span class="tech-pill">SolidWorks</span>
+                <span class="tech-pill">CATIA</span>
+                <span class="tech-pill">LMS TestLab</span>
+                <span class="tech-pill">nCode</span>
+              </div>
             </div>
-            <div data-reveal style="--i:3">
-              <h3 class="tool-group-title">Test &amp; CAD</h3>
-              <ul class="tool-list">
-                <li>LMS TestLab</li>
-                <li>nCode DesignLife</li>
-                <li>SolidWorks · CATIA</li>
-                <li>ParaView</li>
-              </ul>
+
+            <!-- Category 4: HPC & Dev Platforms -->
+            <div class="tech-category-card" data-reveal style="--i:4">
+              <div class="tech-category-title">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <rect x="2" y="2" width="20" height="8" rx="2" ry="2" />
+                  <rect x="2" y="14" width="20" height="8" rx="2" ry="2" />
+                  <line x1="6" y1="6" x2="6.01" y2="6" />
+                  <line x1="6" y1="18" x2="6.01" y2="18" />
+                </svg>
+                <span>HPC &amp; Platforms</span>
+              </div>
+              <div class="tech-pills">
+                <span class="tech-pill">ETH Euler HPC</span>
+                <span class="tech-pill">MPI / OpenMP</span>
+                <span class="tech-pill">Docker</span>
+                <span class="tech-pill">Git</span>
+                <span class="tech-pill">Linux</span>
+              </div>
             </div>
           </div>
         </div>
@@ -547,8 +685,8 @@
     <section class="section" id="contact">
       <div class="container">
         <div class="section-head" data-reveal>
-          <p class="label">06 — Contact</p>
-          <h2 class="h-md" data-anim-words>Working on something that needs modelling?</h2>
+          <!-- <p class="label">07 // CONTACT & INQUIRIES</p>-->
+          <h2 class="h-md" data-anim-words>Let's Connect!</h2>
         </div>
 
         <div class="contact-grid">
@@ -609,8 +747,7 @@
     <div class="footer-inner container">
       <p class="label">© 2026 Ashwani Kumar</p>
       <div class="footer-social">
-        <a class="label" href="https://www.linkedin.com/in/ashwanikumareth" target="_blank"
-          rel="noopener">LinkedIn</a>
+        <a class="label" href="https://www.linkedin.com/in/ashwanikumareth" target="_blank" rel="noopener">LinkedIn</a>
         <a class="label" href="https://github.com/ashwakumar" target="_blank" rel="noopener">GitHub</a>
         <a class="label" href="./assets/CV_Ashwani_Kumar.pdf" target="_blank" rel="noopener">CV</a>
       </div>
