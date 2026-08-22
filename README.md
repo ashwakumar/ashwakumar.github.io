@@ -1,45 +1,58 @@
-<<<<<<< HEAD
-Thanks to the [Sadee ](https://www.x.com/codewithsadee_) for providing the base template. 
-=======
 # Ashwani Kumar | Computational Engineering Researcher
 
-This is the personal portfolio website of **Ashwani Kumar**, a researcher at ETH Zürich specializing in Multiphysics simulations, Machine Learning, and Material Modeling.
+Personal site of **Ashwani Kumar**, a researcher at ETH Zürich working on multiphysics and multiscale
+simulation of manufacturing processes, machine-learning surrogate models, and FEM.
 
-## 🚀 Key Features
+Live at **[ashwakumar.github.io](https://ashwakumar.github.io/)**.
 
-This portfolio has been enhanced with several custom features:
+## Structure
 
--   **Interactive Background**: A custom particle network animation inspired by neural networks and molecular structures.
--   **Glassmorphism UI**: Modern, semi-transparent design elements for a premium feel.
--   **Deep Linking Loop**: Improved navigation logic (History API) to support direct linking to sections (e.g., `#portfolio`, `#about`).
--   **Performance Optimized**: Mobile-responsive animation that reduces battery usage on non-desktop devices.
--   **SEO Ready**: Full Open Graph and Twitter card meta tag support.
+```
+index.html              single-scroll home page (dark)
+multiscale_sps.html     Direct FE² for spark plasma sintering
+multimaterial_sps.html  Multi-material SPS
+sps_sim.html            Material parameter identification for SPS
+bone_sim.html           Bone tunnel stress in AC joint reconstruction
+dolomite_sim.html       Stress regime effects on carbonate permeability
 
-## 🛠️ Tech Stack
+assets/css/main.css     home page styles
+assets/css/paper.css    project / paper page styles (light academic theme)
+assets/js/main.js       scroll reveals, word animation, scroll-spy nav
 
--   **HTML5 & CSS3**: Semantic markup and custom variables/animations.
--   **Vanilla JavaScript**: No heavy frameworks, just clean, fast code.
--   **HTML5 Canvas**: For the background particle simulation.
--   **IonIcons**: For vector iconography.
+index_old.html          previous vCard-template site, kept for reference (noindex)
+assets/css/style.css    styles for the old site only
+assets/js/script.js     scripts for the old site only
+assets/js/particles.js  particle background for the old site only
+```
 
-## 📥 Installation
+## Design
 
-To run this portfolio locally:
+Two deliberately opposed themes:
 
-1.  **Clone the repository:**
-    ```bash
-    git clone https://github.com/ashwakumar/ashwakumar.github.io.git
-    ```
-2.  **Open `index.html`** in your browser.
+- **Home page** — near-black (`#101a1f`) with an ember accent (`#f4581e`), full-viewport hero,
+  credential marquee, sticky scroll-spy nav, alternating full-bleed colour blocks.
+- **Project pages** — white academic theme, the inverse of the home page. Research artifacts should
+  read as paper, not as marketing. Set `--accent: #111111` in `paper.css` to neutralise the remaining
+  accent entirely.
 
-## 🤝 Credits & Acknowledgements
+Typography is Inter Tight + IBM Plex Mono, headings at a single weight — size and tight leading do the
+work rather than boldness. All sizing is fluid `clamp()`; no breakpoint-only layout.
 
-**Template Design**:
-This website is based on the [vCard Personal Portfolio](https://github.com/codewithsadee/vcard-personal-portfolio) by [codewithsadee](https://twitter.com/codewithsadee_). A huge thanks to him for providing such a clean and responsive foundation.
+No frameworks, no build step. Plain HTML, CSS, and vanilla JS.
 
-**Customizations**:
-Research content, background animations, and UI enhancements were developed by Ashwani Kumar.
+## Running locally
+
+```bash
+python -m http.server 8000
+```
+
+Then open <http://localhost:8000/>.
+
+## Credits
+
+The previous version of this site (`index_old.html`) was based on the
+[vCard Personal Portfolio](https://github.com/codewithsadee/vcard-personal-portfolio) template by
+[codewithsadee](https://github.com/codewithsadee). The current design is a ground-up rewrite.
 
 ---
-*© 2025 Ashwani Kumar*
->>>>>>> dev_animation
+*© 2026 Ashwani Kumar*

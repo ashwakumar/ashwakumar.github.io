@@ -2,360 +2,237 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Multi-Material SPS Interface Behavior | Ashwani Kumar</title>
-    <meta name="description"
-        content="Predicting interface behavior and final geometry in multi-material spark plasma sintering using validated multiphysics modeling.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multi-Material Spark Plasma Sintering · Ashwani Kumar</title>
+  <meta name="description"
+    content="A validated electro-thermo-mechanical framework predicting interface behaviour and final geometry in multi-material spark plasma sintering of copper–nickel systems.">
 
-    <!--
-    - favicon
-  -->
-    <link rel="shortcut icon" href="./assets/images/logo-ak.png" type="image/png">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Multi-Material Spark Plasma Sintering · Ashwani Kumar">
+  <meta property="og:description"
+    content="Predicting interface behaviour and final geometry in Cu–Ni multi-material SPS, validated to under 1%.">
+  <meta property="og:image" content="https://ashwakumar.github.io/assets/images/multimaterial_sps.png">
+  <meta name="twitter:card" content="summary_large_image">
 
-    <!--
-    - custom css link
-  -->
-    <link rel="stylesheet" href="./assets/css/style.css">
-
-    <!--
-    - google font link
-  -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="./assets/images/logo-ak.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter+Tight:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/paper.css">
 </head>
 
 <body>
-    <canvas id="bg-canvas"></canvas>
 
-    <main>
-
-        <!--
-      - #SIDEBAR
-    -->
-
-        <aside class="sidebar" data-sidebar>
-
-            <div class="sidebar-info">
-
-                <figure class="avatar-box">
-                    <img src="./assets/images/my_pic.jpg" alt="Ashwani Kumar" width="80">
-                </figure>
-
-                <div class="info-content">
-                    <h1 class="name" title="Ashwani Kumar">Ashwani Kumar</h1>
-
-                    <p class="title">Computational Engineer</p>
-                </div>
-
-                <button class="info_more-btn" data-sidebar-btn>
-                    <span>Show Contacts</span>
-
-                    <ion-icon name="chevron-down"></ion-icon>
-                </button>
-
-            </div>
-
-            <div class="sidebar-info_more">
-
-                <div class="separator"></div>
-
-                <ul class="contacts-list">
-
-                    <li class="contact-item">
-
-                        <div class="icon-box">
-                            <ion-icon name="logo-linkedin"></ion-icon>
-                        </div>
-
-                        <div class="contact-info">
-                            <p class="contact-title">LinkedIn</p>
-                            <a href="https://www.linkedin.com/in/ashwanikumareth"
-                                class="contact-link">ashwanikumareth</a>
-                        </div>
-
-                    </li>
-
-                    <li class="contact-item">
-
-                        <div class="icon-box">
-                            <ion-icon name="logo-github"></ion-icon>
-                        </div>
-
-                        <div class="contact-info">
-                            <p class="contact-title">GitHub</p>
-                            <a href="https://github.com/ashwakumar" class="contact-link">ashwakumar</a>
-                        </div>
-
-                    </li>
-
-                    <li class="contact-item">
-
-                        <div class="icon-box">
-                            <ion-icon name="school-outline"></ion-icon>
-                        </div>
-
-                        <div class="contact-info">
-                            <p class="contact-title">Google Scholar</p>
-                            <a href="https://scholar.google.com/citations?user=ashwanikjangir@gmail.com"
-                                class="contact-link">ashwanikjangir</a>
-                        </div>
-
-                    </li>
-
-                    <li class="contact-item">
-
-                        <div class="icon-box">
-                            <ion-icon name="mail-outline"></ion-icon>
-                        </div>
-
-                        <div class="contact-info">
-                            <p class="contact-title">Email</p>
-
-                            <a href="mailto:ashwanikjangir@gmail.com" class="contact-link">ashwanikjangir@gmail.com</a>
-                        </div>
-
-                    </li>
-
-                    <li class="contact-item">
-
-                        <div class="icon-box">
-                            <ion-icon name="phone-portrait-outline"></ion-icon>
-                        </div>
-
-                        <div class="contact-info">
-                            <p class="contact-title">Phone</p>
-
-                            <a href="tel:+41 782303498" class="contact-link">+41 782303498</a>
-                        </div>
-
-                    </li>
-
-
-                    <li class="contact-item">
-
-                        <div class="icon-box">
-                            <ion-icon name="location-outline"></ion-icon>
-                        </div>
-
-                        <div class="contact-info">
-                            <p class="contact-title">Location</p>
-
-                            <address>Zürich, Switzerland</address>
-                        </div>
-
-                    </li>
-
-                </ul>
-
-                <div class="separator"></div>
-
-                <ul class="social-list">
-
-                    <li class="social-item">
-                        <a href="#" class="social-link">
-                            <ion-icon name="logo-facebook"></ion-icon>
-                        </a>
-                    </li>
-
-                    <li class="social-item">
-                        <a href="#" class="social-link">
-                            <ion-icon name="logo-twitter"></ion-icon>
-                        </a>
-                    </li>
-
-                    <li class="social-item">
-                        <a href="#" class="social-link">
-                            <ion-icon name="logo-instagram"></ion-icon>
-                        </a>
-                    </li>
-
-                </ul>
-
-            </div>
-
-        </aside>
-
-        <!--
-      - #main-content
-    -->
-
-        <div class="main-content">
-
-            <!--
-        - #NAVBAR
-      -->
-
-            <nav class="navbar">
-
-                <ul class="navbar-list">
-
-                    <li class="navbar-item">
-                        <a href="index.html" class="navbar-link">About</a>
-                    </li>
-
-                    <li class="navbar-item">
-                        <a href="index.html#resume" class="navbar-link">Resume</a>
-                    </li>
-
-                    <li class="navbar-item">
-                        <a href="index.html#portfolio" class="navbar-link">Portfolio</a>
-                    </li>
-
-                    <li class="navbar-item">
-                        <a href="index.html#contact" class="navbar-link">Contact</a>
-                    </li>
-
-                </ul>
-
-            </nav>
-
-            <!--
-        - #PROJECT DETAILS
-      -->
-
-            <article class="project-details active" data-page="project-details">
-                <a href="index.html#portfolio" class="back-link"
-                    onclick="localStorage.setItem('activePage','portfolio')">← Back
-                    to Portfolio</a>
-                <header>
-                    <h2 class="h2 article-title">Multi-Material Spark Plasma Sintering Modeling</h2>
-                </header>
-
-                <section class="project-content">
-                    <div class="project-hero">
-                        <img src="./assets/images/multimaterial_sps.png" alt="Multi-Material SPS" loading="lazy">
-                    </div>
-
-                    <h4 class="h4">Predicting Interface Behavior and Final Geometry in Multi-Material Spark Plasma
-                        Sintering: Design Insights from Validated Multiphysics Process Modeling</h4>
-
-                    <div class="project-description">
-
-                        <ul class="author-info-box">
-                            <li class="author-info-item">
-                                <span class="info-label">Main Author:</span>
-                                <span class="info-value">Ashwani Kumar</span>
-                            </li>
-                            <li class="author-info-item">
-                                <span class="info-label">Affiliation:</span>
-                                <span class="info-value">ETH Zurich</span>
-                            </li>
-                            <li class="author-info-item">
-                                <span class="info-label">Online:</span>
-                                <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5700109" target="_blank"
-                                    class="info-value text-link">Submitted</a>
-                            </li>
-                            <li class="author-info-item">
-                                <span class="info-label">Co-Authors:</span>
-                                <span class="info-value">M.Bernet, L. Deillon, M. Bambach, M. Afrasiabi </span>
-                            </li>
-                            <li class="author-info-item">
-                                <span class="info-label">Date:</span>
-                                <span class="info-value">2025</span>
-                            </li>
-                            <li class="author-info-item">
-                                <span class="info-label">Journal:</span>
-                                <span class="info-value">Submitted</span>
-                            </li>
-                        </ul>
-
-                        <h4 class="h4">Project Overview</h4>
-                        <p>
-                            This project introduces a validated electro-thermo-mechanical modeling framework to predict
-                            how interfaces behave and geometries evolve during multi-material spark plasma sintering
-                            (SPS). Using copper–nickel systems, the study demonstrates how fully coupled finite element
-                            simulations can replicate real process behavior and provide actionable design guidance for
-                            achieving high-precision multi-material components.
-                        </p>
-
-                        <h4 class="h4">Problem & Motivation</h4>
-                        <p>
-                            Multi-material SPS enables architected components with tailored properties but suffers from
-                            differential densification and misalignment between dissimilar materials. Experimental
-                            trial-and-error cannot easily capture how current flow, localized heating, and stress
-                            interact at interfaces. A predictive and validated multiphysics model was needed to explain
-                            these coupled phenomena and guide powder deposition and interface orientation design.
-                        </p>
-
-                        <h4 class="h4">Research Contributions</h4>
-                        <ul class="feature-list">
-                            <li>Developed a fully coupled finite element model integrating electrical, thermal, and
-                                mechanical interactions for Cu–Ni SPS.
-                            </li>
-                            <li>Demonstrated that porosity-dependent constitutive parameters from single-material SPS
-                                can be directly transferred to multi-material systems.</li>
-                            <li>Achieved less than 1% deviation between simulated and experimental temperature and
-                                densification data.</li>
-                            <li>Revealed that porosity imbalance drives interface displacement, providing a direct
-                                design lever for geometric precision.</li>
-                        </ul>
-
-                        <h4 class="h4">Technical Highlights</h4>
-                        <ul class="tech-list">
-                            <li>Tools & Platforms: COMSOL Multiphysics®, experimental SPS setup. </li>
-                            <li>Methods: Electro-thermal–mechanical finite element analysis.</li>
-                            <li>Models Used: Sintering material law for copper and nickel powders.</li>
-                            <li>Performance: Model predicted final geometry and interface displacement with >93%
-                                accuracy, confirming parameter transferability.</li>
-                        </ul>
-
-                        <h4 class="h4">Results & Impact</h4>
-                        <p>
-                            The validated model precisely reproduced temperature histories and densification kinetics,
-                            confirming strong predictive capability. Simulations revealed that interface geometry
-                            dictates current redistribution, localized heating, and final interface displacement.
-                            Adjusting porosity and initial interface alignment allows targeted control of post-sintering
-                            geometry. This framework provides design-level insights that extend beyond experimental
-                            limits, enabling optimization of powder deposition and interface design for advanced
-                            multi-material manufacturing.
-                        </p>
-
-                        <h4 class="h4">Publication Details</h4>
-                        <p>
-                            <strong>Journal:</strong> Awaiting<br>
-                            <strong>Year:</strong> 2025<br>
-                            <strong>DOI:</strong> Awaiting
-                        </p>
-
-
-                        <!-- Navigation & Links -->
-                        <div class="project-navigation">
-                            <a href="multiscale_sps.html" class="btn-link">
-                                <ion-icon name="arrow-back-outline"></ion-icon> Previous
-                            </a>
-
-                            <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5700109" target="_blank"
-                                class="btn-link">
-                                <ion-icon name="document-text-outline"></ion-icon> Read Paper
-                            </a>
-
-                            <a href="sps_sim.html" class="btn-link">
-                                Next <ion-icon name="arrow-forward-outline"></ion-icon>
-                            </a>
-                        </div>
-                </section>
-
-            </article>
-
+  <header class="site-header">
+    <div class="site-header-inner wide">
+      <a class="back-link" href="index.html#work">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"
+          style="width:1em;height:1em">
+          <path d="M13 8H3m0 0 4-4M3 8l4 4" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+        <span>Back to work</span>
+      </a>
+      <a class="header-name" href="index.html">Ashwani Kumar</a>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="project-header">
+      <div class="content">
+        <p class="project-eyebrow" data-reveal>2025 · Journal Article · Under review</p>
+
+        <h1 class="project-title" data-reveal style="--i:1">
+          Multi-material spark plasma sintering
+        </h1>
+
+        <div class="project-badges" data-reveal style="--i:2">
+          <span class="project-badge is-live">Preprint · SSRN</span>
+          <span class="project-badge">Multiphysics</span>
+          <span class="project-badge">COMSOL</span>
+          <span class="project-badge">Experimental validation</span>
         </div>
 
-    </main>
+        <p class="project-tagline" data-reveal style="--i:3">
+          A validated electro-thermo-mechanical framework predicting how interfaces behave and geometries evolve during
+          multi-material SPS. Using copper–nickel systems, it shows that porosity imbalance is the lever that controls
+          final interface position — turning a trial-and-error process into a design problem.
+        </p>
 
-    <!--
-    - custom js link
-  -->
-    <script src="./assets/js/script.js"></script>
-    <script src="./assets/js/particles.js"></script>
+        <p class="project-authors" data-reveal style="--i:4">
+          <strong>Ashwani Kumar</strong>, M. Bernet, L. Deillon, M. Bambach, M. Afrasiabi
+          <span class="affil">ETH Zürich · Advanced Manufacturing Lab</span>
+        </p>
 
-    <!--
-    - ionicon link
-  -->
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        <div class="actions" data-reveal style="--i:5">
+          <a class="btn btn-primary" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5700109" target="_blank"
+            rel="noopener">
+            <span>Read the preprint</span>
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <path d="M5 11 11 5m0 0H5.5M11 5v5.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </a>
+          <span class="btn" aria-disabled="true">DOI pending</span>
+        </div>
+      </div>
+    </section>
 
+    <div class="content">
+      <div class="numbers" data-reveal>
+        <div class="stat">
+          <p class="num">&lt;1%</p>
+          <p class="lbl">Deviation vs. experiment</p>
+        </div>
+        <div class="stat">
+          <p class="num">&gt;93%</p>
+          <p class="lbl">Geometry accuracy</p>
+        </div>
+        <div class="stat">
+          <p class="num">Cu–Ni</p>
+          <p class="lbl">Material system</p>
+        </div>
+        <div class="stat">
+          <p class="num">3-way</p>
+          <p class="lbl">Coupled physics</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="content">
+      <figure class="fig" data-reveal>
+        <img src="./assets/images/multimaterial_sps.png" alt="Multi-material SPS interface simulation" loading="lazy">
+        <figcaption><b>Fig. 1</b> — Predicted interface displacement in a Cu–Ni multi-material compact. Interface
+          geometry redirects current flow, which shifts the localised heating, which moves the interface.</figcaption>
+      </figure>
+    </div>
+
+    <article class="project-body content">
+
+      <h2 data-reveal>Overview</h2>
+      <p data-reveal>
+        Multi-material SPS makes it possible to build architected components with properties that vary through the
+        part — hard where it needs to resist wear, conductive where it needs to carry current. The problem is that
+        dissimilar materials densify at different rates, so the interface between them moves during sintering, and the
+        finished geometry is not the geometry you designed.
+      </p>
+      <p data-reveal>
+        This project introduced a <strong>validated fully coupled electro-thermo-mechanical model</strong> for Cu–Ni
+        systems that reproduces this behaviour accurately enough to be used as a design tool rather than a
+        post-hoc explanation.
+      </p>
+
+      <h2 data-reveal>Problem &amp; motivation</h2>
+      <p data-reveal>
+        Differential densification and interface misalignment are the two failure modes that limit multi-material SPS.
+        Experimental trial-and-error cannot easily separate the contributions of current flow, localised heating, and
+        stress at the interface, because all three act simultaneously and none is directly observable inside a hot
+        die.
+      </p>
+      <div class="callout" data-reveal>
+        <p><strong>What was needed:</strong> a predictive multiphysics model, validated against experiment, that could
+          explain the coupled phenomena at the interface and guide powder deposition and interface orientation
+          before the first sample is pressed.</p>
+      </div>
+
+      <h2 data-reveal>Contributions</h2>
+      <ul class="bullets" data-reveal>
+        <li>Developed a fully coupled FE model integrating electrical, thermal, and mechanical interactions for Cu–Ni
+          SPS.</li>
+        <li>Demonstrated that porosity-dependent constitutive parameters identified from <em>single-material</em> SPS
+          transfer directly to multi-material systems — no recalibration required.</li>
+        <li>Achieved less than <strong>1% deviation</strong> between simulated and experimental temperature and
+          densification data.</li>
+        <li>Revealed that <strong>porosity imbalance drives interface displacement</strong>, providing a direct design
+          lever for geometric precision.</li>
+      </ul>
+
+      <h2 data-reveal>Method</h2>
+
+      <div class="roles" data-reveal>
+        <div class="role">
+          <p class="tag-id">Solver</p>
+          <h4>COMSOL Multiphysics</h4>
+          <p>Electro-thermal–mechanical finite element analysis with fully coupled field solution rather than sequential
+            staggering.</p>
+        </div>
+        <div class="role">
+          <p class="tag-id">Material</p>
+          <h4>Sintering law</h4>
+          <p>Porosity-dependent constitutive models for copper and nickel powders, with parameters carried over from
+            single-material calibration.</p>
+        </div>
+        <div class="role">
+          <p class="tag-id">Validation</p>
+          <h4>Experimental SPS</h4>
+          <p>Measured temperature histories and densification kinetics from a physical SPS setup, compared directly
+            against predicted curves.</p>
+        </div>
+        <div class="role">
+          <p class="tag-id">Output</p>
+          <h4>Interface tracking</h4>
+          <p>Final interface position and part geometry predicted as a function of initial porosity distribution and
+            interface orientation.</p>
+        </div>
+      </div>
+
+      <h2 data-reveal>Results</h2>
+      <p data-reveal>
+        The validated model precisely reproduced temperature histories and densification kinetics, confirming strong
+        predictive capability. More usefully, the simulations exposed the causal chain: interface geometry dictates
+        current redistribution, current redistribution drives localised heating, and localised heating produces the
+        final interface displacement.
+      </p>
+      <p data-reveal>
+        Because that chain is now explicit, adjusting the initial porosity and interface alignment allows
+        <strong>targeted control of post-sintering geometry</strong> — the part comes out the shape you intended.
+      </p>
+
+      <h2 data-reveal>Impact</h2>
+      <p data-reveal>
+        This framework provides design-level insight that extends beyond what experiments can reach, enabling
+        optimisation of powder deposition and interface design for advanced multi-material manufacturing. The
+        transferability of single-material parameters is the practical result: it means the calibration effort for a new
+        material pairing is roughly half what it would otherwise be.
+      </p>
+
+      <h2 data-reveal>Citation</h2>
+      <div class="citation" data-reveal>
+        A. Kumar, M. Bernet, L. Deillon, M. Bambach, M. Afrasiabi. “Predicting interface behaviour and final geometry in
+        multi-material spark plasma sintering: design insights from validated multiphysics process modelling.”
+        Preprint, 2025. SSRN 5700109.
+      </div>
+      <p class="note" data-reveal>Currently under review. This page will be updated with the DOI on publication.</p>
+
+    </article>
+
+    <nav class="pager wide" aria-label="Project navigation">
+      <a class="pager-item" href="multiscale_sps.html">
+        <p class="lbl">Previous</p>
+        <p class="ttl">Direct FE² for spark plasma sintering</p>
+      </a>
+      <a class="pager-item is-next" href="sps_sim.html">
+        <p class="lbl">Next</p>
+        <p class="ttl">Material parameter identification for SPS</p>
+      </a>
+    </nav>
+
+  </main>
+
+  <footer class="paper-footer">
+    <div class="paper-footer-inner wide">
+      <p>© 2026 Ashwani Kumar</p>
+      <div class="paper-footer-links">
+        <a href="index.html">Home</a>
+        <a href="index.html#work">Work</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./assets/js/main.js"></script>
 </body>
 
 </html>

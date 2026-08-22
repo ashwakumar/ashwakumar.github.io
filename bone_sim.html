@@ -3,352 +3,282 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bone Tunnel Placement Simulation | Ashwani Kumar</title>
+  <title>Bone Tunnel Stress in AC Joint Reconstruction · Ashwani Kumar</title>
   <meta name="description"
-    content="Finite element study on bone tunnel placement influencing shear stresses after coracoclavicular ligament reconstruction.">
+    content="Finite element study and radiological analysis showing how bone tunnel placement in coracoclavicular ligament reconstruction influences shear stress at the coracoid process.">
 
-  <!--
-    - favicon
-  -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Bone Tunnel Stress in AC Joint Reconstruction · Ashwani Kumar">
+  <meta property="og:description"
+    content="A 3D FE model plus 40 patient cases identifying tunnel configurations that minimise coracoid fracture risk.">
+  <meta property="og:image" content="https://ashwakumar.github.io/assets/images/bone_stress.png">
+  <meta name="twitter:card" content="summary_large_image">
+
   <link rel="shortcut icon" href="./assets/images/logo-ak.png" type="image/png">
-
-  <!--
-    - custom css link
-  -->
-  <link rel="stylesheet" href="./assets/css/style.css">
-
-  <!--
-    - google font link
-  -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter+Tight:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/paper.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "headline": "Bone tunnel placement influences shear stresses at the coracoid process after coracoclavicular ligament reconstruction: a finite element study and radiological analysis",
+    "author": [
+      { "@type": "Person", "name": "Benjamin Bockmann" },
+      { "@type": "Person", "name": "Ashwani Kumar" },
+      { "@type": "Person", "name": "J. J. Timothy" },
+      { "@type": "Person", "name": "G. Meschke" }
+    ],
+    "datePublished": "2023",
+    "isPartOf": { "@type": "Periodical", "name": "Archives of Orthopaedic and Trauma Surgery" },
+    "sameAs": "https://doi.org/10.1007/s00402-022-04382-9"
+  }
+  </script>
 </head>
 
 <body>
-  <canvas id="bg-canvas"></canvas>
+
+  <header class="site-header">
+    <div class="site-header-inner wide">
+      <a class="back-link" href="index.html#work">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"
+          style="width:1em;height:1em">
+          <path d="M13 8H3m0 0 4-4M3 8l4 4" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+        <span>Back to work</span>
+      </a>
+      <a class="header-name" href="index.html">Ashwani Kumar</a>
+    </div>
+  </header>
 
   <main>
 
-    <!--
-      - #SIDEBAR
-    -->
+    <section class="project-header">
+      <div class="content">
+        <p class="project-eyebrow" data-reveal>2023 · Journal Article · Peer-reviewed</p>
 
-    <aside class="sidebar" data-sidebar>
+        <h1 class="project-title" data-reveal style="--i:1">
+          Bone tunnel stress in AC joint reconstruction
+        </h1>
 
-      <div class="sidebar-info">
-
-        <figure class="avatar-box">
-          <img src="./assets/images/my_pic.jpg" alt="Ashwani Kumar" width="80">
-        </figure>
-
-        <div class="info-content">
-          <h1 class="name" title="Ashwani Kumar">Ashwani Kumar</h1>
-
-          <p class="title">Computational Engineer</p>
+        <div class="project-badges" data-reveal style="--i:2">
+          <span class="project-badge is-live">Arch. Orthop. Trauma Surg.</span>
+          <span class="project-badge">Biomechanics</span>
+          <span class="project-badge">Kratos FEM</span>
+          <span class="project-badge">Clinical data</span>
         </div>
 
-        <button class="info_more-btn" data-sidebar-btn>
-          <span>Show Contacts</span>
+        <p class="project-tagline" data-reveal style="--i:3">
+          Coracoid stress fractures are a known complication of AC joint reconstruction, and cadaver studies cannot
+          isolate the cause because bone quality varies too much between specimens. This study combined a 3D finite
+          element model with radiological review of 40 patient cases to identify which tunnel configurations are safe.
+        </p>
 
-          <ion-icon name="chevron-down"></ion-icon>
-        </button>
+        <p class="project-authors" data-reveal style="--i:4">
+          Benjamin Bockmann, <strong>Ashwani Kumar</strong>, J. J. Timothy, G. Meschke
+          <span class="affil">Ruhr University Bochum · Chair of Statics and Dynamics</span>
+        </p>
 
+        <div class="actions" data-reveal style="--i:5">
+          <a class="btn btn-primary" href="https://doi.org/10.1007/s00402-022-04382-9" target="_blank" rel="noopener">
+            <span>Read the paper</span>
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <path d="M5 11 11 5m0 0H5.5M11 5v5.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </a>
+          <a class="btn" href="https://doi.org/10.1007/s00402-022-04382-9" target="_blank" rel="noopener">
+            <span>DOI</span>
+          </a>
+        </div>
       </div>
+    </section>
 
-      <div class="sidebar-info_more">
-
-        <div class="separator"></div>
-
-        <ul class="contacts-list">
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="logo-linkedin"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">LinkedIn</p>
-              <a href="https://www.linkedin.com/in/ashwanikumareth" class="contact-link">ashwanikumareth</a>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="logo-github"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">GitHub</p>
-              <a href="https://github.com/ashwakumar" class="contact-link">ashwakumar</a>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="school-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Google Scholar</p>
-              <a href="https://scholar.google.com/citations?user=ashwanikjangir@gmail.com"
-                class="contact-link">ashwanikjangir</a>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="mail-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Email</p>
-
-              <a href="mailto:ashwanikjangir@gmail.com" class="contact-link">ashwanikjangir@gmail.com</a>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="phone-portrait-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Phone</p>
-
-              <a href="tel:+41 782303498" class="contact-link">+41 782303498</a>
-            </div>
-
-          </li>
-
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="location-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Location</p>
-
-              <address>Zürich, Switzerland</address>
-            </div>
-
-          </li>
-
-        </ul>
-
-        <div class="separator"></div>
-
-        <ul class="social-list">
-
-          <li class="social-item">
-            <a href="#" class="social-link">
-              <ion-icon name="logo-facebook"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="#" class="social-link">
-              <ion-icon name="logo-twitter"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="#" class="social-link">
-              <ion-icon name="logo-instagram"></ion-icon>
-            </a>
-          </li>
-
-        </ul>
-
+    <div class="content">
+      <div class="numbers" data-reveal>
+        <div class="stat">
+          <p class="num">6</p>
+          <p class="lbl">Tunnel configurations</p>
+        </div>
+        <div class="stat">
+          <p class="num">40</p>
+          <p class="lbl">Patient cases reviewed</p>
+        </div>
+        <div class="stat">
+          <p class="num">+23%</p>
+          <p class="lbl">Stress, worst config</p>
+        </div>
+        <div class="stat">
+          <p class="num">420k</p>
+          <p class="lbl">Tetrahedral elements</p>
+        </div>
       </div>
-
-    </aside>
-
-    <!--
-      - #main-content
-    -->
-
-    <div class="main-content">
-
-      <!--
-        - #NAVBAR
-      -->
-
-      <nav class="navbar">
-
-        <ul class="navbar-list">
-
-          <li class="navbar-item">
-            <a href="index.html" class="navbar-link">About</a>
-          </li>
-
-          <li class="navbar-item">
-            <a href="index.html#resume" class="navbar-link">Resume</a>
-          </li>
-
-          <li class="navbar-item">
-            <a href="index.html#portfolio" class="navbar-link">Portfolio</a>
-          </li>
-
-          <li class="navbar-item">
-            <a href="index.html#contact" class="navbar-link">Contact</a>
-          </li>
-
-        </ul>
-
-      </nav>
-
-      <!--
-        - #PROJECT DETAILS
-      -->
-
-      <article class="project-details active" data-page="project-details">
-        <a href="index.html#portfolio" class="back-link" onclick="localStorage.setItem('activePage','portfolio')">← Back
-          to Portfolio</a>
-        <header>
-          <h2 class="h2 article-title">Bone Tunnel Stress in AC Joint Reconstruction</h2>
-        </header>
-
-        <section class="project-content">
-          <div class="project-hero">
-            <img src="./assets/images/bone_stress.png" alt="Bone Tunnel Stress in AC Joint Reconstruction"
-              loading="lazy">
-          </div>
-
-          <h4 class="h4">Bone Tunnel Placement Influences Shear Stresses at the Coracoid Process after Coracoclavicular
-            Ligament Reconstruction</h4>
-
-          <div class="project-description">
-            <ul class="author-info-box">
-              <li class="author-info-item">
-                <span class="info-label">Main Author:</span>
-                <span class="info-value">Benjamin Bockmann</span>
-              </li>
-              <li class="author-info-item">
-                <span class="info-label">Affiliation:</span>
-                <span class="info-value">Ruhr University Bochum</span>
-              </li>
-              <li class="author-info-item">
-                <span class="info-label">Type:</span>
-                <span class="info-value">Research Project</span>
-              </li>
-
-              <li class="author-info-item">
-                <span class="info-label">Co-Author:</span>
-                <span class="info-value"> A. Kumar, J. J. Timothy, G. Meschke</span>
-              </li>
-              <li class="author-info-item">
-                <span class="info-label">Date:</span>
-                <span class="info-value">2023</span>
-              </li>
-              <li class="author-info-item">
-                <span class="info-label">Journal:</span>
-                <span class="info-value">ARTHROSCOPY AND SPORTS MEDICINE</span>
-              </li>
-            </ul>
-
-            <h4 class="h4">Project Overview</h4>
-            <p>
-              This study investigated how bone tunnel placement during coracoclavicular (CC) ligament reconstruction
-              affects shear stresses on the coracoid process.
-              Using a 3D finite element (FE) model combined with a radiological analysis of patient data, the project
-              evaluated different bone tunnel configurations to identify safer surgical techniques that reduce the risk
-              of coracoid fractures.
-            </p>
-            <h4 class="h4">Problem & Motivation</h4>
-            <p>
-              Arthroscopically assisted AC joint reconstructions often involve drilling tunnels in the clavicle and
-              coracoid. However, stress fractures at the coracoid are a known complication, leading to poor clinical
-              outcomes. Cadaver studies offer limited insights due to variable bone quality, so there is a need for
-              computational and clinical analyses to identify optimal bone tunnel configurations that minimize
-              mechanical stress.
-            </p>
-
-            <h4 class="h4">Key Contributions</h4>
-            <ul class="feature-list">
-              <li>Built a 3D finite element model of the AC joint using CT imaging and virtual bone tunnels.</li>
-              <li>Tested six different tunnel configurations for clavicle–coracoid reconstruction.</li>
-              <li>Conducted a radiological review of 40 patient cases to validate tunnel placement in real surgeries.
-              </li>
-              <li>Identified that a proximal coracoid tunnel combined with a lateral clavicle tunnel minimized shear
-                stresses.</li>
-              <li>Showed that certain configurations increased stress by up to 23%, raising fracture risk.</li>
-            </ul>
-
-            <h4 class="h4">Technical Highlights</h4>
-            <ul class="tech-list">
-              <li>Tools & Platforms: CT-based 3D modeling, 3D Slicer, GiD pre/post-processing, Kratos FE solver.</li>
-              <li>Methods: Finite Element Analysis (Von Mises stress evaluation), radiological measurement of clavicle
-                drill holes, statistical analysis with SPSS.</li>
-              <li>Model Details: 420,793 tetrahedral finite elements, applied surface loading, Dirichlet boundary
-                conditions.</li>
-              <li>Validation: Compared FE predictions with radiological evidence from post-surgical X-rays of AC joint
-                reconstructions.</li>
-            </ul>
-
-            <h4 class="h4">Results & Impact</h4>
-            <p>
-              The study demonstrated that bone tunnel placement strongly influences stress distribution at the coracoid.
-              A lateral traction direction with a proximal tunnel significantly lowered stresses, while medial or distal
-              placements increased fracture risk.
-            </p>
-
-            <h4 class="h4">Publication Details</h4>
-            <p>
-              <strong>Journal:</strong> Archives of Orthopaedic and Trauma Surgery<br>
-              <strong>Year:</strong> 2023<br>
-              <strong>DOI:</strong> <a href="https://doi.org/10.1007/s00402-022-04382-9" target="_blank"
-                class="text-link">10.1007/s00402-022-04382-9</a>
-            </p>
-
-            <!-- Navigation & Links -->
-            <div class="project-navigation">
-              <a href="sps_sim.html" class="btn-link">
-                <ion-icon name="arrow-back-outline"></ion-icon> Previous
-              </a>
-
-              <a href="https://doi.org/10.1007/s00402-022-04382-9" target="_blank" class="btn-link">
-                <ion-icon name="document-text-outline"></ion-icon> Read Paper
-              </a>
-
-              <a href="dolomite_sim.html" class="btn-link">
-                Next <ion-icon name="arrow-forward-outline"></ion-icon>
-              </a>
-            </div>
-
-          </div>
-        </section>
-      </article>
-
     </div>
+
+    <div class="content">
+      <figure class="fig" data-reveal>
+        <img src="./assets/images/bone_stress.png" alt="Von Mises stress distribution at the coracoid process"
+          loading="lazy">
+        <figcaption><b>Fig. 1</b> — Von Mises stress at the coracoid process for one tunnel configuration. Traction
+          direction and tunnel position together determine the peak shear stress.</figcaption>
+      </figure>
+    </div>
+
+    <article class="project-body content">
+
+      <h2 data-reveal>Overview</h2>
+      <p data-reveal>
+        Arthroscopically assisted acromioclavicular joint reconstructions involve drilling tunnels through the clavicle
+        and the coracoid process to route a graft. Stress fractures at the coracoid are a known complication and lead to
+        poor clinical outcomes.
+      </p>
+      <p data-reveal>
+        This study investigated how tunnel placement affects shear stress at the coracoid, using a
+        <strong>3D finite element model built from CT imaging</strong> alongside a radiological analysis of real
+        surgical cases.
+      </p>
+
+      <h2 data-reveal>Problem &amp; motivation</h2>
+      <p data-reveal>
+        Cadaver studies are the conventional way to investigate this question, but they offer limited insight because
+        bone quality varies substantially between specimens — the signal from tunnel placement is swamped by the noise
+        from donor variation.
+      </p>
+      <div class="callout" data-reveal>
+        <p><strong>The approach:</strong> a computational model holds bone properties constant, so tunnel geometry is
+          the only variable. Pairing that with radiological review of actual surgeries checks whether the configurations
+          the model favours are the ones surgeons actually achieve.</p>
+      </div>
+
+      <h2 data-reveal>Contributions</h2>
+      <ul class="bullets" data-reveal>
+        <li>Built a 3D finite element model of the AC joint from CT imaging with virtual bone tunnels.</li>
+        <li>Tested six tunnel configurations for clavicle–coracoid reconstruction.</li>
+        <li>Conducted a radiological review of <strong>40 patient cases</strong> to validate tunnel placement in real
+          surgeries.</li>
+        <li>Identified that a <strong>proximal coracoid tunnel with a lateral clavicle tunnel</strong> minimised shear
+          stress.</li>
+        <li>Showed that certain configurations increased stress by up to <strong>23%</strong>, raising fracture risk.
+        </li>
+      </ul>
+
+      <h2 data-reveal>Method</h2>
+
+      <div class="roles" data-reveal>
+        <div class="role">
+          <p class="tag-id">Geometry</p>
+          <h4>CT-based 3D model</h4>
+          <p>Patient CT imaging segmented in 3D Slicer, meshed in GiD, producing 420,793 tetrahedral finite elements.
+          </p>
+        </div>
+        <div class="role">
+          <p class="tag-id">Solver</p>
+          <h4>Kratos FEM</h4>
+          <p>Von Mises stress evaluation under applied surface loading with Dirichlet boundary conditions at the
+            scapular attachment.</p>
+        </div>
+        <div class="role">
+          <p class="tag-id">Clinical</p>
+          <h4>Radiological review</h4>
+          <p>Measurement of clavicle drill hole position on post-surgical X-rays across 40 AC joint reconstructions,
+            analysed statistically in SPSS.</p>
+        </div>
+        <div class="role">
+          <p class="tag-id">Variables</p>
+          <h4>Six configurations</h4>
+          <p>Combinations of proximal/distal coracoid tunnels with lateral/medial clavicle tunnels and traction
+            directions.</p>
+        </div>
+      </div>
+
+      <h2 data-reveal>Results</h2>
+      <p data-reveal>
+        Bone tunnel placement strongly influences stress distribution at the coracoid. A lateral traction direction
+        combined with a proximal tunnel significantly lowered stresses; medial or distal placements increased fracture
+        risk, with the worst configuration raising peak stress by 23% over the best.
+      </p>
+
+      <div class="table-wrap" data-reveal>
+        <table>
+          <thead>
+            <tr>
+              <th>Coracoid tunnel</th>
+              <th>Traction direction</th>
+              <th>Relative peak shear stress</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Proximal</td>
+              <td>Lateral</td>
+              <td class="num best">Lowest</td>
+            </tr>
+            <tr>
+              <td>Proximal</td>
+              <td>Medial</td>
+              <td class="num">Elevated</td>
+            </tr>
+            <tr>
+              <td>Distal</td>
+              <td>Lateral</td>
+              <td class="num">Elevated</td>
+            </tr>
+            <tr>
+              <td>Distal</td>
+              <td>Medial</td>
+              <td class="num">+23%</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 data-reveal>Impact</h2>
+      <p data-reveal>
+        The study gives surgeons a concrete, mechanically grounded recommendation for tunnel placement, and demonstrates
+        that computational modelling can resolve questions that cadaver studies cannot answer cleanly. The radiological
+        component confirms the recommendation is achievable in practice, not merely optimal in simulation.
+      </p>
+
+      <h2 data-reveal>Citation</h2>
+      <div class="citation" data-reveal>
+        B. Bockmann, A. Kumar, J. J. Timothy, G. Meschke. “Bone tunnel placement influences shear stresses at the
+        coracoid process after coracoclavicular ligament reconstruction: a finite element study and radiological
+        analysis.” <em>Archives of Orthopaedic and Trauma Surgery</em>, Springer, 2023.
+        doi:10.1007/s00402-022-04382-9
+      </div>
+      <p class="note" data-reveal>Contributed the finite element modelling and stress analysis.</p>
+
+    </article>
+
+    <nav class="pager wide" aria-label="Project navigation">
+      <a class="pager-item" href="sps_sim.html">
+        <p class="lbl">Previous</p>
+        <p class="ttl">Material parameter identification for SPS</p>
+      </a>
+      <a class="pager-item is-next" href="dolomite_sim.html">
+        <p class="lbl">Next</p>
+        <p class="ttl">Stress regime effects on carbonate permeability</p>
+      </a>
+    </nav>
 
   </main>
 
-  <!--
-    - custom js link
-  -->
-  <script src="./assets/js/script.js"></script>
-  <script src="./assets/js/particles.js"></script>
+  <footer class="paper-footer">
+    <div class="paper-footer-inner wide">
+      <p>© 2026 Ashwani Kumar</p>
+      <div class="paper-footer-links">
+        <a href="index.html">Home</a>
+        <a href="index.html#work">Work</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
 
-  <!--
-    - ionicon link
-  -->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
+  <script src="./assets/js/main.js"></script>
 </body>
 
 </html>

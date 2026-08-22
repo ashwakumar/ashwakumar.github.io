@@ -3,358 +3,291 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dolomite Simulation Research | Ashwani Kumar</title>
+  <title>Stress Regime Effects on Carbonate Permeability · Ashwani Kumar</title>
   <meta name="description"
-    content="Computational modeling of dolomite fracture and fluid flow using finite element methods.">
+    content="How superimposed tectonic stress regimes alter fracture aperture and permeability in the Latemar carbonate buildup — outcrop data, FE geomechanics, and flow simulation.">
 
-  <!--
-    - favicon
-  -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Stress Regime Effects on Carbonate Permeability · Ashwani Kumar">
+  <meta property="og:description"
+    content="Superimposed tectonic stresses raise permeability by up to 62% in a naturally fractured carbonate buildup.">
+  <meta property="og:image" content="https://ashwakumar.github.io/assets/images/rock_fracture.png">
+  <meta name="twitter:card" content="summary_large_image">
+
   <link rel="shortcut icon" href="./assets/images/logo-ak.png" type="image/png">
-
-  <!--
-    - custom css link
-  -->
-  <link rel="stylesheet" href="./assets/css/style.css">
-
-  <!--
-    - google font link
-  -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter+Tight:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/paper.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "headline": "Impact of stress regime change on the permeability of a naturally fractured carbonate buildup (Latemar, Dolomites, Northern Italy)",
+    "author": [
+      { "@type": "Person", "name": "Onyedika Anthony Igbokwe" },
+      { "@type": "Person", "name": "J. J. Timothy" },
+      { "@type": "Person", "name": "Ashwani Kumar" },
+      { "@type": "Person", "name": "G. Meschke" }
+    ],
+    "datePublished": "2024",
+    "isPartOf": { "@type": "Periodical", "name": "Solid Earth" },
+    "sameAs": "https://doi.org/10.5194/se-15-763-2024"
+  }
+  </script>
 </head>
 
 <body>
-  <canvas id="bg-canvas"></canvas>
+
+  <header class="site-header">
+    <div class="site-header-inner wide">
+      <a class="back-link" href="index.html#work">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"
+          style="width:1em;height:1em">
+          <path d="M13 8H3m0 0 4-4M3 8l4 4" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+        <span>Back to work</span>
+      </a>
+      <a class="header-name" href="index.html">Ashwani Kumar</a>
+    </div>
+  </header>
 
   <main>
 
-    <!--
-      - #SIDEBAR
-    -->
+    <section class="project-header">
+      <div class="content">
+        <p class="project-eyebrow" data-reveal>2024 · Journal Article · Open access</p>
 
-    <aside class="sidebar" data-sidebar>
+        <h1 class="project-title" data-reveal style="--i:1">
+          Stress regime effects on carbonate permeability
+        </h1>
 
-      <div class="sidebar-info">
-
-        <figure class="avatar-box">
-          <img src="./assets/images/my_pic.jpg" alt="Ashwani Kumar" width="80">
-        </figure>
-
-        <div class="info-content">
-          <h1 class="name" title="Ashwani Kumar">Ashwani Kumar</h1>
-
-          <p class="title">Computational Engineer</p>
+        <div class="project-badges" data-reveal style="--i:2">
+          <span class="project-badge is-live">Solid Earth · EGU</span>
+          <span class="project-badge">Geomechanics</span>
+          <span class="project-badge">Kratos FEM</span>
+          <span class="project-badge">Photogrammetry</span>
         </div>
 
-        <button class="info_more-btn" data-sidebar-btn>
-          <span>Show Contacts</span>
+        <p class="project-tagline" data-reveal style="--i:3">
+          Naturally fractured carbonate reservoirs hold a large share of global oil, gas, and geothermal resources, and
+          their permeability is notoriously hard to predict. This study shows that successive tectonic stress regimes do
+          not cancel out — they superimpose, raising permeability by up to 62%.
+        </p>
 
-          <ion-icon name="chevron-down"></ion-icon>
-        </button>
+        <p class="project-authors" data-reveal style="--i:4">
+          Onyedika Anthony Igbokwe, J. J. Timothy, <strong>Ashwani Kumar</strong>, G. Meschke
+          <span class="affil">Ruhr University Bochum · Chair of Statics and Dynamics</span>
+        </p>
 
+        <div class="actions" data-reveal style="--i:5">
+          <a class="btn btn-primary" href="https://doi.org/10.5194/se-15-763-2024" target="_blank" rel="noopener">
+            <span>Read the paper</span>
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <path d="M5 11 11 5m0 0H5.5M11 5v5.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </a>
+          <a class="btn" href="https://doi.org/10.5194/se-15-763-2024" target="_blank" rel="noopener">
+            <span>DOI · Open access</span>
+          </a>
+        </div>
       </div>
+    </section>
 
-      <div class="sidebar-info_more">
-
-        <div class="separator"></div>
-
-        <ul class="contacts-list">
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="logo-linkedin"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">LinkedIn</p>
-              <a href="https://www.linkedin.com/in/ashwanikumareth" class="contact-link">ashwanikumareth</a>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="logo-github"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">GitHub</p>
-              <a href="https://github.com/ashwakumar" class="contact-link">ashwakumar</a>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="school-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Google Scholar</p>
-              <a href="https://scholar.google.com/citations?user=ashwanikjangir@gmail.com"
-                class="contact-link">ashwanikjangir</a>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="mail-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Email</p>
-
-              <a href="mailto:ashwanikjangir@gmail.com" class="contact-link">ashwanikjangir@gmail.com</a>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="phone-portrait-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Phone</p>
-
-              <a href="tel:+41 782303498" class="contact-link">+41 782303498</a>
-            </div>
-
-          </li>
-
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="location-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Location</p>
-
-              <address>Zürich, Switzerland</address>
-            </div>
-
-          </li>
-
-        </ul>
-
-        <div class="separator"></div>
-
-        <ul class="social-list">
-
-          <li class="social-item">
-            <a href="#" class="social-link">
-              <ion-icon name="logo-facebook"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="#" class="social-link">
-              <ion-icon name="logo-twitter"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="#" class="social-link">
-              <ion-icon name="logo-instagram"></ion-icon>
-            </a>
-          </li>
-
-        </ul>
-
+    <div class="content">
+      <div class="numbers" data-reveal>
+        <div class="stat">
+          <p class="num">+62%</p>
+          <p class="lbl">Peak permeability gain</p>
+        </div>
+        <div class="stat">
+          <p class="num">2000+</p>
+          <p class="lbl">Fractures mapped</p>
+        </div>
+        <div class="stat">
+          <p class="num">2</p>
+          <p class="lbl">Tectonic stress regimes</p>
+        </div>
+        <div class="stat">
+          <p class="num">5</p>
+          <p class="lbl">Fracture substructures</p>
+        </div>
       </div>
-
-    </aside>
-
-    <!--
-      - #main-content
-    -->
-
-    <div class="main-content">
-
-      <!--
-        - #NAVBAR
-      -->
-
-      <nav class="navbar">
-
-        <ul class="navbar-list">
-
-          <li class="navbar-item">
-            <a href="index.html" class="navbar-link">About</a>
-          </li>
-
-          <li class="navbar-item">
-            <a href="index.html#resume" class="navbar-link">Resume</a>
-          </li>
-
-          <li class="navbar-item">
-            <a href="index.html#portfolio" class="navbar-link">Portfolio</a>
-          </li>
-
-          <li class="navbar-item">
-            <a href="index.html#contact" class="navbar-link">Contact</a>
-          </li>
-
-        </ul>
-
-      </nav>
-
-      <!--
-        - #PROJECT DETAILS
-      -->
-
-      <article class="project-details active" data-page="project-details">
-        <a href="index.html#portfolio" class="back-link" onclick="localStorage.setItem('activePage','portfolio')">← Back
-          to Portfolio</a>
-        <header>
-          <h2 class="h2 article-title">Stress Regime Effects on Carbonate Permeability</h2>
-        </header>
-
-        <section class="project-content">
-          <div class="project-hero">
-            <img src="./assets/images/rock_fracture.png" alt="Fracture Network in Dolomite" loading="lazy">
-          </div>
-
-          <h4 class="h4">Impact of Stress Regime Change on the Permeability of a Naturally Fractured Carbonate Buildup
-            (Latemar, Dolomites, Northern Italy)</h4>
-
-          <div class="project-description">
-            <ul class="author-info-box">
-              <li class="author-info-item">
-                <span class="info-label">Main Author:</span>
-                <span class="info-value">Onyedika Anthony Igbokwe</span>
-              </li>
-              <li class="author-info-item">
-                <span class="info-label">Affiliation:</span>
-                <span class="info-value">Ruhr University Bochum</span>
-              </li>
-              <li class="author-info-item">
-                <span class="info-label">Type:</span>
-                <span class="info-value">Research Project</span>
-              </li>
-              <li class="author-info-item">
-                <span class="info-label">Co-Author:</span>
-                <span class="info-value">J. J. Timothy, A. Kumar, G. Meschke</span>
-              </li>
-              <li class="author-info-item">
-                <span class="info-label">Date:</span>
-                <span class="info-value">2023</span>
-              </li>
-              <li class="author-info-item">
-                <span class="info-label">Journal:</span>
-                <span class="info-value">Solid Earth</span>
-              </li>
-            </ul>
-
-            <h4 class="h4">Project Overview</h4>
-            <p>
-              This research investigates how changes in tectonic stress regimes affect fracture aperture and
-              permeability in carbonate reservoirs, using the Latemar carbonate buildup in northern Italy as an
-              analogue.
-              By combining detailed outcrop data, finite element geomechanical modeling, and fluid flow simulations, the
-              study quantifies how stress from multiple tectonic episodes influenced fracture networks and flow
-              pathways.</p>
-
-            <h4 class="h4">Problem & Motivation</h4>
-            <p>
-              Naturally fractured carbonate reservoirs contain a large share of global oil, gas, and geothermal
-              resources. However, predicting permeability is challenging because fracture networks are highly
-              heterogeneous and influenced by stress history. Previous models often considered only single stress
-              regimes, overlooking the cumulative effects of multiple tectonic episodes.
-              This study addresses that gap by modeling stress regime superposition to better understand how
-              permeability evolves over geological time.</p>
-
-            <h4 class="h4">Key Contributions</h4>
-            <ul class="feature-list">
-              <li>Developed a three-phase workflow: outcrop data acquisition (via drone imaging), finite element
-                geomechanical aperture modeling, and single-phase flow simulations.</li>
-              <li>Simulated two major tectonic stress regimes: subsidence-related (NW–SE) and Alpine compression (N–S).
-              </li>
-              <li>Quantified the effect of stress regime change on fracture aperture distributions and effective
-                permeability tensors.</li>
-              <li>Showed that permeability increased by up to 62% under combined tectonic loading compared to baseline
-                matrix permeability.</li>
-              <li>Demonstrated that fracture density, connectivity, and orientation critically control anisotropy in
-                fluid flow.</li>
-            </ul>
-
-            <h4 class="h4">Technical Highlights</h4>
-            <ul class="tech-list">
-              <li>Tools & Platforms: Drone photogrammetry (Agisoft Metashape), ArcGIS for fracture mapping, Kratos FEM
-                solver.</li>
-              <li>Methods: 2D finite element modeling, computational homogenization, single-phase flow analysis.</li>
-              <li>Data Sources: Over 2,000 fractures mapped from Latemar outcrops; five representative fracture
-                substructures (FSSs) analyzed.</li>
-              <li>Parameters: Young’s modulus = 25 GPa, Poisson’s ratio = 0.30, applied stress magnitudes of 50 MPa
-                (subsidence) and 160 MPa (Alpine compression).</li>
-            </ul>
-
-            <h4 class="h4">Results & Impact</h4>
-            <p>
-              The study revealed that stress regime changes significantly alter fracture aperture and permeability
-              anisotropy.
-              Permeability increased by 37–62%, with stress orientation and fracture density dictating flow pathways.
-              The results demonstrate that superimposed tectonic stresses do not cancel each other but instead create
-              new permeability effects, underscoring the need for multi-episode stress modeling.
-              These findings enhance the ability to predict flow in fractured carbonate reservoirs, with implications
-              for hydrocarbon recovery, CO₂ storage, and geothermal energy development.
-            </p>
-
-            <h4 class="h4">Publication Details</h4>
-            <p>
-              <strong>Journal:</strong> Solid Earth<br>
-              <strong>Year:</strong> 2024<br>
-              <strong>DOI:</strong> <a href="https://doi.org/10.5194/se-15-763-2024" target="_blank"
-                class="text-link">10.5194/se-15-763-2024</a>
-            </p>
-
-            <!-- Navigation & Links -->
-            <div class="project-navigation">
-              <a href="bone_sim.html" class="btn-link">
-                <ion-icon name="arrow-back-outline"></ion-icon> Previous
-              </a>
-
-              <a href="https://doi.org/10.5194/se-15-763-2024" target="_blank" class="btn-link">
-                <ion-icon name="document-text-outline"></ion-icon> Read Paper
-              </a>
-
-              <a href="multiscale_sps.html" class="btn-link">
-                Back to Start <ion-icon name="refresh-outline"></ion-icon>
-              </a>
-            </div>
-
-          </div>
-        </section>
-      </article>
-
     </div>
+
+    <div class="content">
+      <figure class="fig" data-reveal>
+        <img src="./assets/images/rock_fracture.png" alt="Fracture network permeability simulation" loading="lazy">
+        <figcaption><b>Fig. 1</b> — Modelled fracture aperture distribution in a representative fracture substructure
+          from the Latemar buildup, under superimposed subsidence and Alpine compression.</figcaption>
+      </figure>
+    </div>
+
+    <article class="project-body content">
+
+      <h2 data-reveal>Overview</h2>
+      <p data-reveal>
+        This research investigated how changes in tectonic stress regime affect fracture aperture and permeability in
+        carbonate reservoirs, using the <strong>Latemar carbonate buildup</strong> in the northern Italian Dolomites as
+        a field analogue.
+      </p>
+      <p data-reveal>
+        Combining detailed outcrop data, finite element geomechanical modelling, and fluid flow simulation, it
+        quantifies how stress from multiple tectonic episodes shaped the fracture network and the flow pathways through
+        it.
+      </p>
+
+      <h2 data-reveal>Problem &amp; motivation</h2>
+      <p data-reveal>
+        Predicting permeability in fractured carbonates is difficult because fracture networks are highly heterogeneous
+        and strongly influenced by stress history. Previous models typically considered a single stress regime,
+        overlooking the cumulative effect of successive tectonic episodes.
+      </p>
+      <div class="callout" data-reveal>
+        <p><strong>The question:</strong> when a rock mass experiences one stress regime and then another, do the
+          effects on permeability cancel, or accumulate? The answer turns out to be neither — they produce
+          <em>new</em> permeability effects that neither regime creates alone.</p>
+      </div>
+
+      <h2 data-reveal>Contributions</h2>
+      <ul class="bullets" data-reveal>
+        <li>Developed a three-phase workflow: drone-based outcrop data acquisition, finite element aperture modelling,
+          and single-phase flow simulation.</li>
+        <li>Simulated two major tectonic stress regimes — subsidence-related (NW–SE) and Alpine compression (N–S).</li>
+        <li>Quantified the effect of stress regime change on fracture aperture distributions and effective permeability
+          tensors.</li>
+        <li>Showed permeability increasing by up to <strong>62%</strong> under combined tectonic loading versus baseline
+          matrix permeability.</li>
+        <li>Demonstrated that fracture density, connectivity, and orientation critically control flow anisotropy.</li>
+      </ul>
+
+      <h2 data-reveal>Method</h2>
+
+      <div class="roles" data-reveal>
+        <div class="role">
+          <p class="tag-id">Field</p>
+          <h4>Drone photogrammetry</h4>
+          <p>Outcrop imaging processed in Agisoft Metashape, with fracture traces mapped in ArcGIS — over 2,000
+            fractures digitised.</p>
+        </div>
+        <div class="role">
+          <p class="tag-id">Model</p>
+          <h4>Kratos FEM</h4>
+          <p>2D finite element geomechanical modelling of fracture aperture under applied far-field stress, across five
+            representative fracture substructures.</p>
+        </div>
+        <div class="role">
+          <p class="tag-id">Upscaling</p>
+          <h4>Homogenisation</h4>
+          <p>Computational homogenisation producing effective permeability tensors, capturing directional anisotropy
+            rather than a single scalar value.</p>
+        </div>
+        <div class="role">
+          <p class="tag-id">Parameters</p>
+          <h4>Loading</h4>
+          <p>Young's modulus 25 GPa, Poisson's ratio 0.30; applied stresses of 50 MPa (subsidence) and 160 MPa (Alpine
+            compression).</p>
+        </div>
+      </div>
+
+      <h2 data-reveal>Results</h2>
+      <p data-reveal>
+        Stress regime changes significantly alter both fracture aperture and permeability anisotropy. Permeability
+        increased by <strong>37–62%</strong> depending on the substructure, with stress orientation and fracture
+        density together dictating the dominant flow pathways.
+      </p>
+
+      <div class="table-wrap" data-reveal>
+        <table>
+          <thead>
+            <tr>
+              <th>Loading case</th>
+              <th>Orientation</th>
+              <th>Magnitude</th>
+              <th>Permeability change</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Baseline matrix</td>
+              <td>—</td>
+              <td class="num">—</td>
+              <td class="num">reference</td>
+            </tr>
+            <tr>
+              <td>Subsidence</td>
+              <td>NW–SE</td>
+              <td class="num">50 MPa</td>
+              <td class="num">increase</td>
+            </tr>
+            <tr>
+              <td>Alpine compression</td>
+              <td>N–S</td>
+              <td class="num">160 MPa</td>
+              <td class="num">increase</td>
+            </tr>
+            <tr>
+              <td>Superimposed</td>
+              <td>Both</td>
+              <td class="num">50 + 160 MPa</td>
+              <td class="num best">+37 to +62%</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p data-reveal>
+        The key finding is that superimposed tectonic stresses <strong>do not cancel each other out</strong>. They
+        instead create permeability effects that neither regime produces on its own, which means single-regime models
+        systematically misestimate flow in rocks with a complex tectonic history.
+      </p>
+
+      <h2 data-reveal>Impact</h2>
+      <p data-reveal>
+        These findings improve the ability to predict fluid flow in fractured carbonate reservoirs, with direct
+        implications for hydrocarbon recovery, CO₂ storage, and geothermal energy development — all three depend on
+        knowing where fluid will actually go.
+      </p>
+
+      <h2 data-reveal>Citation</h2>
+      <div class="citation" data-reveal>
+        O. A. Igbokwe, J. J. Timothy, A. Kumar, G. Meschke. “Impact of stress regime change on the permeability of a
+        naturally fractured carbonate buildup (Latemar, Dolomites, Northern Italy).” <em>Solid Earth</em>, 15, 763,
+        2024. doi:10.5194/se-15-763-2024
+      </div>
+      <p class="note" data-reveal>Contributed the finite element geomechanical modelling and flow simulation.</p>
+
+    </article>
+
+    <nav class="pager wide" aria-label="Project navigation">
+      <a class="pager-item" href="bone_sim.html">
+        <p class="lbl">Previous</p>
+        <p class="ttl">Bone tunnel stress in AC joint reconstruction</p>
+      </a>
+      <a class="pager-item is-next" href="index.html#work">
+        <p class="lbl">Back to</p>
+        <p class="ttl">All work</p>
+      </a>
+    </nav>
 
   </main>
 
-  <!--
-    - custom js link
-  -->
-  <script src="./assets/js/script.js"></script>
-  <script src="./assets/js/particles.js"></script>
+  <footer class="paper-footer">
+    <div class="paper-footer-inner wide">
+      <p>© 2026 Ashwani Kumar</p>
+      <div class="paper-footer-links">
+        <a href="index.html">Home</a>
+        <a href="index.html#work">Work</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
 
-  <!--
-    - ionicon link
-  -->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
+  <script src="./assets/js/main.js"></script>
 </body>
 
 </html>

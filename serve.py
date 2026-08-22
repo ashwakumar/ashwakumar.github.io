@@ -11,6 +11,14 @@ import sys
 import webbrowser
 from pathlib import Path
 
+# Windows consoles default to a legacy codepage (cp1252) that cannot encode the
+# emoji used in the banner below. Force UTF-8 so the server does not crash on start.
+for _stream in (sys.stdout, sys.stderr):
+    try:
+        _stream.reconfigure(encoding="utf-8", errors="replace")
+    except (AttributeError, ValueError):
+        pass
+
 # Configuration
 PORT = 8000
 HOST = "localhost"

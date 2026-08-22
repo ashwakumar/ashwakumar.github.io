@@ -3,359 +3,298 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Multiscale SPS Simulation | Ashwani Kumar</title>
+  <title>Direct FE² for Spark Plasma Sintering · Ashwani Kumar</title>
   <meta name="description"
-    content="Direct FE² framework for enhancing multiscale simulations of the spark plasma sintering process.">
+    content="A Direct FE² multiscale framework for spark plasma sintering: microscale powder mechanics embedded in macroscale electro-thermo-mechanical simulation, at up to 70× lower computational cost and under 1% error.">
 
-  <!--
-    - favicon
-  -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Direct FE² for Spark Plasma Sintering · Ashwani Kumar">
+  <meta property="og:description"
+    content="Multiscale SPS simulation at up to 70× lower cost, with under 1% error against full FE.">
+  <meta property="og:image" content="https://ashwakumar.github.io/assets/images/multiscale_sps.png">
+  <meta name="twitter:card" content="summary_large_image">
+
   <link rel="shortcut icon" href="./assets/images/logo-ak.png" type="image/png">
-
-  <!--
-    - custom css link
-  -->
-  <link rel="stylesheet" href="./assets/css/style.css">
-
-  <!--
-    - google font link
-  -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter+Tight:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/paper.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "headline": "Enhancing multiscale simulations for spark plasma sintering with a novel Direct FE² framework",
+    "author": [
+      { "@type": "Person", "name": "Ashwani Kumar" },
+      { "@type": "Person", "name": "Z. Zhang" },
+      { "@type": "Person", "name": "M. Afrasiabi" },
+      { "@type": "Person", "name": "M. Bambach" }
+    ],
+    "datePublished": "2025",
+    "isPartOf": { "@type": "Periodical", "name": "Journal of Manufacturing Processes" },
+    "sameAs": "https://doi.org/10.1016/j.jmapro.2025.07.006"
+  }
+  </script>
 </head>
 
 <body>
-  <canvas id="bg-canvas"></canvas>
+
+  <header class="site-header">
+    <div class="site-header-inner wide">
+      <a class="back-link" href="index.html#work">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"
+          style="width:1em;height:1em">
+          <path d="M13 8H3m0 0 4-4M3 8l4 4" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+        <span>Back to work</span>
+      </a>
+      <a class="header-name" href="index.html">Ashwani Kumar</a>
+    </div>
+  </header>
 
   <main>
 
-    <!--
-      - #SIDEBAR
-    -->
+    <!--============ HEADER ============-->
+    <section class="project-header">
+      <div class="content">
+        <p class="project-eyebrow" data-reveal>2025 · Journal Article · Peer-reviewed</p>
 
-    <aside class="sidebar" data-sidebar>
+        <h1 class="project-title" data-reveal style="--i:1">
+          Direct FE² for spark plasma sintering
+        </h1>
 
-      <div class="sidebar-info">
-
-        <figure class="avatar-box">
-          <img src="./assets/images/my_pic.jpg" alt="Ashwani Kumar" width="80">
-        </figure>
-
-        <div class="info-content">
-          <h1 class="name" title="Ashwani Kumar">Ashwani Kumar</h1>
-
-          <p class="title">Computational Engineer</p>
+        <div class="project-badges" data-reveal style="--i:2">
+          <span class="project-badge is-live">J. Manufacturing Processes</span>
+          <span class="project-badge">Multiscale</span>
+          <span class="project-badge">Abaqus</span>
+          <span class="project-badge">Python</span>
         </div>
 
-        <button class="info_more-btn" data-sidebar-btn>
-          <span>Show Contacts</span>
+        <p class="project-tagline" data-reveal style="--i:3">
+          A multiscale framework that embeds resolved microscale powder mechanics directly inside a macroscale
+          electro-thermo-mechanical model — matching full finite element accuracy to within 1% while cutting
+          computational cost by up to a factor of 70.
+        </p>
 
-          <ion-icon name="chevron-down"></ion-icon>
-        </button>
+        <p class="project-authors" data-reveal style="--i:4">
+          <strong>Ashwani Kumar</strong>, Z. Zhang, M. Afrasiabi, M. Bambach
+          <span class="affil">ETH Zürich · Advanced Manufacturing Lab</span>
+        </p>
 
+        <div class="actions" data-reveal style="--i:5">
+          <a class="btn btn-primary" href="https://doi.org/10.1016/j.jmapro.2025.07.006" target="_blank"
+            rel="noopener">
+            <span>Read the paper</span>
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <path d="M5 11 11 5m0 0H5.5M11 5v5.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </a>
+          <a class="btn" href="https://doi.org/10.1016/j.jmapro.2025.07.006" target="_blank" rel="noopener">
+            <span>DOI</span>
+          </a>
+        </div>
       </div>
+    </section>
 
-      <div class="sidebar-info_more">
-
-        <div class="separator"></div>
-
-        <ul class="contacts-list">
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="logo-linkedin"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">LinkedIn</p>
-              <a href="https://www.linkedin.com/in/ashwanikumareth" class="contact-link">ashwanikumareth</a>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="logo-github"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">GitHub</p>
-              <a href="https://github.com/ashwakumar" class="contact-link">ashwakumar</a>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="school-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Google Scholar</p>
-              <a href="https://scholar.google.com/citations?user=ashwanikjangir@gmail.com"
-                class="contact-link">ashwanikjangir</a>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="mail-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Email</p>
-
-              <a href="mailto:ashwanikjangir@gmail.com" class="contact-link">ashwanikjangir@gmail.com</a>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="phone-portrait-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Phone</p>
-
-              <a href="tel:+41 782303498" class="contact-link">+41 782303498</a>
-            </div>
-
-          </li>
-
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="location-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Location</p>
-
-              <address>Zürich, Switzerland</address>
-            </div>
-
-          </li>
-
-        </ul>
-
-        <div class="separator"></div>
-
-        <ul class="social-list">
-
-          <li class="social-item">
-            <a href="#" class="social-link">
-              <ion-icon name="logo-facebook"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="#" class="social-link">
-              <ion-icon name="logo-twitter"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="#" class="social-link">
-              <ion-icon name="logo-instagram"></ion-icon>
-            </a>
-          </li>
-
-        </ul>
-
+    <!--============ NUMBERS ============-->
+    <div class="content">
+      <div class="numbers" data-reveal>
+        <div class="stat">
+          <p class="num">70×</p>
+          <p class="lbl">Faster runtime</p>
+        </div>
+        <div class="stat">
+          <p class="num">44×</p>
+          <p class="lbl">Fewer DOF</p>
+        </div>
+        <div class="stat">
+          <p class="num">&lt;1%</p>
+          <p class="lbl">Error vs. full FE</p>
+        </div>
+        <div class="stat">
+          <p class="num">3</p>
+          <p class="lbl">Powder morphologies</p>
+        </div>
       </div>
-
-    </aside>
-
-    <!--
-      - #main-content
-    -->
-
-    <div class="main-content">
-
-      <!--
-        - #NAVBAR
-      -->
-
-      <nav class="navbar">
-
-        <ul class="navbar-list">
-
-          <li class="navbar-item">
-            <a href="index.html" class="navbar-link">About</a>
-          </li>
-
-          <li class="navbar-item">
-            <a href="index.html#resume" class="navbar-link">Resume</a>
-          </li>
-
-          <li class="navbar-item">
-            <a href="index.html#portfolio" class="navbar-link">Portfolio</a>
-          </li>
-
-          <li class="navbar-item">
-            <a href="index.html#contact" class="navbar-link">Contact</a>
-          </li>
-
-        </ul>
-
-      </nav>
-
-      <!--
-        - #PROJECT DETAILS
-      -->
-
-      <article class="project-details active" data-page="project-details">
-        <a href="index.html#portfolio" class="back-link" onclick="localStorage.setItem('activePage','portfolio')">← Back
-          to Portfolio</a>
-        <header>
-          <h2 class="h2 article-title">Multiscale Modeling of SPS with Direct FE2 Framework</h2>
-        </header>
-
-        <section class="project-content">
-          <div class="project-hero">
-            <img src="./assets/images/sps_multiscale.png" alt="Multiscale SPS Simulation" loading="lazy">
-          </div>
-
-          <h4 class="h4">Direct FE2 Framework for Multiscale SPS Simulations</h4>
-
-          <div class="project-description">
-
-            <ul class="author-info-box">
-              <li class="author-info-item">
-                <span class="info-label">Main Author:</span>
-                <span class="info-value">Ashwani Kumar</span>
-              </li>
-              <li class="author-info-item">
-                <span class="info-label">Affiliation:</span>
-                <span class="info-value">ETH Zurich</span>
-              </li>
-              <li class="author-info-item">
-                <span class="info-label">Online:</span>
-                <a href="https://doi.org/10.1016/j.jmapro.2025.07.006" target="_blank"
-                  class="info-value text-link">ScienceDirect</a>
-              </li>
-              <li class="author-info-item">
-                <span class="info-label">Co-Authors:</span>
-                <span class="info-value">Z. Zhang, M. Afrasiabi, M. Bambach </span>
-              </li>
-              <li class="author-info-item">
-                <span class="info-label">Date:</span>
-                <span class="info-value">2025</span>
-              </li>
-              <li class="author-info-item">
-                <span class="info-label">Journal:</span>
-                <span class="info-value">Journal of Manufacturing Processes</span>
-              </li>
-            </ul>
-
-            <h4 class="h4">Project Overview</h4>
-            <p>
-              This project focuses on improving the simulation of spark plasma sintering (SPS), a key process in
-              advanced materials manufacturing.
-              Traditional finite element models either miss microscale powder interactions or become too
-              computationally
-              expensive.
-              To address this, a Direct FE2 multiscale framework was developed that directly integrates microscale
-              powder behavior into macroscale electro-thermal-mechanical simulations.
-            </p>
-
-            <h4 class="h4">Problem & Motivation</h4>
-            <p>
-              SPS involves complex electrical, thermal, and mechanical interactions across different scales.
-              Existing models either treat powder as a continuum (ignoring particle-level detail) or use
-              particle-based
-              methods (accurate but computationally prohibitive).
-              This gap made it difficult to simulate large-scale SPS with both accuracy and efficiency.
-            </p>
-
-            <h4 class="h4">Research Contributions</h4>
-            <ul class="feature-list">
-              <li>Designed a Direct FE2 approach for fully coupled electro-thermal-mechanical SPS simulations.
-              </li>
-              <li>Achieved temperature & displacement error below 1% compared to full FE analysis.</li>
-              <li>Reduced computational cost by factors up to 70x, with degrees of freedom reduced up to 44x.</li>
-              <li>Demonstrated flexibility in handling different powder morphologies (SC, BCC, FCC).</li>
-              <li>Validated the model against the Heckel equation.</li>
-            </ul>
-
-            <h4 class="h4">Technical Highlights</h4>
-            <ul class="tech-list">
-              <li>Tools & Platforms: Abaqus FE solver, Python scripting for automation.</li>
-              <li>Methods: Finite Element Analysis (FEA), multiscale FE2 coupling, representative volume elements
-                (RVEs), periodic boundary conditions, multi-point constraints.</li>
-              <li>Models Used: Coupled electro-thermal-mechanical FE models, Johnson–Cook material law for copper
-                powders.</li>
-              <li>Performance: Demonstrated scalable efficiency with 8–70x faster runtime compared to full FE
-                methods.
-              </li>
-            </ul>
-
-            <h4 class="h4">Results & Impact</h4>
-            <p>
-              The Direct FE2 framework produced results nearly identical to full FE simulations while drastically
-              lowering computational cost.
-              It revealed how powder morphology, mesh scaling, and current intensity affect densification during
-              SPS.
-              The method makes it feasible to simulate realistic SPS geometries that were previously
-              computationally
-              intractable.
-              This work advances multiscale modeling in materials processing and provides a foundation for future
-              studies on non-spherical powders and complex geometries.
-            </p>
-
-            <h4 class="h4">Publication Details</h4>
-            <p>
-              <strong>Journal:</strong> Journal of Manufacturing Processes<br>
-              <strong>Year:</strong> 2025<br>
-              <strong>DOI:</strong> <a href="https://doi.org/10.1016/j.jmapro.2025.07.006" target="_blank"
-                class="text-link">10.1016/j.jmapro.2025.07.006</a>
-            </p>
-
-            <!-- Navigation & Links -->
-            <div class="project-navigation">
-              <a href="dolomite_sim.html" class="btn-link">
-                <ion-icon name="arrow-back-outline"></ion-icon> Previous
-              </a>
-
-              <a href="https://doi.org/10.1016/j.jmapro.2025.07.006" target="_blank" class="btn-link">
-                <ion-icon name="document-text-outline"></ion-icon> Read Paper
-              </a>
-
-              <a href="multimaterial_sps.html" class="btn-link">
-                Next <ion-icon name="arrow-forward-outline"></ion-icon>
-              </a>
-            </div>
-          </div>
-
-        </section>
-      </article>
-
     </div>
+
+    <!--============ FIGURE ============-->
+    <div class="content">
+      <figure class="fig" data-reveal>
+        <img src="./assets/images/multiscale_sps.png" alt="Direct FE² multiscale SPS simulation result" loading="lazy">
+        <figcaption><b>Fig. 1</b> — Representative volume elements embedded at the macroscale integration points,
+          coupling particle-level densification to component-scale electro-thermal fields.</figcaption>
+      </figure>
+    </div>
+
+    <!--============ BODY ============-->
+    <article class="project-body content">
+
+      <h2 data-reveal>Overview</h2>
+      <p data-reveal>
+        Spark plasma sintering (SPS) consolidates powder into a dense component by passing electric current through it
+        under mechanical pressure. It is a key process in advanced materials manufacturing, and it is hard to simulate
+        well: what happens between individual powder particles determines the outcome, but resolving those particles
+        across a full component is computationally prohibitive.
+      </p>
+      <p data-reveal>
+        Existing finite element models sit at one of two extremes. Continuum models treat the powder as a homogeneous
+        medium and lose particle-level detail entirely. Particle-based methods capture that detail but cannot scale to
+        realistic geometries. This project developed a <strong>Direct FE² multiscale framework</strong> that closes the
+        gap — microscale powder behaviour is integrated directly into macroscale electro-thermo-mechanical simulation,
+        without the cost of resolving it everywhere.
+      </p>
+
+      <h2 data-reveal>Problem &amp; motivation</h2>
+      <p data-reveal>
+        SPS couples electrical, thermal, and mechanical physics across scales that differ by orders of magnitude.
+        Current flows preferentially through particle contacts, generating localised Joule heating, which softens the
+        material, which changes the contact geometry, which changes the current path. The loop is genuinely coupled and
+        genuinely multiscale.
+      </p>
+      <div class="callout" data-reveal>
+        <p><strong>The gap:</strong> continuum models ignore particle-level detail; particle-based methods are
+          accurate but computationally intractable at component scale. Neither could simulate large-scale SPS with both
+          accuracy and efficiency.</p>
+      </div>
+
+      <h2 data-reveal>Contributions</h2>
+      <ul class="bullets" data-reveal>
+        <li>Designed a Direct FE² approach for fully coupled electro-thermo-mechanical SPS simulation.</li>
+        <li>Achieved temperature and displacement error below <strong>1%</strong> against full FE analysis.</li>
+        <li>Reduced computational cost by factors up to <strong>70×</strong>, with degrees of freedom cut up to
+          <strong>44×</strong>.</li>
+        <li>Demonstrated flexibility across powder morphologies — simple cubic, BCC, and FCC packings.</li>
+        <li>Validated the densification response against the Heckel equation.</li>
+      </ul>
+
+      <h2 data-reveal>Method</h2>
+
+      <div class="roles" data-reveal>
+        <div class="role">
+          <p class="tag-id">Solver</p>
+          <h4>Abaqus + Python</h4>
+          <p>Coupled electro-thermo-mechanical FE models, with Python scripting automating mesh generation, RVE
+            embedding, and constraint assembly.</p>
+        </div>
+        <div class="role">
+          <p class="tag-id">Coupling</p>
+          <h4>Direct FE²</h4>
+          <p>Representative volume elements attached at macroscale integration points via multi-point constraints —
+            no separate microscale solve, no nested iteration.</p>
+        </div>
+        <div class="role">
+          <p class="tag-id">Boundary</p>
+          <h4>Periodic conditions</h4>
+          <p>Periodic boundary conditions on each RVE enforce scale separation while preserving the microscale
+            deformation and current fields.</p>
+        </div>
+        <div class="role">
+          <p class="tag-id">Material</p>
+          <h4>Johnson–Cook</h4>
+          <p>Rate- and temperature-dependent plasticity for copper powder, capturing softening as Joule heating
+            raises local temperature.</p>
+        </div>
+      </div>
+
+      <h2 data-reveal>Results</h2>
+      <p data-reveal>
+        The Direct FE² framework produced results nearly identical to full FE simulation while drastically lowering
+        computational cost. Speedup scales with problem size — the larger and more realistic the geometry, the greater
+        the advantage.
+      </p>
+
+      <div class="table-wrap" data-reveal>
+        <table>
+          <thead>
+            <tr>
+              <th>Metric</th>
+              <th>Full FE</th>
+              <th>Direct FE²</th>
+              <th>Improvement</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Runtime</td>
+              <td class="num">baseline</td>
+              <td class="num">8–70× faster</td>
+              <td class="num best">up to 70×</td>
+            </tr>
+            <tr>
+              <td>Degrees of freedom</td>
+              <td class="num">baseline</td>
+              <td class="num">up to 44× fewer</td>
+              <td class="num best">up to 44×</td>
+            </tr>
+            <tr>
+              <td>Temperature error</td>
+              <td class="num">—</td>
+              <td class="num">&lt; 1%</td>
+              <td class="num best">&lt; 1%</td>
+            </tr>
+            <tr>
+              <td>Displacement error</td>
+              <td class="num">—</td>
+              <td class="num">&lt; 1%</td>
+              <td class="num best">&lt; 1%</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p data-reveal>
+        Beyond the efficiency gain, the framework revealed how powder morphology, mesh scaling, and current intensity
+        each affect densification during SPS — relationships that continuum models cannot express because they have no
+        microstructure to vary.
+      </p>
+
+      <h2 data-reveal>Impact</h2>
+      <p data-reveal>
+        The method makes it feasible to simulate realistic SPS geometries that were previously computationally
+        intractable. It advances multiscale modelling in materials processing and provides a foundation for future work
+        on non-spherical powders and complex component geometries.
+      </p>
+
+      <h2 data-reveal>Citation</h2>
+      <div class="citation" data-reveal>
+        A. Kumar, Z. Zhang, M. Afrasiabi, M. Bambach. “Enhancing multiscale simulations for spark plasma sintering with
+        a novel Direct FE² framework.” <em>Journal of Manufacturing Processes</em>, 2025.
+        doi:10.1016/j.jmapro.2025.07.006
+      </div>
+
+    </article>
+
+    <!--============ PAGER ============-->
+    <nav class="pager wide" aria-label="Project navigation">
+      <span class="pager-item is-empty">
+        <p class="lbl">Previous</p>
+        <p class="ttl">—</p>
+      </span>
+      <a class="pager-item is-next" href="multimaterial_sps.html">
+        <p class="lbl">Next</p>
+        <p class="ttl">Multi-material spark plasma sintering</p>
+      </a>
+    </nav>
 
   </main>
 
-  <!--
-    - custom js link
-  -->
-  <script src="./assets/js/particles.js"></script>
+  <footer class="paper-footer">
+    <div class="paper-footer-inner wide">
+      <p>© 2026 Ashwani Kumar</p>
+      <div class="paper-footer-links">
+        <a href="index.html">Home</a>
+        <a href="index.html#work">Work</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
 
-  <!--
-    - ionicon link
-  -->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
+  <script src="./assets/js/main.js"></script>
 </body>
 
 </html>
