@@ -7,8 +7,8 @@
 :root {
   color-scheme: light;
 
-  /* Set --accent to Sandy Terra Cotta to match main site */
-  --accent: #f4a261;
+  /* Set --accent to match main site primary color */
+  --accent: #e94f37;
 
   --bg: #ffffff;
   --bg-soft: #fafafa;
